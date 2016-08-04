@@ -1,0 +1,9 @@
+# IDE Files
+/nbproject/
+
+# other
+/samples/
+/test/
+/temp/
+/download/
+/parser_logs/
