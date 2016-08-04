@@ -26,7 +26,7 @@
                     <tr>
                         <td>Forrás</td>
                         <td>
-                            <a href="https://github.com/juditacs/hunspeech/tree/master/langid/laur" target="_blank">https://github.com/juditacs/hunspeech/tree/master/langid/laur</a>
+                            <a href="https://github.com/juditacs/hunspeech/tree/master/emLid" target="_blank">https://github.com/juditacs/hunspeech/tree/master/emLid</a>
                         </td>
                     </tr>
                     <tr>
