@@ -18,14 +18,22 @@
                 Az e-magyar.hu rendszer szövegfeldolgozó része jelenleg az alább modulokat tartalmazza:         
             </p>
             <ul>
-                <li>Szövegegység tagoló (tokenizáló) – emToken</li>
-                <li>Morfológiai elemző – emMorph</li>
-                <li>Szótövező (lemmatizáló) – emLem</li>
-                <li>Egyértelműsítő (tagger) – emTag</li>
-                <li>Függőségi mondatelemző (dependency parser) – emDep</li>
-                <li>Összetevős mondatelemző (constituent parser) – emCons</li>
-                <li>Részleges mondatelemző (chunker) – emChunk</li>
-                <li>Névkifejezés elemző (named entity recognizer) – emNer</li>                
+                <li>Szövegegység tagoló (tokenizáló) – 
+                    <a href="<?php echo base_url(); ?>textmodules/emtoken">emToken</a></li>
+                <li>Morfológiai elemző – 
+                    <a href="<?php echo base_url(); ?>textmodules/emmorph">emMorph</a></li>
+                <li>Szótövező (lemmatizáló) – 
+                    <a href="<?php echo base_url(); ?>textmodules/emlem">emLem</a></li>
+                <li>Egyértelműsítő (tagger) – 
+                    <a href="<?php echo base_url(); ?>textmodules/emtag">emTag</a></li>
+                <li>Függőségi mondatelemző (dependency parser) – 
+                    <a href="<?php echo base_url(); ?>textmodules/emdep">emDep</a></li>
+                <li>Összetevős mondatelemző (constituent parser) – 
+                    <a href="<?php echo base_url(); ?>textmodules/emcons">emCons</a></li>
+                <li>Részleges mondatelemző (chunker) – 
+                    <a href="<?php echo base_url(); ?>textmodules/emchunk">emChunk</a></li>
+                <li>Névkifejezés elemző (named entity recognizer) – 
+                    <a href="<?php echo base_url(); ?>textmodules/emner">emNer</a></li>
             </ul>
             <p>
                 Az egyes eszközök működésének leírása az adott eszköznél található.         
