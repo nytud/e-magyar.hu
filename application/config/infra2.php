@@ -3,7 +3,7 @@
 $config['gate_path'] = "/home/joker/GATE_Developer_8.1";
 $config['hunlp_path'] = "/home/gerocs/hunlp-GATE";
 
-$config['maxchar'] = 1000;
+$config['maxchar'] = 3000;
 
 /*$config['modules'] = array(
     'tokenizer' => "hu.nytud.gate.tokenizers.QunTokenCommandLine",
