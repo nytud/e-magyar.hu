@@ -50,7 +50,7 @@ class ParserController extends CI_Controller {
             if (empty($text)) {
                 throw new Exception("No input text submitted.");
             }
-            if (strlen($text) > $maxchar) {
+            if (mb_strlen(stripslashes($text), 'UTF-8') > $maxchar) {
                 throw new Exception("Input is too long. Maximum " . $maxchar . " characters is allowed.");
             }
             if (empty($modules)) {
@@ -88,8 +88,8 @@ class ParserController extends CI_Controller {
 			set_time_limit(300);
 			$xml = file_get_contents($url);		
 			
-            $xml = preg_replace('/(.*)?(<GateDocument .*)/s', '$2', $xml);
-			$xml = "<?xml version='1.0' encoding='UTF-8'?>\n" . $xml;
+            /*$xml = preg_replace('/(.*)?(<GateDocument .*)/s', '$2', $xml);
+			$xml = "<?xml version='1.0' encoding='UTF-8'?>\n" . $xml;*/
 			
 			file_put_contents($this->temppath . "/" . $tempname . "_output.xml", $xml);
             

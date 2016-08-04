@@ -136,8 +136,8 @@ function Parser(_maxchar) {
             }
         });
         //console.log(self.sentences);
-        console.log(self.nps);
-        console.log(self.nes);
+        //console.log(self.nps);
+        //console.log(self.nes);
 
     };
 

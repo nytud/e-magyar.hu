@@ -20,6 +20,7 @@ if (empty($menuitems)) {
     <a class="dropdown-toggle" data-toggle="dropdown" href="#"><?= $this->lang->line("menu_textparser"); ?> <span class="caret"></span></a>    
     <ul class="dropdown-menu">        
         <li><a href="<?php echo base_url(); ?>textmodules/textoverview"><?= $this->lang->line("overview"); ?></a></li>
+		<li class="divider"></li>
         <li><a href="<?php echo base_url(); ?>textmodules/emtoken"><?= $this->lang->line("emtoken"); ?></a></li>
         <li><a href="<?php echo base_url(); ?>textmodules/emmorph"><?= $this->lang->line("emmorph"); ?></a></li>
         <li><a href="<?php echo base_url(); ?>textmodules/emlem"><?= $this->lang->line("emlem"); ?></a></li>
@@ -38,6 +39,7 @@ if (empty($menuitems)) {
     <a class="dropdown-toggle" data-toggle="dropdown" href="#"><?= $this->lang->line("menu_speechparser"); ?> <span class="caret"></span></a>    
     <ul class="dropdown-menu"> 
         <li><a href="<?php echo base_url(); ?>speechmodules/speechoverview"><?= $this->lang->line("overview"); ?></a></li>
+		<li class="divider"></li>
         <li><a href="<?php echo base_url(); ?>speechmodules/emsad"><?= $this->lang->line("emsad"); ?></a></li>
         <li><a href="<?php echo base_url(); ?>speechmodules/emdia"><?= $this->lang->line("emdia"); ?></a></li>
         <li><a href="<?php echo base_url(); ?>speechmodules/emlid"><?= $this->lang->line("emlid"); ?></a></li>               
