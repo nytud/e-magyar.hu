@@ -111,7 +111,7 @@
                             (txt, html, xml, doc, xls, docx, xlsx...),
                             belőlük a rendszer automatikusan kinyeri a szöveges tartalmat.
                             HTML illetve XML esetén az eredeti markup megőrződik,
-                            a hozzáadott információk az eredeti markuptól függetlenül kezelődik.
+                            a hozzáadott információ az eredeti markuptól függetlenül kezelődik.
                         </td>
                     </tr>
                     <tr>
