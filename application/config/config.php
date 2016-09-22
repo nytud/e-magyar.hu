@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-//$config['base_url'] = 'http://oliphant.nytud.hu/infra2/';
+//$config['base_url'] = 'http://localhost/e-magyar.hu/';
 /* use this if server IP is registered in DNS */
 //$config['base_url'] = 'http://e-magyar.hu/'; -- PK: let us be a bit more dynamic ;)
 $config['base_url'] = $_SERVER['HTTP_X_FORWARDED_PROTO'].'://'.$_SERVER['HTTP_X_FORWARDED_SERVER'].'/';

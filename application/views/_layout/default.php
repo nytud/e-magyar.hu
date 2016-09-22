@@ -17,7 +17,7 @@
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>vendor/bootstrap/css/awesome-bootstrap-checkbox.css" />  
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>vendor/jquery-ui/jquery-ui.min.css">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>vendor/datatables/media/css/dataTables.bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>vendor/datatables/extensions/FixedHeader/css/dataTables.fixedHeader.min.css">
+<!--        <link rel="stylesheet" type="text/css" href="<?php// echo base_url(); ?>vendor/datatables/extensions/FixedHeader/css/dataTables.fixedHeader.min.css">-->
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>vendor/treant/Treant.css">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>vendor/font-awesome/css/font-awesome.min.css" />
         <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>css/style.css">
@@ -62,7 +62,7 @@
         <script type="text/javascript" src="<?php echo base_url(); ?>vendor/jquery-ui/jquery-ui.min.js"></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>vendor/datatables/media/js/jquery.dataTables.min.js"></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>vendor/datatables/media/js/dataTables.bootstrap.min.js"></script>        
-        <script type="text/javascript" src="<?php echo base_url(); ?>vendor/datatables/extensions/FixedHeader/js/dataTables.fixedHeader.min.js"></script>        
+        <script type="text/javascript" src="<?php echo base_url(); ?>vendor/floatThead/dist/jquery.floatThead.min.js"></script>        
         <script type="text/javascript" src="<?php echo base_url(); ?>vendor/treant/vendor/raphael.js"></script>        
         <script type="text/javascript" src="<?php echo base_url(); ?>vendor/treant/Treant.js"></script>        
         <script type="text/javascript" src="<?php echo base_url(); ?>vendor/xregexp/xregexp-all.js"></script>  

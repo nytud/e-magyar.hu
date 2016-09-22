@@ -180,7 +180,8 @@ function Parser(_maxchar) {
                     'end': endNode,
                     'lemma': (featureSet.lemma || ""),
                     'anas': (featureSet.anas || ""),
-                    'msd': (featureSet.msd || ""),
+                    'hfstana': (featureSet.hfstana || ""),
+                    //'msd': (featureSet.msd || ""),
                     'pos': (featureSet.pos || ""),
                     'deptype': (featureSet.depType || ""),
                     'target_id': (featureSet.depTarget || ""),
@@ -205,7 +206,7 @@ function Parser(_maxchar) {
         $parsed.html("");
 
         $.each(self.tokens, function (index, token) {
-            var tokenElement = '<span id="' + token.id + '" class="' + token.cls + ' tooltipper" data-start="' + token.start + '" data-end="' + token.end + '" data-lemma="' + token.lemma + '" data-anas="' + token.anas + '" data-msd="' + token.msd + '" data-pos="' + token.pos + '" data-deptype="' + token.deptype + '" data-target_id="' + token.target_id + '" data-cons="' + token.cons + '" title="">' + token.content + '</span>';
+            var tokenElement = '<span id="' + token.id + '" class="' + token.cls + ' tooltipper" data-start="' + token.start + '" data-end="' + token.end + '" data-lemma="' + token.lemma + '" data-anas="' + token.anas + '" data-hfstana="' + token.hfstana + '" data-pos="' + token.pos + '" data-deptype="' + token.deptype + '" data-target_id="' + token.target_id + '" data-cons="' + token.cons + '" title="">' + token.content + '</span>';
             $parsed.append(tokenElement);
         });
 
@@ -362,7 +363,7 @@ function Parser(_maxchar) {
                 //rows += '<td>' + labels + '</td>';
             }
             if ($.inArray('pos', self.modules) > 0) {
-                rows += '<td>' + token.pos + '</td>';
+                rows += '<td>' + token.lemma + '</br>' + token.hfstana + '</br><b>' + token.pos + '</b></td>';
             }
             if ($.inArray('syntax', self.modules) > 0) {
                 rows += '<td>' + token.deptype + '</td>';
