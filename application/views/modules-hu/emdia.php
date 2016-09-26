@@ -1,12 +1,12 @@
 <section class="fullpanel">
     <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 col-sm-offset-1 col-md-offset-2 col-lg-offset-3 text-justify">
         <article>
-            <h3 id="emdia"><span>emDia</span> - beszélő detektáló</h3>
+            <h3 id="emdia"><span>emDia</span> - beszélő diarizáló</h3>
 
             <h4>Az eszközről</h4>
             <h5>Mire jó? Mit csinál?</h5>
             <p>Az emDial egy több beszélő beszédét tartalmazó hangfelvétel esetében arra a kérdésre ad választ,
-                hogy „ki, mikor beszélt?”, ezt hívják beszélődetekciónak. Képes tehát különbséget tenni a beszédhangok között, és felismerni, 
+                hogy „ki, mikor beszélt?”, ezt hívják beszélődiarizációnak. Képes tehát különbséget tenni a beszédhangok között, és felismerni, 
                 amikor az egyik beszélő átveszi a szót a másiktól.</p>
             <h5>Mi a bemenet?</h5>
             <p>A bemenet ez esetben is egy hangfájl (pl .wav, .mp3 formátumban).</p>

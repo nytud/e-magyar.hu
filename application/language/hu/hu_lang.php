@@ -45,8 +45,8 @@ $lang['emner'] = "tulajdonnév-felismerő";
 $lang['gate'] = "elemzőlánc";
 $lang['emlam'] = "nyelvmodell";
 
-$lang['emsad'] = "beszédfelismerő";
-$lang['emdia'] = "beszélőfelismerő";
+$lang['emsad'] = "beszéddetektáló";
+$lang['emdia'] = "beszélő diarizáló";
 $lang['emlid'] = "nyelvfelismerő";
 $lang['speechdb'] = "beszédarchívum";
 

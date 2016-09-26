@@ -2,7 +2,7 @@
     <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 col-sm-offset-1 col-md-offset-2 col-lg-offset-3 text-justify">
         <article>
             
-            <h3><span>emSad</span> - beszédfelismerő</h3>
+            <h3><span>emSad</span> - beszéddetektáló</h3>
             <h4>Az eszközről</h4>
             <h5>Mire jó? Mit csinál?</h5>
             <p>A Speech Activity Detection (SAD) modul beszédszegmentálást végez audió fájlokon. A fájlokat háromféle szegmensre bontja:
