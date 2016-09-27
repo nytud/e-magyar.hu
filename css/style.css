@@ -210,6 +210,11 @@ body > .container-fluid {
     padding: 2px; }
   #main-content #tabs #output .table > thead > tr > th {
     border-bottom: none; }
+  #main-content #tabs #output .table tr td ul {
+    list-style-type: none;
+    padding-left: 20px; }
+  #main-content #tabs #output .table tr td ol li:only-child {
+    list-style: none; }
   #main-content #tabs #output .dataTable tr.filters input, #main-content #tabs #output .dataTable tr.filters select {
     width: 100%; }
   #main-content #tabs #output .dataTables_wrapper td {

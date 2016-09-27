@@ -267,14 +267,14 @@ function Parser(_maxchar) {
                 var $first = $parsed.find('.token[data-start=' + ne.start + ']');
                 var $last = $parsed.find('.token[data-end=' + ne.end + ']');
                 $first.addClass("ne_start");
-                $last.addClass("ne_end");                
+                $last.addClass("ne_end");
                 var $ne;
                 if ($first[0] === $last[0]) {
                     $ne = $first;
                     $first.addClass("ne_end");
                 } else {
                     $ne = $first.nextUntil($last).andSelf().add($last);
-                }              
+                }
                 $ne.addClass("ne");
             });
         } else {
@@ -306,13 +306,13 @@ function Parser(_maxchar) {
         var $table = $(table);
 
         if ($.inArray('morph', self.modules) > 0) {
+            $table.find("thead tr.filters").append('<td class="form-group form-group-sm"><input type="text" class="form-control" placeholder="morph"/></td>');
             $table.find("thead tr.filters").append('<td class="form-group form-group-sm"><input type="text" class="form-control" placeholder="lemma"/></td>');
-			$table.find("thead tr.filters").append('<td class="form-group form-group-sm"><input type="text" class="form-control" placeholder="morph"/></td>');
-			$table.find("thead tr.headers").append('<th class="no-order">emLem</th>');
             $table.find("thead tr.headers").append('<th class="no-order">emMorph</th>');
+            $table.find("thead tr.headers").append('<th class="no-order">emLem</th>');
         }
         if ($.inArray('pos', self.modules) > 0) {
-            $table.find("thead tr.filters").append('<td class="form-group form-group-sm"><select class="form-control" placeholder="pos"></select></td>');
+            $table.find("thead tr.filters").append('<td class="form-group form-group-sm"><select class="form-control posfilter" placeholder="pos"></select></td>');
             $table.find("thead tr.headers").append('<th class="no-order">emTag</th>');
         }
         if ($.inArray('syntax', self.modules) > 0) {
@@ -328,39 +328,32 @@ function Parser(_maxchar) {
             rows += '<tr id="' + token.id + '">';
             rows += '<td class="token" data-start="' + token.start + '" data-end="' + token.end + '">' + token.id + '</td>';
             rows += '<td>' + token.content + '</td>';
-            //rows += '<td>' + token.lemma + '</td>';
+
             if ($.inArray('morph', self.modules) > 0) {
                 var lemmas = "";
-                var annots = "";                  
+                var annots = "";
                 var ana = token.anas.split(";");
-                lemmas += '<ol>';
-                annots += '<ol>';
+                annots += ana.length > 1 ? '<ol>' : '<ul>';
+                lemmas += ana.length > 1 ? '<ol>' : '<ul>';
                 var i = 0;
-                while (i < ana.length  && token.anas.length > 0) {
-                    var line = ana[i].slice(1, -1);                    
+                var prev_lemma = "";
+                while (i < ana.length && token.anas.length > 0) {
+                    var line = ana[i].slice(1, -1);
                     var label = line.split(",")[0].replace(/^ ?ana=/, "");
                     var lemma = line.split(",")[2].replace(/^ ?lemma=/, "");
-                    lemmas += '<li>' + lemma + '</li>';
                     annots += '<li>' + label + '</li>';
+                    if (prev_lemma !== lemma) {
+                        lemmas += '<li>' + lemma + '</li>';
+                        prev_lemma = lemma;
+                    }
                     i++;
                 }
-                lemmas += '</ol>';
-                annots += '</ol>';
+                annots += ana.length > 1 ? '</ol>' : '</ul>';
+                lemmas += ana.length > 1 ? '</ol>' : '</ul>';
 
-                //  régi            
-//                var labels = token.anas.split(";");
-//                var annot = "";
-//                annot += '<ol>';
-//                var i = 0;
-//                while (i < labels.length && token.anas.length > 0) {
-//                    annot += '<li>' + labels[i] + '</li>';
-//                    i++;
-//                }
-//                annot += '</ol>';
-
-                rows += '<td>' + lemmas + '</td>';
                 rows += '<td>' + annots + '</td>';
-                //rows += '<td>' + labels + '</td>';
+                rows += '<td>' + lemmas + '</td>';
+
             }
             if ($.inArray('pos', self.modules) > 0) {
                 rows += '<td>' + token.lemma + '</br>' + token.hfstana + '</br><b>' + token.pos + '</b></td>';
@@ -371,13 +364,9 @@ function Parser(_maxchar) {
             }
             rows += '</tr>';
 
-            /*if ($.inArray('sentence', self.modules) > 0) {
-                rows += '<td>' + token.deptype + '</td>';
-                rows += '<td>' + token.target_id + '</td>';
-            }*/
         });
 
-        $parsed.find("table tbody").html(rows);      
+        $parsed.find("table tbody").html(rows);
         $.each(self.sentences, function (index, sentence) {
             $('#parsed .token[data-start=' + sentence.start + ']').closest("tr").addClass("sentence sentence_start").attr('data-sentence', sentence.id);
             $('#parsed .token[data-end=' + sentence.end + ']').closest("tr").addClass("sentence sentence_end").attr('data-sentence', sentence.id);
@@ -408,7 +397,7 @@ function Parser(_maxchar) {
         }
 
         if ($.inArray('ner', self.modules) > 0) {
-            $("#filter #nes").parent().show();      
+            $("#filter #nes").parent().show();
             var $first;
             var $last;
             var $ne;
@@ -467,7 +456,7 @@ function Parser(_maxchar) {
         var ellipsis = (_ellipsis || false);
         var anas = $token.data("anas");
         //var msd = $token.data("msd");
-		var pos = $token.data("pos");
+        var pos = $token.data("pos");
         var str = $token.text();
         var annot = "";
         if (anas !== "" && $.inArray('morph', self.modules) > 0) {
@@ -514,7 +503,7 @@ function Parser(_maxchar) {
 //        if (msd !== "" && $.inArray('pos', self.modules) > 0) {
 //            annot += '<div id="msd"><b>' + msd + '</b></div>';
 //        }
-      
+
         if (pos !== "" && $.inArray('pos', self.modules) > 0) {
             annot += '<div class="pos"><b>' + pos + '</b></div>';
         }
