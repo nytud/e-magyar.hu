@@ -239,6 +239,14 @@ class ParserController extends CI_Controller {
                 if (array_key_exists('feature', $features)) {
                     $line .= $features['feature'];
                 }
+				$line .= "\t";
+                if (array_key_exists('lemma', $features)) {
+                    $line .= $features['lemma'];
+                }
+				$line .= "\t";
+                if (array_key_exists('hfstana', $features)) {
+                    $line .= $features['hfstana'];
+                }
                 $line .= "\t";               
                 if (array_key_exists('pos', $features)) {
                     $line .= $features['pos'];
@@ -287,7 +295,7 @@ class ParserController extends CI_Controller {
 
         $handle = fopen($this->temppath . "/" . $tsvname, "a");
 
-        fwrite($handle, "ID\tstring\tanas\tfeature\tpos\tdepType\tdepTarget\tcons\n");
+        fwrite($handle, "ID\tstring\tanas\tfeature\tlemma\thfstana\tpos\tdepType\tdepTarget\tcons\n");
 
         foreach ($annotations as $annot) {
             $fullline = "";

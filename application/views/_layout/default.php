@@ -62,7 +62,7 @@
         <script type="text/javascript" src="<?php echo base_url(); ?>vendor/jquery-ui/jquery-ui.min.js"></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>vendor/datatables/media/js/jquery.dataTables.min.js"></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>vendor/datatables/media/js/dataTables.bootstrap.min.js"></script>        
-        <script type="text/javascript" src="<?php echo base_url(); ?>vendor/datatables/extensions/FixedHeader/js/dataTables.fixedHeader.min.js"></script>       
+        <script type="text/javascript" src="<?php echo base_url(); ?>vendor/datatables/extensions/FixedHeader/js/dataTables.fixedHeader.min.js"></script>        
         <script type="text/javascript" src="<?php echo base_url(); ?>vendor/treant/vendor/raphael.js"></script>        
         <script type="text/javascript" src="<?php echo base_url(); ?>vendor/treant/Treant.js"></script>        
         <script type="text/javascript" src="<?php echo base_url(); ?>vendor/xregexp/xregexp-all.js"></script>  
