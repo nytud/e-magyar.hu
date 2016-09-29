@@ -100,7 +100,8 @@ var Tabulator = function () {
                         .column($(this).parent('td').index() + ':visible')
                         .search(".*\]" + this.value + "$", true, false)
                         .draw();
-            } else {
+            }
+            else {
                 self.instance
                         .column($(this).parent('td').index() + ':visible')
                         .search(this.value)
