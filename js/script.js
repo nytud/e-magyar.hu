@@ -68,7 +68,7 @@ var datatable_options = {
             var checked = $elem.prop('checked');
             parser.highlightSegment(item, checked);
         });
-    }	
+    }
 };
 /******************************************************************************
  * 
@@ -94,21 +94,20 @@ var Tabulator = function () {
                     .draw();
         });
         self.$element.find("thead .filters select").on('change', function () {
-			
-			if($(this).hasClass("posfilter") && this.value) {	
-				self.instance
-                    .column($(this).parent('td').index() + ':visible')
-                    .search(".*\]" + this.value + "$", true, false)
-                    .draw();
-			}
-			else {
-				self.instance
-                    .column($(this).parent('td').index() + ':visible')
-                    .search(this.value)
-                    .draw();
-			}
-		});   
-				
+
+            if ($(this).hasClass("posfilter") && this.value) {
+                self.instance
+                        .column($(this).parent('td').index() + ':visible')
+                        .search(".*\]" + this.value + "$", true, false)
+                        .draw();
+            } else {
+                self.instance
+                        .column($(this).parent('td').index() + ':visible')
+                        .search(this.value)
+                        .draw();
+            }
+        });
+
     };
     this.createSelectFilter = function () {
         var self = this;
@@ -117,32 +116,31 @@ var Tabulator = function () {
             var column = self.instance.column($(this).parent('td').index() + ':visible');
             var options = "";
             options += "<option></option>";
-			var optionlabels = [];
-			if($select.hasClass("posfilter")) {				
-				column.data().each(function(content) {
-					var pattern = /(OTHER|<b>.*?<\/b>)/g;
-					optionlabels.push(pattern.exec(content)[1]);
-				});
-				
-				function getUniqueValues(a) {
-					var temp = {};
-					for (var i = 0; i < a.length; i++)
-						temp[a[i]] = true;
-					return Object.keys(temp);
-				}
-				optionlabels = getUniqueValues(optionlabels).sort();				
-			}
-			else {
-				optionlabels = column.data().unique().sort();
-			}
-			
-			$.each(optionlabels, function (index, category) {
+            var optionlabels = [];
+            if ($select.hasClass("posfilter")) {
+                column.data().each(function (content) {
+                    var pattern = /(OTHER|<b>.*?<\/b>)/g;
+                    optionlabels.push(pattern.exec(content)[1]);
+                });
+
+                function getUniqueValues(a) {
+                    var temp = {};
+                    for (var i = 0; i < a.length; i++)
+                        temp[a[i]] = true;
+                    return Object.keys(temp);
+                }
+                optionlabels = getUniqueValues(optionlabels).sort();
+            } else {
+                optionlabels = column.data().unique().sort();
+            }
+
+            $.each(optionlabels, function (index, category) {
                 var option = category !== null ? category : "";
-				if (option !== "") {					
-					options += '<option>' + option + '</option>';
-				}
-			});
-			          
+                if (option !== "") {
+                    options += '<option>' + option + '</option>';
+                }
+            });
+
             $select.html(options);
         });
     };
@@ -237,14 +235,14 @@ $(document).ready(function () {
     //show target on row hover - vetical view
     $("#parsed").on("mouseenter", "#datatable tr", function () {
         var $row = $(this);
-        var target_id = $row.find('td.target').data('target_id');        
+        var target_id = $row.find('td.target').data('target_id');
         if (!target_id) {
             return false;
         }
         $row.addClass("target_highlight");
         $("#parsed #datatable tr#" + target_id).addClass("target_highlight");
     });
-    $("#parsed").on("mouseleave", "#datatable tr", function () {        
+    $("#parsed").on("mouseleave", "#datatable tr", function () {
         $("#parsed #datatable tr").removeClass("target_highlight");
     });
     //show modal on token click
@@ -434,14 +432,14 @@ $(document).ready(function () {
             parser.getParsed(orientation);
         }
     });
-	
-	var wwidth = $(window).width();
+
+    var wwidth = $(window).width();
     $(window).resize(function () {
-		var _wwidth = $(window).width();
-		if(wwidth !== _wwidth) {
-			wwidth = _wwidth;
-			renderTriangles();
-		}
+        var _wwidth = $(window).width();
+        if (wwidth !== _wwidth) {
+            wwidth = _wwidth;
+            renderTriangles();
+        }
     });
 
 });

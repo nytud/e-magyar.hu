@@ -368,8 +368,8 @@ body > .container-fluid {
             .table > thead > tr > th {
                 border-bottom: none;
             }
-			
-			.table tr td { 
+
+            .table tr td { 
                 ul {
                     list-style-type: none;
                     padding-left: 20px;                    
@@ -407,15 +407,15 @@ body > .container-fluid {
                     display: inline-block;        
                     padding-right: 6px;
                 }
-/*                span.token.preverb_target:before {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    bottom: 0;
-                    right: 6px;                    
-                    border-bottom: 1px solid orange;
-                }*/
+                /*                span.token.preverb_target:before {
+                                    content: '';
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    bottom: 0;
+                                    right: 6px;                    
+                                    border-bottom: 1px solid orange;
+                                }*/
                 span.token.preverb_target {
                     color: red;
                 }
@@ -489,7 +489,7 @@ body > .container-fluid {
                         right: 6px;
                     }
                 }
-                
+
                 tr.ne.ne_highlight {
                     td:nth-child(2) {
                         color: red;
