@@ -34,21 +34,21 @@ $lang['no_input'] = "No text input.";
 $lang['too_long'] = "Input is too long. Maximum * characters allowed.";
 
 $lang['overview'] = "overview";
-$lang['emtoken'] = "szövegtagoló (tokenizáló)";
-$lang['emmorph'] = "morfológiai elemző";
-$lang['emlem'] = "szótövesítő";
-$lang['emtag'] = "egyértelműsítő";
-$lang['emconst'] = "összetevő elemző";
-$lang['emdep'] = "függőségi elemző";
-$lang['emchunk'] = "főnévi csoport felismerő";
-$lang['emner'] = "tulajdonnév felismerő";
-$lang['gate'] = "elemzőlánc";
-$lang['emlam'] = "nyelvmodell";
+$lang['emtoken'] = "tokenizer";
+$lang['emmorph'] = "morphological analyzer";
+$lang['emlem'] = "lemmatizer";
+$lang['emtag'] = "POS tagger";
+$lang['emconst'] = "constituent parser";
+$lang['emdep'] = "dependency parser";
+$lang['emchunk'] = "NP chunker";
+$lang['emner'] = "NER tagger";
+$lang['gate'] = "pipeline";
+$lang['emlam'] = "language model";
 
-$lang['emsad'] = "beszédfelismerő";
-$lang['emdia'] = "beszélőfelismerő";
-$lang['emlid'] = "nyelvfelismerő";
-$lang['speechdb'] = "beszédadatbázis";
+$lang['emsad'] = "speech detector";
+$lang['emdia'] = "speaker diarizer";
+$lang['emlid'] = "language identifier";
+$lang['speechdb'] = "speech database";
 
 $lang['syntax_anal'] = "syntactical analyzer";
 

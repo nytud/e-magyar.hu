@@ -17,11 +17,12 @@ class ParserController extends CI_Controller {
 
     function __construct() {
         parent::__construct();
-        /* $language = $this->session->userdata('language');
-          if (!isset($language)) {
-          $this->session->set_userdata('language', "hu");
-          } */
-        $this->language = "hu"; //$this->session->userdata('language');
+        $language = $this->session->userdata('language');
+        if (!isset($language)) {
+            $this->session->set_userdata('language', "hu");
+        }
+        //$this->language = "hu";
+        $this->language = $this->session->userdata('language');
         $this->lang->load($this->language . "_lang", $this->language);
 
         $this->hunlppath = $this->config->item("hunlp_path");

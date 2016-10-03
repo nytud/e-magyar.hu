@@ -50,12 +50,12 @@ if (empty($menuitems)) {
 <li class="<?= $menuitems['parser']; ?>">
     <a href="<?php echo base_url(); ?>parser"><?= $this->lang->line("menu_parser"); ?></a>
 </li>
-<!--<li class="langswitch-xs visible-xs <?php //echo $this->session->userdata("language") == "hu" ? "active" : ""; ?>">
-    <a href="<?php// echo base_url(); ?>language/hu">hu</a>
+<li class="langswitch-xs visible-xs <?php echo $this->session->userdata("language") == "hu" ? "active" : ""; ?>">
+    <a href="<?php echo base_url(); ?>language/hu">hu</a>
     <a href="#">hu</a>
 </li>
-<li class="langswitch-xs visible-xs <?php //echo $this->session->userdata("language") == "en" ? "active" : ""; ?>">
-    <a href="<?php //echo base_url(); ?>language/en">en</a>
+<li class="langswitch-xs visible-xs <?php echo $this->session->userdata("language") == "en" ? "active" : ""; ?>">
+    <a href="<?php echo base_url(); ?>language/en">en</a>
     <a href="#">en</a>
-</li>-->
+</li>
 <hr class="hidden-xs" />

@@ -9,7 +9,7 @@
         </ul>
     </div>    
     <div id="langswitch" class="navbar-right langswitch lgray">
-        <?php //$this->load->view('_layout/langswitch'); ?>
+        <?php $this->load->view('_layout/langswitch'); ?>
     </div>    
 </nav>
 
@@ -26,6 +26,6 @@
         <span class="icon-bar bottom-bar"></span>
     </button>
     <div class="navbar-header logo-xs visible-xs">
-        <div class="navbar-brand"><img src="<?php echo base_url(); ?>css/images/e-magyar-logo-hu<?php // $this->session->userdata('language'); ?>.png" alt="<?= $this->lang->line('brand'); ?>" class="img-responsive" /></div>
+        <div class="navbar-brand"><img src="<?php echo base_url(); ?>css/images/e-magyar-logo-hu<?php $this->session->userdata('language'); ?>.png" alt="<?= $this->lang->line('brand'); ?>" class="img-responsive" /></div>
     </div>
 </div>
