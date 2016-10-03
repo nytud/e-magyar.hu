@@ -52,10 +52,10 @@ if (empty($menuitems)) {
 </li>
 <li class="langswitch-xs visible-xs <?php echo $this->session->userdata("language") == "hu" ? "active" : ""; ?>">
     <a href="<?php echo base_url(); ?>language/hu">hu</a>
-    <a href="#">hu</a>
+<!--    <a href="#">hu</a>-->
 </li>
 <li class="langswitch-xs visible-xs <?php echo $this->session->userdata("language") == "en" ? "active" : ""; ?>">
     <a href="<?php echo base_url(); ?>language/en">en</a>
-    <a href="#">en</a>
+<!--    <a href="#">en</a>-->
 </li>
 <hr class="hidden-xs" />

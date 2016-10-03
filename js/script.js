@@ -83,7 +83,7 @@ var Tabulator = function () {
     this.init = function (options) {
         var self = this;
         self.$element = $("#datatable");
-        if (language === "hu") {
+        if (site_lang === "hu") {
             options.oLanguage = oLanguage;
         }
         self.instance = self.$element.DataTable(options);
