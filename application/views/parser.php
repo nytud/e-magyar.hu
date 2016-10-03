@@ -34,31 +34,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="checkbox"> 
                             <input type="hidden" name="module[]" value="token" >
                             <input type="checkbox" id="token" class="default" checked disabled><label for="token"><?= $this->lang->line("emtoken"); ?></label>                            
-                            <span class="help" title="azonosítja a mondat- és szóhatárokat a szövegben"><i class="fa fa-question-circle"></i></span>
+                            <span class="help" title="<?= $this->lang->line("emtoken_desc"); ?>"><i class="fa fa-question-circle"></i></span>
                         </div> 
                         <div class="checkbox">
                             <input type="hidden" id="morph_hidden" name="module[]" value="morph" disabled>
                             <input type="checkbox" id="morph"><label for="morph"><?= $this->lang->line("emmorph"); ?></label>                            
-                            <span class="help" title="hozzárendeli a szöveg minden egyes szóalakjához annak összes lehetséges morfológiai, morfoszintaktikai elemzését"><i class="fa fa-question-circle"></i></span>
+                            <span class="help" title="<?= $this->lang->line("emmorph_desc"); ?>"><i class="fa fa-question-circle"></i></span>
                         </div>
                         <div class="checkbox">
                             <input type="hidden" id="pos_hidden" name="module[]" value="pos" disabled>
                             <input type="checkbox" id="pos"><label for="pos"><?= $this->lang->line("emtag"); ?></label>                            
-                            <span class="help" title="meghatározza a tokenek szófaji címkéjét"><i class="fa fa-question-circle"></i></span>
+                            <span class="help" title="<?= $this->lang->line("empos_desc"); ?>"><i class="fa fa-question-circle"></i></span>
                         </div>
                         <div class="checkbox">
                             <input type="checkbox" name="module[]" id="syntax" value="syntax"><label for="syntax"><?= $this->lang->line("syntax_anal"); ?></label>
-                            <span class="help" title="csoportokba rendezi az egy jelentéses egységet alkotó szavakat nyelvtani kategória alapján, illetve hozzárendeli a szavakhoz azok nyelvtani szerepeit (alany, tárgy stb.)"><i class="fa fa-question-circle"></i></span>
+                            <span class="help" title="<?= $this->lang->line("syntaxanal_desc"); ?>"><i class="fa fa-question-circle"></i></span>
                         </div> 
                         <div class="checkbox">
                             <input type="checkbox" name="module[]" id="npchunk" value="npchunk"><label for="npchunk"><?= $this->lang->line("emchunk"); ?></label>
-                            <span class="help" title="azonosítja a szövegben található főnévi csoportokat"><i class="fa fa-question-circle"></i></span>
+                            <span class="help" title="<?= $this->lang->line("emchunk_desc"); ?>"><i class="fa fa-question-circle"></i></span>
                         </div>                                               
                         <div class="checkbox">
                             <input type="checkbox" name="module[]" id="ner" value="ner"><label for="ner"><?= $this->lang->line("emner"); ?></label>
-                            <span class="help" title="azonosítja a szövegben található tulajdonneveket"><i class="fa fa-question-circle"></i></span>
+                            <span class="help" title="<?= $this->lang->line("emner_desc"); ?>"><i class="fa fa-question-circle"></i></span>
                         </div>  
-                        <!--<p><a href="<?php //echo base_url(); ?>modules"><?= $this->lang->line("more_about_modules"); ?></a></p>-->
+                        <!--<p><a href="<?php //echo base_url(); ?>modules"><?php // $this->lang->line("more_about_modules"); ?></a></p>-->
                         <div class="row">
                             <div class="col-xs-12 hidden-xs">
                                 <button type="submit" class="btn btn-primary"><i class="fa fa-gears"></i> <?= $this->lang->line("submit"); ?></button>  

@@ -5,9 +5,9 @@ $lang['brand'] = "Digital Language Processing System";
 //MENU
 $lang['menu_home'] = "Home";
 $lang['menu_intro'] = "Introduction";
-$lang['menu_textparser'] = "Text Parser";
-$lang['menu_speechparser'] = "Speech Parser";
-$lang['menu_parser'] = "Parser";
+$lang['menu_textparser'] = "Text Modules";
+$lang['menu_speechparser'] = "Speech Modules";
+$lang['menu_parser'] = "Text Parser";
 
 //HOME
 $lang['welcome'] = "Welcome to <span>e-magyar.hu</span>!";
@@ -68,6 +68,13 @@ $lang['download_output'] = "Download output";
 
 $lang['dep_tree'] = "Dependency tree";
 $lang['const_tree'] = "Constituent tree";
+
+$lang['emtoken_desc'] = "";
+$lang['emmorph_desc'] = "";
+$lang['emtag_desc'] = "";
+$lang['syntaxanal_desc'] = "";
+$lang['emchunk_desc'] = "";
+$lang['emner_desc'] = "";
 
 //FOOTER
 $lang['partners'] = "Partners";

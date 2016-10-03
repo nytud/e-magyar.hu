@@ -69,6 +69,13 @@ $lang['download_output'] = "Elemzés letöltése";
 $lang['dep_tree'] = "Függőségi szerkezet";
 $lang['const_tree'] = "Összetevős szerkezet";
 
+$lang['emtoken_desc'] = "azonosítja a mondat- és szóhatárokat a szövegben";
+$lang['emmorph_desc'] = "hozzárendeli a szöveg minden egyes szóalakjához annak összes lehetséges morfológiai, morfoszintaktikai elemzését";
+$lang['emtag_desc'] = "meghatározza a tokenek szófaji címkéjét";
+$lang['syntaxanal_desc'] = "csoportokba rendezi az egy jelentéses egységet alkotó szavakat nyelvtani kategória alapján, illetve hozzárendeli a szavakhoz azok nyelvtani szerepeit (alany, tárgy stb.)";
+$lang['emchunk_desc'] = "azonosítja a szövegben található főnévi csoportokat";
+$lang['emner_desc'] = "azonosítja a szövegben található tulajdonneveket";
+
 //FOOTER
 $lang['partners'] = "Partnerek";
 $lang['developers'] = "Fejlesztők";
