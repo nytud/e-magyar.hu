@@ -44,7 +44,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="checkbox">
                             <input type="hidden" id="pos_hidden" name="module[]" value="pos" disabled>
                             <input type="checkbox" id="pos"><label for="pos"><?= $this->lang->line("emtag"); ?></label>                            
-                            <span class="help" title="<?= $this->lang->line("empos_desc"); ?>"><i class="fa fa-question-circle"></i></span>
+                            <span class="help" title="<?= $this->lang->line("emtag_desc"); ?>"><i class="fa fa-question-circle"></i></span>
                         </div>
                         <div class="checkbox">
                             <input type="checkbox" name="module[]" id="syntax" value="syntax"><label for="syntax"><?= $this->lang->line("syntax_anal"); ?></label>
