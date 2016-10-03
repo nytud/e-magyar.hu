@@ -1,7 +1,7 @@
 
 <nav id="navigation" class="navbar navbar-default navbar-static-top hidden-xs" role="navigation">       
     <div class="navbar-header col-xs-12 col-sm-4 col-md-4 col-lg-3">
-        <a class="navbar-brand" href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>css/images/e-magyar-logo-hu<?php // $this->session->userdata('language'); ?>.png" alt="<?= $this->lang->line('brand'); ?>" class="img-responsive" /></a>
+        <a class="navbar-brand" href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>css/images/e-magyar-logo-<?php $this->session->userdata('language'); ?>.png" alt="<?= $this->lang->line('brand'); ?>" class="img-responsive" /></a>
     </div>
     <div class="navbar-nav-wrapper">
         <ul class="nav navbar-nav">
