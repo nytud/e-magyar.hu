@@ -336,15 +336,15 @@ function Parser(_maxchar) {
                 annots += ana.length > 1 ? '<ol>' : '<ul>';
                 lemmas += ana.length > 1 ? '<ol>' : '<ul>';
                 var i = 0;
-                var prev_lemma = "";
+                var prev_lemmas = [];
                 while (i < ana.length && token.anas.length > 0) {
                     var line = ana[i].slice(1, -1);
                     var label = line.split(",")[0].replace(/^ ?ana=/, "");
                     var lemma = line.split(",")[2].replace(/^ ?lemma=/, "");
-                    annots += '<li>' + label + '</li>';
-                    if (prev_lemma !== lemma) {
-                        lemmas += '<li>' + lemma + '</li>';
-                        prev_lemma = lemma;
+                    annots += '<li>' + label + '</li>';                    
+                    if (prev_lemmas.indexOf(lemma) < 0) {
+                        prev_lemmas.push(lemma);
+                        lemmas += '<li>' + lemma + '</li>';                        
                     }
                     i++;
                 }

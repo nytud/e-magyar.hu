@@ -27,7 +27,7 @@ $lang['text_input'] = "Text:";
 $lang['modules'] = "Modules:";
 
 $lang['being_processed'] = "Your input is being processed.";
-$lang['take_a_while'] = "This may take a while (approx. 30-60 sec).";
+$lang['take_a_while'] = "This may take a few seconds.";
 $lang['please_wait'] = "Please wait...";
 
 $lang['no_input'] = "No text input.";

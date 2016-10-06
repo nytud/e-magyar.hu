@@ -27,7 +27,7 @@ $lang['text_input'] = "Szöveg:";
 $lang['modules'] = "Modulok:";
 
 $lang['being_processed'] = "A bemenet feldolgozás alatt.";
-$lang['take_a_while'] = "Ez eltarhat egy kis ideig (kb. 30-60 mp).";
+$lang['take_a_while'] = "Ez eltarhat néhány másodpercig.";
 $lang['please_wait'] = "Kérjük, várj...";
 
 $lang['no_input'] = "Nem adtál meg szöveget.";
