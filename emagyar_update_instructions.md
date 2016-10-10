@@ -2,7 +2,7 @@
 
 Tudnivalók az e-magyar.hu frissítése elõtt:
 
-- A változtatásokat érdemes elõször az oldal **teszt** verzióján letesztelni, ami a `/var/www/infra2test` könyvtárban található. Ez egy teszt deploy az `e-magyar.hu` git repóból (aminek a klónja itt van: `/home/gerocs/e-magyar/hu`).
+- A változtatásokat érdemes elõször az oldal **teszt** verzióján letesztelni, ami a `/var/www/infra2test` könyvtárban található. Ez egy teszt deploy az `e-magyar.hu` git repóból (aminek a klónja itt van: `/home/gerocs/e-magyar.hu`).
 - A teszt verzió által használt `Lang_Hungarian` plugin és a web service (`gate-server`) fájljai a `/home/gerocs/test/hunlp-GATE` könyvtárban vannak. Ez a `hunlp-GATE` git repó klónja.
 - FONTOS: az éles és a teszt verzió egy dologban különbözik: különbözõ portokra küldik a kéréseket, az éles a 8000-re, a teszt a 8080-ra; ezt a beállítást a `gate-server.props` fájl tartalmazza; ennek így kell maradnia, nem kell committolni. Sõt, ezért kell az alábbi `git stash`, hogy a 8080 megmaradjon a tesztverzióban, ott indítsuk a szervert, **így nem lövi ki az éles szervert**.
 
@@ -47,9 +47,10 @@ cd /home/gerocs/hunlp-GATE; git pull
 
 ellenõrizni, hogy a `gate-server.props`-ban a port 8000
 
-`cd /home/gerocs/e-magyar.hu ; git pull`
-
-`cd deploy ; ./deploy.sh /var/www/infra2`
+```
+cd /home/gerocs/e-magyar.hu ; git pull
+cd deploy ; ./deploy.sh /var/www/infra2
+```
 
 ```
 cd /home/gerocs/hunlp-GATE
