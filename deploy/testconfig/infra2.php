@@ -3,7 +3,7 @@
 $config['gate_path'] = "/home/joker/GATE_Developer_8.1";
 $config['hunlp_path'] = "/home/gerocs/hunlp-GATE";
 
-$confog['port'] = 8000;
+$confog['port'] = 8080;
 
 $config['maxchar'] = 6000;
 

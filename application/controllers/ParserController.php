@@ -77,7 +77,7 @@ class ParserController extends CI_Controller {
             //$xml = file_get_contents("http://localhost:8000/process?run=QT,HFST,ML2-PosLem,ML3-PosLem,ML3-Dep,ML3-Cons,huntag3-NP,Preverb,IOB4NP&text=A+kutya+nem+ugat,+hanem+el+is+alszik.");
             //$url = "http://localhost:8000/process?run=" . $config . "&text=" . urlencode($text);
             //hack!
-            $url = "http://localhost:8000/process?run=" . $config . "&text=" . str_replace("%0D%0A", "%0A", urlencode($text));
+            $url = "http://localhost:" . $this->config->item('port') . "/process?run=" . $config . "&text=" . str_replace("%0D%0A", "%0A", urlencode($text));
 
             set_time_limit(300);
             $xml = file_get_contents($url);
@@ -85,13 +85,7 @@ class ParserController extends CI_Controller {
             /* $xml = preg_replace('/(.*)?(<GateDocument .*)/s', '$2', $xml);
               $xml = "<?xml version='1.0' encoding='UTF-8'?>\n" . $xml; */
 
-            file_put_contents($this->temppath . "/" . $tempname . "_output.xml", $xml);
-
-            //FOR TESTING:---------------------------------
-            //$xml = file_get_contents(realpath(APPPATH . "/../samples") . "/post574da1cb1fceb_output.xml");
-            //$xml = file_get_contents(realpath(APPPATH . "/../samples") . "/neolit4.xml");
-            //file_put_contents($this->temppath . "/" . $tempname . "_output.xml", $xml);
-            //---------------------------------------------                        
+            file_put_contents($this->temppath . "/" . $tempname . "_output.xml", $xml);                  
 
             $this->createTSV($this->temppath, $tempname . "_output.xml", $tempname . "_output.tsv");
 
