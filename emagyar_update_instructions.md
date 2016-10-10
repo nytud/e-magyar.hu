@@ -30,15 +30,16 @@ végül tesztelés:
 
 `http://oliphant.nytud.hu/infra2test`
 
+-----
 
-Ha minden OK, akkor ugyanezt elvégezni az éles rendszeren is.
+Ha minden OK, akkor ugyanezt elvégezni az **éles** rendszeren is.
 
 ```
 cd /home/gerocs/hunlp-GATE; git pull
 ./complete.sh
 ```
 
-ellenõrizni, hogy a gate-server.props-ban a port 8000
+ellenõrizni, hogy a `gate-server.props`-ban a port 8000
 
 `cd /var/www/infra2; git pull`
 
