@@ -339,7 +339,7 @@ function Parser(_maxchar) {
                 var prev_lemmas = [];
                 while (i < ana.length && token.anas.length > 0) {
                     var line = ana[i].slice(1, -1);
-                    var label = line.split(",")[0].replace(/^ ?ana=/, "");
+                    var label = line.split(",")[3].replace(/^ ?readable_ana=/, "");
                     var lemma = line.split(",")[2].replace(/^ ?lemma=/, "");
                     annots += '<li>' + label + '</li>';                    
                     if (prev_lemmas.indexOf(lemma) < 0) {
@@ -486,7 +486,7 @@ function Parser(_maxchar) {
                     annot += "";
                 } else {
                     var line = ana[i].slice(1, -1);
-                    var label = line.split(",")[0].replace(/^ ?ana=/, "");
+                    var label = line.split(",")[3].replace(/^ ?readable_ana=/, "");
                     var lemma = line.split(",")[2].replace(/^ ?lemma=/, "");
                     annot += '<li>' + lemma + '<br/>' + label + '</li>';
                 }

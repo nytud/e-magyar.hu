@@ -3,7 +3,7 @@
 $config['gate_path'] = "/home/joker/GATE_Developer_8.1";
 $config['hunlp_path'] = "/home/gerocs/hunlp-GATE";
 
-$confog['port'] = 8080;
+$config['port'] = 8080;
 
 $config['maxchar'] = 6000;
 
@@ -60,7 +60,7 @@ $config['maxchar'] = 6000;
 
 $config['modules'] = array(
   'tokenizer' => array(0, "QT"),
-  'morph_anal' => array(1, "HFSTLemm"),
+  'morph_anal' => array(1, "HFSTLemm,readable-morpho"),
   'pos_tagger' => array(2, "ML3-PosLem-hfstcode"),	
   'dep_parser' => array(3, "ML3-Dep,Preverb"),
   'const_parser' => array(4, "ML3-Cons"),    
