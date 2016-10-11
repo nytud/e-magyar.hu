@@ -23,8 +23,13 @@ azaz csakis a szükséges dolgokban térnek el az `application/config`-ban
 található megfelelõ fájloktól.
 
 `cd deploy ; ./deploy.sh /var/www/infra2test test`
+
+a deployban a `download`, `temp` és `parser_logs` kvtárnak rekurzíve
+a `www-data` useré kell lennie csoportilag!
  
 - Ezután újra kell indítani a web service-t:
+
+ellenõrizni, hogy a `gate-server.props`-ban a port 8080!
 
 ```
 cd /home/gerocs/test/hunlp-GATE
@@ -45,12 +50,15 @@ cd /home/gerocs/hunlp-GATE; git pull
 ./complete.sh
 ```
 
-ellenõrizni, hogy a `gate-server.props`-ban a port 8000
-
 ```
 cd /home/gerocs/e-magyar.hu ; git pull
 cd deploy ; ./deploy.sh /var/www/infra2
 ```
+
+a deployban a `download`, `temp` és `parser_logs` kvtárnak rekurzíve
+a `www-data` useré kell lennie csoportilag!
+ 
+ellenõrizni, hogy a `gate-server.props`-ban a port 8000!
 
 ```
 cd /home/gerocs/hunlp-GATE
