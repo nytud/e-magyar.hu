@@ -103,16 +103,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <a id="download_link" href="" class="btn btn-sm btn-primary pull-right" download><i class="fa fa-download"></i> <?= $this->lang->line("download_output"); ?></a>                        
                         </div> 
                         <div id="orientation_switch" class="pull-right">
-                            <div class="input-group input-group-sm">
-                                <div class="input-group-btn input-group-btn-sm">
-                                    <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?= $this->lang->line("view"); ?> <span class="caret"></span></button>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#" class="active" data-orientation="horizontal"><?= $this->lang->line("horizontal"); ?></a></li>
-                                        <li><a href="#" data-orientation="vertical"><?= $this->lang->line("vertical"); ?></a></li>                                   
-                                    </ul>
-                                </div>
-                                <input type="text" class="form-control" aria-label="..." value="<?= $this->lang->line("horizontal"); ?>" disabled>
-                            </div>                            
+                            <input type="checkbox" id="viewswitch" />                           
                         </div>
                     </div>                    
                 </div>
