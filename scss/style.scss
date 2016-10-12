@@ -194,6 +194,10 @@ body > .container-fluid {
     padding-bottom: 15px;
 }
 
+.bootstrap-switch.bootstrap-switch-focused {
+    box-shadow: none;
+}
+
 #langswitch {
     position: absolute;
     top: 0;
@@ -281,6 +285,7 @@ body > .container-fluid {
             a {
                 width: 100%;
                 color: #eee;
+                border: 1px solid #0592D7;
             }
             a:hover, a:active {
                 color: #fff;

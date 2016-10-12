@@ -70,6 +70,7 @@ var datatable_options = {
         });
     }
 };
+
 /******************************************************************************
  * 
  * TABULATOR
@@ -100,8 +101,7 @@ var Tabulator = function () {
                         .column($(this).parent('td').index() + ':visible')
                         .search(".*\]" + this.value + "$", true, false)
                         .draw();
-            }
-            else {
+            } else {
                 self.instance
                         .column($(this).parent('td').index() + ':visible')
                         .search(this.value)
@@ -150,6 +150,7 @@ var Tabulator = function () {
         self.instance.destroy();
     };
 };
+
 /******************************************************************************
  * 
  * DOCUMENT READY
@@ -312,8 +313,7 @@ $(document).ready(function () {
             part = XRegExp.replace(part, '\*', "(" + XRegExp.replace($token.text(), '[\\(\\)]', '', 'all') + ")");
             constituentString += part;
         });
-        //alert(constituentString);
-
+        
         constituentString = XRegExp.replace(constituentString, '"', '\\"', 'all');
         constituentString = XRegExp.replace(constituentString, "'", "\\'", 'all');
 
@@ -422,16 +422,17 @@ $(document).ready(function () {
             displayError(jqXHR, exception);
         });
     });
-    $("#orientation_switch").on('click', '.dropdown-menu li a', function (e) {
-        e.preventDefault();
-        var $element = $(this);
-        var orientation = $element.data("orientation");
-        if (!$element.hasClass('active')) {
-            $element.closest(".dropdown-menu").find("li a").removeClass("active");
-            $element.addClass("active");
-            $element.closest(".input-group").find("input").val($element.text());
-            parser.getParsed(orientation);
-        }
+    //switch view
+    $("#controls #viewswitch").bootstrapSwitch({
+        state: false,
+        offText: translations.text_view,
+        onText: translations.list_view,
+        offColor: 'primary',
+        onColor: 'info'
+    });
+    $("#controls #viewswitch").on('switchChange.bootstrapSwitch', function (event, state) {
+        var orientation = state === true ? "vertical" : "horizontal";
+        parser.getParsed(orientation);
     });
 
     var wwidth = $(window).width();
@@ -581,14 +582,16 @@ function initDataTable() {
 
 function renderTriangles() {
     var $decor = $("#decor");
-    $decor.find("canvas").remove();
-    var pattern = Trianglify({
-        width: $decor.innerWidth(),
-        height: $decor.innerHeight() * 1.2,
-        cell_size: 200,
-        x_colors: ['#194762', '#005283', '#308BC1', '#579AC1', '#005283', '#003555']
-    });
-    $decor.append(pattern.canvas());
+    if ($decor.length > 0) {
+        $decor.find("canvas").remove();
+        var pattern = Trianglify({
+            width: $decor.innerWidth(),
+            height: $decor.innerHeight() * 1.2,
+            cell_size: 200,
+            x_colors: ['#194762', '#005283', '#308BC1', '#579AC1', '#005283', '#003555']
+        });
+        $decor.append(pattern.canvas());
+    }
 }
 
 function displayError(jqXHR, textStatus, exception) {

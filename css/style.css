@@ -81,6 +81,9 @@ ol {
 body > .container-fluid {
   padding-bottom: 15px; }
 
+.bootstrap-switch.bootstrap-switch-focused {
+  box-shadow: none; }
+
 #langswitch {
   position: absolute;
   top: 0;
@@ -147,7 +150,8 @@ body > .container-fluid {
   margin-left: 10px; }
   #main-content #controls #download a {
     width: 100%;
-    color: #eee; }
+    color: #eee;
+    border: 1px solid #0592D7; }
   #main-content #controls #download a:hover, #main-content #controls #download a:active {
     color: #fff; }
 #main-content #controls #orientation_switch {

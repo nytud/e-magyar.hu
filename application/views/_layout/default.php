@@ -14,7 +14,8 @@
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>vendor/bootstrap/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>vendor/bootstrap/css/jasny-bootstrap.min.css" />  
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>vendor/bootstrap/css/awesome-bootstrap-checkbox.css" />  
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>vendor/bootstrap/css/awesome-bootstrap-checkbox.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>vendor/bootstrap-switch/css/bootstrap-switch.min.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>vendor/jquery-ui/jquery-ui.min.css">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>vendor/datatables/media/css/dataTables.bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>vendor/datatables/extensions/FixedHeader/css/dataTables.fixedHeader.min.css">
@@ -59,6 +60,7 @@
         <!-- JavaScript -->        
         <script type="text/javascript" src="<?php echo base_url(); ?>vendor/bootstrap/js/bootstrap.min.js"></script>        
         <script type="text/javascript" src="<?php echo base_url(); ?>vendor/bootstrap/js/jasny-bootstrap.min.js"></script>  
+        <script type="text/javascript" src="<?php echo base_url(); ?>vendor/bootstrap-switch/js/bootstrap-switch.min.js"></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>vendor/jquery-ui/jquery-ui.min.js"></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>vendor/datatables/media/js/jquery.dataTables.min.js"></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>vendor/datatables/media/js/dataTables.bootstrap.min.js"></script>        
