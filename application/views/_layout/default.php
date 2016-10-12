@@ -77,7 +77,9 @@
                 dep_tree: '<?= $this->lang->line("dep_tree"); ?>',
                 const_tree: '<?= $this->lang->line("const_tree"); ?>',
                 no_input_error: '<?= $this->lang->line("no_input"); ?>',
-                too_long_error: '<?= $this->lang->line("too_long"); ?>'
+                too_long_error: '<?= $this->lang->line("too_long"); ?>',
+                text_view: '<?= $this->lang->line("horizontal"); ?>',
+                list_view: '<?= $this->lang->line("vertical"); ?>'
             };
         </script>
         <script type="text/javascript" src="<?php echo base_url(); ?>js/script.js"></script>
