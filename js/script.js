@@ -222,6 +222,7 @@ $(document).ready(function () {
         }
 
     });
+    
     //show preverbs on token hover
     $("#parsed").on("mouseenter", ".token", function () {
         var $token = $(this);
@@ -234,6 +235,7 @@ $(document).ready(function () {
         var $token = $(this);
         $token.closest(".sentence").find(".token").removeClass("preverb_target");
     });
+    
     //show target on row hover - vetical view
     $("#parsed").on("mouseenter", "#datatable tr", function () {
         var $row = $(this);
@@ -247,22 +249,19 @@ $(document).ready(function () {
     $("#parsed").on("mouseleave", "#datatable tr", function () {
         $("#parsed #datatable tr").removeClass("target_highlight");
     });
+    
     //show modal on token click
     $("#parsed").on("click", ".token", function () {
-        var $token = $(this);
-        var annot = parser.getAnnot($token);
-        if (annot) {
+        var $token = $(this);        
+        var html = parser.getAnnotList($token.data('anas'), "horizontal");
+        if (html) {
             var $modal = $("#annot_modal");
-//            var myRegexp = /^<b>(.*)<\/b>/g;
-//            var match = myRegexp.exec(annot);
-//            if (match[1]) {
-//                annot = annot.replace("<b>" + match[1] + "</b><br>", "");
-//            }
-            $modal.html(annot);
+            $modal.html(html);
             var dialog = $modal.dialog(dialog_options);
             dialog.dialog({title: $token.text()}).dialog('open').unbind('dialogopen');
         }
     });
+    
     //show dependeny model
     $("#parsed").on("click", ".dep_toggle", function () {
         var $sentence = $(this).closest(".sentence");
@@ -362,8 +361,9 @@ $(document).ready(function () {
         }
         $form.find("#form-feedback").text("");
         parser.submitInput($form.attr("action"), $form.serialize());
-        //return false;
+        return false;
     });
+    
     //navbar toggle animation
     $('#navigation-xs').on('show.bs.offcanvas', function (e) {
         var $button = $(".navbar-toggle");
@@ -373,6 +373,7 @@ $(document).ready(function () {
         var $button = $(".navbar-toggle");
         $button.removeClass('active');
     });
+    
     //show segments
     $("#filter").on('change', "input", function () {
         var $checkbox = $(this);
@@ -383,6 +384,7 @@ $(document).ready(function () {
         }
         parser.highlightSegment(item, checked);
     });
+    
     //helper tooltip
     $(".help").tooltip({
         track: true,
@@ -391,6 +393,7 @@ $(document).ready(function () {
     $(".help").click(function () {
         $(this).tooltip('open');
     });
+    
     //switch language
     $("#langswitch, #langswitch-xs").on("click", "a", function (e) {
         e.preventDefault();
@@ -422,6 +425,7 @@ $(document).ready(function () {
             displayError(jqXHR, exception);
         });
     });
+    
     //switch view
     $("#controls #viewswitch").bootstrapSwitch({
         state: false,
@@ -434,7 +438,8 @@ $(document).ready(function () {
         var orientation = state === true ? "vertical" : "horizontal";
         parser.getParsed(orientation);
     });
-
+    
+    //render home page decoration
     var wwidth = $(window).width();
     $(window).resize(function () {
         var _wwidth = $(window).width();
@@ -445,6 +450,7 @@ $(document).ready(function () {
     });
 
 });
+
 //error animation
 function addError($form, msg) {
     $form.find("#form-feedback").text(msg);
@@ -495,7 +501,7 @@ function addDepLabels($modal, sentenceWidth) {
         webkit = true;
     }
 
-//find max curve height
+    //find max curve height
     var maxHeight = 0;
     $.each($modal.find("path"), function (index, curve) {
         var box = $(curve)[0].getBBox();
@@ -560,8 +566,8 @@ function initOutputLayout() {
         items: '.tooltipper',
         content: function (event, ui) {
             var $token = $(this);
-            var annot = parser.getAnnot($token, true);
-            return annot;
+            var html = parser.getAnnotList($token.data('anas'), "horizontal");
+            return html;
         },
         open: function (event, ui) {
             ui.tooltip.css("max-width", "100%");

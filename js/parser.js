@@ -168,9 +168,6 @@ function Parser(_maxchar) {
                     var content = featureSet.string;
                 }
 
-                //compile token annotations and features
-                //var token = '<span id="' + id + '" class="' + type.toLowerCase() + '" data-start="' + startNode + '" data-end="' + endNode + '" data-lemma="' + (featureSet.lemma || "") + '" data-anas="' + (featureSet.anas || "") + '" data-msd="' + (featureSet.msd || "") + '" data-deptype="' + (featureSet.depType || "") + '" data-target_id="' + (featureSet.depTarget || "") + '">' + content + '</span>';
-
                 //cretae token object
                 var token = {
                     'id': id,
@@ -213,18 +210,8 @@ function Parser(_maxchar) {
         $("#filter input[type='checkbox']").prop('checked', false).prop('disabled', false);
 
         $.each(self.sentences, function (index, sentence) {
-            //magyarlanc
-            //var $sentence = $('#parsed .token[data-start=' + (sentence.start + 1) + ']').nextUntil('#parsed .token[data-end=' + sentence.end + ']').addBack().next('.token').addBack();
-            //quntoken
-            //var $sentence = $('#parsed .token[data-start=' + sentence.start + ']').nextUntil('#parsed .token[data-end=' + sentence.end + ']').addBack().next('.token').addBack();
+
             var $first = $parsed.find('.token[data-start=' + sentence.start + ']');
-
-            //hack
-            /*if($first.length === 0) {
-             $first = $parsed.find('.spacetoken[data-start=' + sentence.start + ']');
-             }*/
-            //console.log($first);
-
             var $last = $parsed.find('.token[data-end=' + sentence.end + ']');
             $first.addClass("sentence_start");
             $last.addClass("sentence_end");
@@ -241,7 +228,6 @@ function Parser(_maxchar) {
         if ($.inArray('npchunk', self.modules) > 0) {
             $("#filter #npchunks").parent().show();
             $.each(self.nps, function (index, np) {
-                //var $np = $('#parsed .token[data-start=' + np.start + ']').nextUntil('#parsed .token[data-end=' + np.end + ']').addBack().next('.token').addBack();				
                 var $first = $parsed.find('.token[data-start=' + np.start + ']');
                 var $last = $parsed.find('.token[data-end=' + np.end + ']');
                 $first.addClass("np_start");
@@ -253,7 +239,6 @@ function Parser(_maxchar) {
                 } else {
                     $np = $first.nextUntil($last).andSelf().add($last);
                 }
-                //$np.wrapAll('<span id="' + np.id + '" class="np" />');
                 $np.addClass("np");
             });
         } else {
@@ -263,7 +248,6 @@ function Parser(_maxchar) {
         if ($.inArray('ner', self.modules) > 0) {
             $("#filter #nes").parent().show();
             $.each(self.nes, function (index, ne) {
-                //var $ne = $('#parsed .token[data-start=' + ne.start + ']').nextUntil('#parsed .token[data-end=' + ne.end + ']').addBack().next('.token').addBack();
                 var $first = $parsed.find('.token[data-start=' + ne.start + ']');
                 var $last = $parsed.find('.token[data-end=' + ne.end + ']');
                 $first.addClass("ne_start");
@@ -330,29 +314,31 @@ function Parser(_maxchar) {
             rows += '<td>' + token.content + '</td>';
 
             if ($.inArray('morph', self.modules) > 0) {
-                var lemmas = "";
-                var annots = "";
-                var ana = token.anas.split(";");
-                annots += ana.length > 1 ? '<ol>' : '<ul>';
-                lemmas += ana.length > 1 ? '<ol>' : '<ul>';
-                var i = 0;
-                var prev_lemmas = [];
-                while (i < ana.length && token.anas.length > 0) {
-                    var line = ana[i].slice(1, -1);
-                    var label = line.split(",")[3].replace(/^ ?readable_ana=/, "");
-                    var lemma = line.split(",")[2].replace(/^ ?lemma=/, "");
-                    annots += '<li>' + label + '</li>';                    
-                    if (prev_lemmas.indexOf(lemma) < 0) {
-                        prev_lemmas.push(lemma);
-                        lemmas += '<li>' + lemma + '</li>';                        
-                    }
-                    i++;
-                }
-                annots += ana.length > 1 ? '</ol>' : '</ul>';
-                lemmas += ana.length > 1 ? '</ol>' : '</ul>';
+//                var lemmas = "";
+//                var annots = "";
+//                var ana = token.anas.split(";");
+//                annots += ana.length > 1 ? '<ol>' : '<ul>';
+//                lemmas += ana.length > 1 ? '<ol>' : '<ul>';
+//                var i = 0;
+//                var prev_lemmas = [];
+//                while (i < ana.length && token.anas.length > 0) {
+//                    var line = ana[i].slice(1, -1);
+//                    var label = line.split(",")[3].replace(/^ ?readable_ana=/, "");
+//                    var lemma = line.split(",")[2].replace(/^ ?lemma=/, "");
+//                    annots += '<li>' + label + '</li>';
+//                    if (prev_lemmas.indexOf(lemma) < 0) {
+//                        prev_lemmas.push(lemma);
+//                        lemmas += '<li>' + lemma + '</li>';
+//                    }
+//                    i++;
+//                }
+//                annots += ana.length > 1 ? '</ol>' : '</ul>';
+//                lemmas += ana.length > 1 ? '</ol>' : '</ul>';
 
-                rows += '<td>' + annots + '</td>';
-                rows += '<td>' + lemmas + '</td>';
+                var data = self.getAnnotList(token.anas, "vertical");
+
+                rows += '<td>' + data.annotlist + '</td>';
+                rows += '<td>' + data.lemmalist + '</td>';
 
             }
             if ($.inArray('pos', self.modules) > 0) {
@@ -431,23 +417,57 @@ function Parser(_maxchar) {
         } else {
             $('#parsed .' + obj[0].item).removeClass(obj[0].cls);
         }
-
-//        if (self.orientation === 'horizontal' || segment === 'sentence') {
-//            if (checked === true) {
-//                $("#parsed ." + obj[0].item).addClass(obj[0].cls);
-//            } else {
-//                $("#parsed ." + obj[0].item).removeClass(obj[0].cls);
-//            }
-//        }
-//
-//        if (self.orientation === 'vertical' && segment !== 'sentence') {
-//            if (checked === true) {
-//                $('#parsed .' + obj[0].item).addClass(obj[0].cls);
-//            } else {
-//                $('#parsed .' + obj[0].item).removeClass(obj[0].cls);
-//            }           
-//        }
     };
+
+    function getAnnotList(anas, orientation) {
+        if (anas.length > 0) {
+
+            var ana = anas.split(";");
+
+            var annots = [];
+
+            for (var i = 0; i < ana.length; i++) {
+                var line = ana[i].slice(1, -1);
+                var annot = {};
+                annot.readable_ana = line.split(",")[3].replace(/^ ?readable_ana=/, "");
+                annot.lemma = line.split(",")[2].replace(/^ ?lemma=/, "");
+                annots.push(annot);
+            }
+            
+            console.log(annots);
+
+            if (orientation === "vertical") {
+                var annotlist = "";
+                var lemmalist = "";
+                annotlist += ana.length > 1 ? '<ol>' : '<ul>';
+                lemmalist += ana.length > 1 ? '<ol>' : '<ul>';
+                for (var j = 0; j < annots.length; j++) {
+                    annotlist += '<li>' + annots[j].radable_ana + '</li>';
+                }
+                var prev_lemmas = [];
+                for (var k = 0; k < annots.length; k++) {
+                    if (prev_lemmas.indexOf(annots[k].lemma) < 0) {
+                        prev_lemmas.push(annots[k].lemma);
+                        lemmalist += '<li>' + annots[k].lemma + '</li>';
+                    }
+                }
+                annotlist += ana.length > 1 ? '</ol>' : '</ul>';
+                lemmalist += ana.length > 1 ? '</ol>' : '</ul>';
+                return {
+                    annotlist: annotlist,
+                    lemmalist: lemmalist
+                };
+            } else {
+                var list = "";
+                list += ana.length > 1 ? '<ol>' : '<ul>';
+                for (var j = 0; j < annots.length; j++) {
+                    list += '<li>' + annots[j].lemma + '<br/>' + annots[j].readable_ana + '</li>';
+                }
+                list += ana.length > 1 ? '</ol>' : '</ul>';
+                return {list: list};
+            }
+        }
+    }
 
     //compile morph annot list of tokens    
     this.getAnnot = function ($token, _ellipsis) {
@@ -460,24 +480,6 @@ function Parser(_maxchar) {
         var str = $token.text();
         var annot = "";
         if (anas !== "" && $.inArray('morph', self.modules) > 0) {
-
-            //régi
-//            var labels = anas.split(";");
-//            annot += '<div id="anas"><ol>';
-//            var i = 0;
-//            while (i < labels.length) {
-//                if (ellipsis && i > 3) {
-//                    annot += "";
-//                } else {
-//                    annot += '<li>' + labels[i] + '</li>';
-//                }
-//                i++;
-//            }
-//            annot += '</ol></div>';
-//            if (ellipsis && i > 4) {
-//                annot += '<p>... (' + (labels.length - 4) + ' more)</p>';
-//            }
-
             var ana = anas.split(";");
             annot += '<div id="anas"><ol>';
             var i = 0;
@@ -498,11 +500,6 @@ function Parser(_maxchar) {
             }
 
         }
-
-        //régi
-//        if (msd !== "" && $.inArray('pos', self.modules) > 0) {
-//            annot += '<div id="msd"><b>' + msd + '</b></div>';
-//        }
 
         if (pos !== "" && $.inArray('pos', self.modules) > 0) {
             annot += '<div class="pos"><b>' + pos + '</b></div>';
