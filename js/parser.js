@@ -335,10 +335,10 @@ function Parser(_maxchar) {
 //                annots += ana.length > 1 ? '</ol>' : '</ul>';
 //                lemmas += ana.length > 1 ? '</ol>' : '</ul>';
 
-                var data = self.getAnnotList(token.anas, "vertical");
+                var lists = self.getAnnotList(token.anas, "vertical");
 
-                rows += '<td>' + data.annotlist + '</td>';
-                rows += '<td>' + data.lemmalist + '</td>';
+                rows += '<td>' + (lists.annotlist || "") + '</td>';
+                rows += '<td>' + (lists.lemmalist || "") + '</td>';
 
             }
             if ($.inArray('pos', self.modules) > 0) {
@@ -433,8 +433,6 @@ function Parser(_maxchar) {
                 annot.lemma = line.split(",")[2].replace(/^ ?lemma=/, "");
                 annots.push(annot);
             }
-            
-            console.log(annots);
 
             if (orientation === "vertical") {
                 var annotlist = "";
@@ -442,7 +440,7 @@ function Parser(_maxchar) {
                 annotlist += ana.length > 1 ? '<ol>' : '<ul>';
                 lemmalist += ana.length > 1 ? '<ol>' : '<ul>';
                 for (var j = 0; j < annots.length; j++) {
-                    annotlist += '<li>' + annots[j].radable_ana + '</li>';
+                    annotlist += '<li>' + annots[j].readable_ana + '</li>';
                 }
                 var prev_lemmas = [];
                 for (var k = 0; k < annots.length; k++) {
@@ -461,52 +459,52 @@ function Parser(_maxchar) {
                 var list = "";
                 list += ana.length > 1 ? '<ol>' : '<ul>';
                 for (var j = 0; j < annots.length; j++) {
-                    list += '<li>' + annots[j].lemma + '<br/>' + annots[j].readable_ana + '</li>';
+                    list += '<li><b>' + annots[j].lemma + '</b><br/>' + annots[j].readable_ana + '</li>';
                 }
                 list += ana.length > 1 ? '</ol>' : '</ul>';
-                return {list: list};
+                return list;
             }
         }
     };
 
     //compile morph annot list of tokens    
-    this.getAnnot = function ($token, _ellipsis) {
-        var self = this;
-
-        var ellipsis = (_ellipsis || false);
-        var anas = $token.data("anas");
-        //var msd = $token.data("msd");
-        var pos = $token.data("pos");
-        var str = $token.text();
-        var annot = "";
-        if (anas !== "" && $.inArray('morph', self.modules) > 0) {
-            var ana = anas.split(";");
-            annot += '<div id="anas"><ol>';
-            var i = 0;
-            while (i < ana.length) {
-                if (ellipsis && i > 3) {
-                    annot += "";
-                } else {
-                    var line = ana[i].slice(1, -1);
-                    var label = line.split(",")[3].replace(/^ ?readable_ana=/, "");
-                    var lemma = line.split(",")[2].replace(/^ ?lemma=/, "");
-                    annot += '<li>' + lemma + '<br/>' + label + '</li>';
-                }
-                i++;
-            }
-            annot += '</ol></div>';
-            if (ellipsis && i > 4) {
-                annot += '<p>... (' + (ana.length - 4) + ' more)</p>';
-            }
-
-        }
-
-        if (pos !== "" && $.inArray('pos', self.modules) > 0) {
-            annot += '<div class="pos"><b>' + pos + '</b></div>';
-        }
-
-        return annot;
-    };
+//    this.getAnnot = function ($token, _ellipsis) {
+//        var self = this;
+//
+//        var ellipsis = (_ellipsis || false);
+//        var anas = $token.data("anas");
+//        //var msd = $token.data("msd");
+//        var pos = $token.data("pos");
+//        var str = $token.text();
+//        var annot = "";
+//        if (anas !== "" && $.inArray('morph', self.modules) > 0) {
+//            var ana = anas.split(";");
+//            annot += '<div id="anas"><ol>';
+//            var i = 0;
+//            while (i < ana.length) {
+//                if (ellipsis && i > 3) {
+//                    annot += "";
+//                } else {
+//                    var line = ana[i].slice(1, -1);
+//                    var label = line.split(",")[3].replace(/^ ?readable_ana=/, "");
+//                    var lemma = line.split(",")[2].replace(/^ ?lemma=/, "");
+//                    annot += '<li>' + lemma + '<br/>' + label + '</li>';
+//                }
+//                i++;
+//            }
+//            annot += '</ol></div>';
+//            if (ellipsis && i > 4) {
+//                annot += '<p>... (' + (ana.length - 4) + ' more)</p>';
+//            }
+//
+//        }
+//
+//        if (pos !== "" && $.inArray('pos', self.modules) > 0) {
+//            annot += '<div class="pos"><b>' + pos + '</b></div>';
+//        }
+//
+//        return annot;
+//    };
 
     //build const tree from const property of tokens e.g. (NP(Det)(AdjP)(NP))
     this.getTree = function (constituentString) {
