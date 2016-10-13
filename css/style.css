@@ -65,6 +65,16 @@ body {
   .dataTables_paginate .paginate_button a {
     padding: 6px !important; }
 
+#orientation_switch > span {
+  padding: 0 10px;
+  color: #ddd; }
+  #orientation_switch > span.active {
+    color: #005283; }
+#orientation_switch .bootstrap-switch.bootstrap-switch-focused {
+  box-shadow: none; }
+#orientation_switch .bootstrap-switch .bootstrap-switch-handle-on, #orientation_switch .bootstrap-switch .bootstrap-switch-handle-off {
+  color: transparent !important; }
+
 a, input, button {
   outline: none !important; }
 
@@ -83,9 +93,6 @@ ol {
 
 body > .container-fluid {
   padding-bottom: 15px; }
-
-.bootstrap-switch.bootstrap-switch-focused {
-  box-shadow: none; }
 
 #langswitch {
   position: absolute;

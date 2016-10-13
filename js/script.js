@@ -429,13 +429,14 @@ $(document).ready(function () {
     //switch view
     $("#controls #viewswitch").bootstrapSwitch({
         state: false,
-        offText: translations.text_view,
-        onText: translations.list_view,
         offColor: 'primary',
-        onColor: 'info'
+        onColor: 'info',
+        labelWidth: '10px',
+        handleWidth: '10px'
     });
     $("#controls #viewswitch").on('switchChange.bootstrapSwitch', function (event, state) {
-        var orientation = state === true ? "vertical" : "horizontal";
+        var orientation = state === true ? "vertical" : "horizontal";     
+        $("#orientation_switch > span").toggleClass("active");
         parser.getParsed(orientation);
     });
     
