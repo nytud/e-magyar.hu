@@ -419,7 +419,7 @@ function Parser(_maxchar) {
         }
     };
 
-    function getAnnotList(anas, orientation) {
+    this.getAnnotList = function(anas, orientation) {
         if (anas.length > 0) {
 
             var ana = anas.split(";");
@@ -467,7 +467,7 @@ function Parser(_maxchar) {
                 return {list: list};
             }
         }
-    }
+    };
 
     //compile morph annot list of tokens    
     this.getAnnot = function ($token, _ellipsis) {
