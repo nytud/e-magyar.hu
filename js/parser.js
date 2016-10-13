@@ -419,51 +419,52 @@ function Parser(_maxchar) {
         }
     };
 
-    this.getAnnotList = function(anas, orientation) {
-        if (anas.length > 0) {
+    this.getAnnotList = function (anas, orientation) {
+        if (anas.length < 1) {
+            return false;
+        }
+        
+        var ana = anas.split(";");
 
-            var ana = anas.split(";");
+        var annots = [];
 
-            var annots = [];
+        for (var i = 0; i < ana.length; i++) {
+            var line = ana[i].slice(1, -1);
+            var annot = {};
+            annot.readable_ana = line.split(",")[3].replace(/^ ?readable_ana=/, "");
+            annot.lemma = line.split(",")[2].replace(/^ ?lemma=/, "");
+            annots.push(annot);
+        }
 
-            for (var i = 0; i < ana.length; i++) {
-                var line = ana[i].slice(1, -1);
-                var annot = {};
-                annot.readable_ana = line.split(",")[3].replace(/^ ?readable_ana=/, "");
-                annot.lemma = line.split(",")[2].replace(/^ ?lemma=/, "");
-                annots.push(annot);
+        if (orientation === "vertical") {
+            var annotlist = "";
+            var lemmalist = "";
+            annotlist += ana.length > 1 ? '<ol>' : '<ul>';
+            lemmalist += ana.length > 1 ? '<ol>' : '<ul>';
+            for (var j = 0; j < annots.length; j++) {
+                annotlist += '<li>' + annots[j].readable_ana + '</li>';
             }
-
-            if (orientation === "vertical") {
-                var annotlist = "";
-                var lemmalist = "";
-                annotlist += ana.length > 1 ? '<ol>' : '<ul>';
-                lemmalist += ana.length > 1 ? '<ol>' : '<ul>';
-                for (var j = 0; j < annots.length; j++) {
-                    annotlist += '<li>' + annots[j].readable_ana + '</li>';
+            var prev_lemmas = [];
+            for (var k = 0; k < annots.length; k++) {
+                if (prev_lemmas.indexOf(annots[k].lemma) < 0) {
+                    prev_lemmas.push(annots[k].lemma);
+                    lemmalist += '<li>' + annots[k].lemma + '</li>';
                 }
-                var prev_lemmas = [];
-                for (var k = 0; k < annots.length; k++) {
-                    if (prev_lemmas.indexOf(annots[k].lemma) < 0) {
-                        prev_lemmas.push(annots[k].lemma);
-                        lemmalist += '<li>' + annots[k].lemma + '</li>';
-                    }
-                }
-                annotlist += ana.length > 1 ? '</ol>' : '</ul>';
-                lemmalist += ana.length > 1 ? '</ol>' : '</ul>';
-                return {
-                    annotlist: annotlist,
-                    lemmalist: lemmalist
-                };
-            } else {
-                var list = "";
-                list += ana.length > 1 ? '<ol>' : '<ul>';
-                for (var j = 0; j < annots.length; j++) {
-                    list += '<li><b>' + annots[j].lemma + '</b><br/>' + annots[j].readable_ana + '</li>';
-                }
-                list += ana.length > 1 ? '</ol>' : '</ul>';
-                return list;
             }
+            annotlist += ana.length > 1 ? '</ol>' : '</ul>';
+            lemmalist += ana.length > 1 ? '</ol>' : '</ul>';
+            return {
+                annotlist: annotlist,
+                lemmalist: lemmalist
+            };
+        } else {
+            var list = "";
+            list += ana.length > 1 ? '<ol>' : '<ul>';
+            for (var j = 0; j < annots.length; j++) {
+                list += '<li><b>' + annots[j].lemma + '</b><br/>' + annots[j].readable_ana + '</li>';
+            }
+            list += ana.length > 1 ? '</ol>' : '</ul>';
+            return list;
         }
     };
 

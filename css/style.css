@@ -57,6 +57,9 @@ body {
   max-width: 90vw !important;
   z-index: 999998; }
 
+.ui-widget ul {
+  list-style-type: none; }
+
 .dataTables_paginate {
   text-align: center !important; }
   .dataTables_paginate .paginate_button a {
