@@ -103,7 +103,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <a id="download_link" href="" class="btn btn-sm btn-primary pull-right" download><i class="fa fa-download"></i> <?= $this->lang->line("download_output"); ?></a>                        
                         </div> 
                         <div id="orientation_switch" class="pull-right">
-                            <label class="active" for="viewswitch"><?= $this->lang->line("horizontal"); ?></label><input type="checkbox" id="viewswitch" /><label id="viewswitch"><?= $this->lang->line("vertical"); ?></label>                         
+                            <label class="active" for="viewswitch"><?= $this->lang->line("horizontal"); ?></label><input type="checkbox" id="viewswitch" /><label for="viewswitch"><?= $this->lang->line("vertical"); ?></label>                         
                         </div>
                     </div>                    
                 </div>
