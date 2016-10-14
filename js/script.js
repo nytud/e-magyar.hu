@@ -429,8 +429,8 @@ $(document).ready(function () {
     //switch view
     $("#controls #viewswitch").bootstrapSwitch({
         state: false,
-        offColor: 'primary',
-        onColor: 'info',
+        offColor: '#005283',
+        onColor: '#029FEC',
         labelWidth: '10px',
         handleWidth: '10px'
     });

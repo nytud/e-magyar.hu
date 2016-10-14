@@ -184,7 +184,10 @@ body {
         .bootstrap-switch-handle-on, .bootstrap-switch-handle-off {
             color: transparent !important;
         }   
-    } 
+        .bootstrap-switch-handle-off, .bootstrap-switch-handle-on, .bootstrap-switch-label {
+            line-height: 6px;
+        }
+    }     
 }
 
 a, input, button {
@@ -210,12 +213,12 @@ ul.annotlist, ul.lemmalist, ul.annot_lemma_list {
 ol.annotlist, ol.lemmalist {
     padding-left: 20px;
 }
-ul.annot_lemma_list {
+ol.annot_lemma_list, ul.annot_lemma_list {
     padding-left: 0;
 }
 .annotlist, .annot_lemma_list {
     .morph_label {
-        color: #ddd;
+        color: #bbb;
     }
 }
 

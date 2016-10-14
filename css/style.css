@@ -71,6 +71,8 @@ body {
   box-shadow: none; }
 #orientation_switch .bootstrap-switch .bootstrap-switch-handle-on, #orientation_switch .bootstrap-switch .bootstrap-switch-handle-off {
   color: transparent !important; }
+#orientation_switch .bootstrap-switch .bootstrap-switch-handle-off, #orientation_switch .bootstrap-switch .bootstrap-switch-handle-on, #orientation_switch .bootstrap-switch .bootstrap-switch-label {
+  line-height: 6px; }
 
 a, input, button {
   outline: none !important; }
@@ -91,11 +93,11 @@ ul.annotlist, ul.lemmalist, ul.annot_lemma_list {
 ol.annotlist, ol.lemmalist {
   padding-left: 20px; }
 
-ul.annot_lemma_list {
+ol.annot_lemma_list, ul.annot_lemma_list {
   padding-left: 0; }
 
 .annotlist .morph_label, .annot_lemma_list .morph_label {
-  color: #ddd; }
+  color: #bbb; }
 
 body > .container-fluid {
   padding-bottom: 15px; }
