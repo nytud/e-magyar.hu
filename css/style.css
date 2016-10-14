@@ -62,11 +62,13 @@ body {
   .dataTables_paginate .paginate_button a {
     padding: 6px !important; }
 
-#orientation_switch > span {
+#orientation_switch > label {
   padding: 0 10px;
   color: #ddd; }
-  #orientation_switch > span.active {
+  #orientation_switch > label.active {
     color: #005283; }
+  #orientation_switch > label:hover {
+    cursor: pointer; }
 #orientation_switch .bootstrap-switch.bootstrap-switch-focused {
   box-shadow: none; }
 #orientation_switch .bootstrap-switch .bootstrap-switch-handle-on, #orientation_switch .bootstrap-switch .bootstrap-switch-handle-off {

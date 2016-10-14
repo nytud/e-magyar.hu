@@ -170,12 +170,15 @@ body {
 }
 
 #orientation_switch {
-    & > span {
+    & > label {
         padding: 0 10px;
         color: #ddd;
         &.active {
             color: #005283;
-        }        
+        }   
+        &:hover {
+            cursor: pointer;
+        }
     }
     .bootstrap-switch.bootstrap-switch-focused {
         box-shadow: none;
