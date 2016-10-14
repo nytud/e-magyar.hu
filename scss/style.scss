@@ -213,12 +213,12 @@ ul.annotlist, ul.lemmalist, ul.annot_lemma_list {
 ol.annotlist, ol.lemmalist {
     padding-left: 20px;
 }
-ol.annot_lemma_list, ul.annot_lemma_list {
+ul.annot_lemma_list {
     padding-left: 0;
 }
 .annotlist, .annot_lemma_list {
     .morph_label {
-        color: #bbb;
+        color: #b5b5b5;
     }
 }
 
