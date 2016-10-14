@@ -437,6 +437,7 @@ $(document).ready(function () {
     $("#controls #viewswitch").on('switchChange.bootstrapSwitch', function (event, state) {
         var orientation = state === true ? "vertical" : "horizontal";
         $("#orientation_switch > span").toggleClass("active");
+        $(".tooltipper").tooltip('hide');
         parser.getParsed(orientation);
     });
 
