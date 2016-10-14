@@ -57,9 +57,6 @@ body {
   max-width: 90vw !important;
   z-index: 999998; }
 
-.ui-widget ul {
-  list-style-type: none; }
-
 .dataTables_paginate {
   text-align: center !important; }
   .dataTables_paginate .paginate_button a {
@@ -88,8 +85,17 @@ a, input, button {
 .checkbox input[type="checkbox"]:checked + label::after, .checkbox input[type="radio"]:checked + label::after {
   margin-top: 4px; }
 
-ol {
+ul.annotlist, ul.lemmalist, ul.annot_lemma_list {
+  list-style-type: none; }
+
+ol.annotlist, ol.lemmalist {
   padding-left: 20px; }
+
+ul.annot_lemma_list {
+  padding-left: 0; }
+
+.annotlist .morph_label, .annot_lemma_list .morph_label {
+  color: #ddd; }
 
 body > .container-fluid {
   padding-bottom: 15px; }

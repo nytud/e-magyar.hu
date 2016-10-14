@@ -314,26 +314,6 @@ function Parser(_maxchar) {
             rows += '<td>' + token.content + '</td>';
 
             if ($.inArray('morph', self.modules) > 0) {
-//                var lemmas = "";
-//                var annots = "";
-//                var ana = token.anas.split(";");
-//                annots += ana.length > 1 ? '<ol>' : '<ul>';
-//                lemmas += ana.length > 1 ? '<ol>' : '<ul>';
-//                var i = 0;
-//                var prev_lemmas = [];
-//                while (i < ana.length && token.anas.length > 0) {
-//                    var line = ana[i].slice(1, -1);
-//                    var label = line.split(",")[3].replace(/^ ?readable_ana=/, "");
-//                    var lemma = line.split(",")[2].replace(/^ ?lemma=/, "");
-//                    annots += '<li>' + label + '</li>';
-//                    if (prev_lemmas.indexOf(lemma) < 0) {
-//                        prev_lemmas.push(lemma);
-//                        lemmas += '<li>' + lemma + '</li>';
-//                    }
-//                    i++;
-//                }
-//                annots += ana.length > 1 ? '</ol>' : '</ul>';
-//                lemmas += ana.length > 1 ? '</ol>' : '</ul>';
 
                 var lists = self.getAnnotList(token.anas, "vertical");
 
@@ -439,10 +419,11 @@ function Parser(_maxchar) {
         if (orientation === "vertical") {
             var annotlist = "";
             var lemmalist = "";
-            annotlist += ana.length > 1 ? '<ol>' : '<ul>';
-            lemmalist += ana.length > 1 ? '<ol>' : '<ul>';
+            annotlist += ana.length > 1 ? '<ol class="annotlist">' : '<ul class="annotlist">';
+            lemmalist += ana.length > 1 ? '<ol class="lemmalist">' : '<ul class="lemmalist">';
             for (var j = 0; j < annots.length; j++) {
-                annotlist += '<li>' + annots[j].readable_ana + '</li>';
+                var readable_ana = annots[j].readable_ana.replace(/(\[(.*?)\])/ig, '<span class="morph_label">$1</span>');                
+                annotlist += '<li>' + readable_ana + '</li>';
             }
             var prev_lemmas = [];
             for (var k = 0; k < annots.length; k++) {
@@ -459,53 +440,15 @@ function Parser(_maxchar) {
             };
         } else {
             var list = "";
-            list += ana.length > 1 ? '<ol>' : '<ul>';
+            list += ana.length > 1 ? '<ol class="annot_lemma_list">' : '<ul class="annot_lemma_list">';
             for (var j = 0; j < annots.length; j++) {
-                list += '<li><b>' + annots[j].lemma + '</b><br/>' + annots[j].readable_ana + '</li>';
+                var readable_ana = annots[j].readable_ana.replace(/(\[(.*?)\])/ig, '<span class="morph_label">$1</span>');
+                list += '<li><b>' + annots[j].lemma + '</b><br/>' + readable_ana + '</li>';
             }
             list += ana.length > 1 ? '</ol>' : '</ul>';
             return list;
         }
     };
-
-    //compile morph annot list of tokens    
-//    this.getAnnot = function ($token, _ellipsis) {
-//        var self = this;
-//
-//        var ellipsis = (_ellipsis || false);
-//        var anas = $token.data("anas");
-//        //var msd = $token.data("msd");
-//        var pos = $token.data("pos");
-//        var str = $token.text();
-//        var annot = "";
-//        if (anas !== "" && $.inArray('morph', self.modules) > 0) {
-//            var ana = anas.split(";");
-//            annot += '<div id="anas"><ol>';
-//            var i = 0;
-//            while (i < ana.length) {
-//                if (ellipsis && i > 3) {
-//                    annot += "";
-//                } else {
-//                    var line = ana[i].slice(1, -1);
-//                    var label = line.split(",")[3].replace(/^ ?readable_ana=/, "");
-//                    var lemma = line.split(",")[2].replace(/^ ?lemma=/, "");
-//                    annot += '<li>' + lemma + '<br/>' + label + '</li>';
-//                }
-//                i++;
-//            }
-//            annot += '</ol></div>';
-//            if (ellipsis && i > 4) {
-//                annot += '<p>... (' + (ana.length - 4) + ' more)</p>';
-//            }
-//
-//        }
-//
-//        if (pos !== "" && $.inArray('pos', self.modules) > 0) {
-//            annot += '<div class="pos"><b>' + pos + '</b></div>';
-//        }
-//
-//        return annot;
-//    };
 
     //build const tree from const property of tokens e.g. (NP(Det)(AdjP)(NP))
     this.getTree = function (constituentString) {

@@ -222,7 +222,7 @@ $(document).ready(function () {
         }
 
     });
-    
+
     //show preverbs on token hover
     $("#parsed").on("mouseenter", ".token", function () {
         var $token = $(this);
@@ -235,7 +235,7 @@ $(document).ready(function () {
         var $token = $(this);
         $token.closest(".sentence").find(".token").removeClass("preverb_target");
     });
-    
+
     //show target on row hover - vetical view
     $("#parsed").on("mouseenter", "#datatable tr", function () {
         var $row = $(this);
@@ -249,10 +249,10 @@ $(document).ready(function () {
     $("#parsed").on("mouseleave", "#datatable tr", function () {
         $("#parsed #datatable tr").removeClass("target_highlight");
     });
-    
+
     //show modal on token click
     $("#parsed").on("click", ".token", function () {
-        var $token = $(this);        
+        var $token = $(this);
         var html = parser.getAnnotList($token.data('anas'), "horizontal");
         if (html) {
             var $modal = $("#annot_modal");
@@ -261,7 +261,7 @@ $(document).ready(function () {
             dialog.dialog({title: $token.text()}).dialog('open').unbind('dialogopen');
         }
     });
-    
+
     //show dependeny model
     $("#parsed").on("click", ".dep_toggle", function () {
         var $sentence = $(this).closest(".sentence");
@@ -312,7 +312,7 @@ $(document).ready(function () {
             part = XRegExp.replace(part, '\*', "(" + XRegExp.replace($token.text(), '[\\(\\)]', '', 'all') + ")");
             constituentString += part;
         });
-        
+
         constituentString = XRegExp.replace(constituentString, '"', '\\"', 'all');
         constituentString = XRegExp.replace(constituentString, "'", "\\'", 'all');
 
@@ -363,7 +363,7 @@ $(document).ready(function () {
         parser.submitInput($form.attr("action"), $form.serialize());
         return false;
     });
-    
+
     //navbar toggle animation
     $('#navigation-xs').on('show.bs.offcanvas', function (e) {
         var $button = $(".navbar-toggle");
@@ -373,7 +373,7 @@ $(document).ready(function () {
         var $button = $(".navbar-toggle");
         $button.removeClass('active');
     });
-    
+
     //show segments
     $("#filter").on('change', "input", function () {
         var $checkbox = $(this);
@@ -384,7 +384,7 @@ $(document).ready(function () {
         }
         parser.highlightSegment(item, checked);
     });
-    
+
     //helper tooltip
     $(".help").tooltip({
         track: true,
@@ -393,7 +393,7 @@ $(document).ready(function () {
     $(".help").click(function () {
         $(this).tooltip('open');
     });
-    
+
     //switch language
     $("#langswitch, #langswitch-xs").on("click", "a", function (e) {
         e.preventDefault();
@@ -425,7 +425,7 @@ $(document).ready(function () {
             displayError(jqXHR, exception);
         });
     });
-    
+
     //switch view
     $("#controls #viewswitch").bootstrapSwitch({
         state: false,
@@ -435,18 +435,20 @@ $(document).ready(function () {
         handleWidth: '10px'
     });
     $("#controls #viewswitch").on('switchChange.bootstrapSwitch', function (event, state) {
-        var orientation = state === true ? "vertical" : "horizontal";     
+        var orientation = state === true ? "vertical" : "horizontal";
         $("#orientation_switch > span").toggleClass("active");
         parser.getParsed(orientation);
     });
-    
+
     //render home page decoration
     var wwidth = $(window).width();
     $(window).resize(function () {
         var _wwidth = $(window).width();
         if (wwidth !== _wwidth) {
             wwidth = _wwidth;
-            renderTriangles();
+            if ($("#decor").length > 0) {
+                renderTriangles();
+            }
         }
     });
 
@@ -589,16 +591,14 @@ function initDataTable() {
 
 function renderTriangles() {
     var $decor = $("#decor");
-    if ($decor.length > 0) {
-        $decor.find("canvas").remove();
-        var pattern = Trianglify({
-            width: $decor.innerWidth(),
-            height: $decor.innerHeight() * 1.2,
-            cell_size: 200,
-            x_colors: ['#194762', '#005283', '#308BC1', '#579AC1', '#005283', '#003555']
-        });
-        $decor.append(pattern.canvas());
-    }
+    $decor.find("canvas").remove();
+    var pattern = Trianglify({
+        width: $decor.innerWidth(),
+        height: $decor.innerHeight() * 1.2,
+        cell_size: 200,
+        x_colors: ['#194762', '#005283', '#308BC1', '#579AC1', '#005283', '#003555']
+    });
+    $decor.append(pattern.canvas());
 }
 
 function displayError(jqXHR, textStatus, exception) {

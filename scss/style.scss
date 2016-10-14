@@ -161,11 +161,6 @@ body {
     max-width: 90vw !important;
     z-index: 999998;
 }
-.ui-widget {
-    ul {
-        list-style-type: none;
-    }
-}
 
 .dataTables_paginate {
     text-align: center !important;
@@ -209,8 +204,19 @@ a, input, button {
     margin-top: 4px;
 }
 
-ol {
+ul.annotlist, ul.lemmalist, ul.annot_lemma_list {
+    list-style-type: none;
+}
+ol.annotlist, ol.lemmalist {
     padding-left: 20px;
+}
+ul.annot_lemma_list {
+    padding-left: 0;
+}
+.annotlist, .annot_lemma_list {
+    .morph_label {
+        color: #ddd;
+    }
 }
 
 body > .container-fluid {
