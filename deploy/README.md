@@ -22,7 +22,7 @@ ellenõrizni, hogy a `deploy/testconfig` fájlok megfelelõek,
 azaz csakis a szükséges dolgokban térnek el az `application/config`-ban
 található megfelelõ fájloktól.
 
-`cd deploy ; ./deploy.sh /var/www/infra2test test`
+`cd deploy ; ./deploy.sh test`
 
 a deployban a `download`, `temp` és `parser_logs` kvtárnak rekurzíve
 a `www-data` useré kell lennie csoportilag!
@@ -52,7 +52,7 @@ cd /home/gerocs/hunlp-GATE; git pull
 
 ```
 cd /home/gerocs/e-magyar.hu ; git pull
-cd deploy ; ./deploy.sh /var/www/infra2
+cd deploy ; ./deploy.sh prod
 ```
 
 a deployban a `download`, `temp` és `parser_logs` kvtárnak rekurzíve
