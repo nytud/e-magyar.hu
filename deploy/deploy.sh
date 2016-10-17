@@ -32,8 +32,8 @@ chmod 775 $path/parser_logs
 if [ "$1" == "test" ]; then
 base_url="\"http:\/\/oliphant.nytud.hu\/infra2test\/\";"
 port="8080;"
-sed -i .bak "s/^\$config\['base_url'\] \?= \?.\+$/\$config\['base_url'\] = $base_url/gi" $path/application/config/config.php 
-sed -i .bak "s/^\$config\['port'\] \?= \?.\+$/\$config\['port'\] = $port/gi" $path/application/config/infra2.php
+sed -i.bak "s/^\$config\['base_url'\] \?= \?.\+$/\$config\['base_url'\] = $base_url/gi" $path/application/config/config.php 
+sed -i.bak "s/^\$config\['port'\] \?= \?.\+$/\$config\['port'\] = $port/gi" $path/application/config/infra2.php
 fi
 
 echo "Done." 
