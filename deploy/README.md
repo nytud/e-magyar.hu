@@ -46,9 +46,20 @@ végül tesztelés:
 Ha minden OK, akkor ugyanezt elvégezni az **éles** rendszeren is.
 
 ```
+cd /home/gerocs
+rm -rf hunlp-GATE.bak infra2.bak
+cp -rp hunlp-GATE hunlp-GATE.bak
+cp -rp /var/www/infra2 infra2.bak
+```
+
+```
 cd /home/gerocs/hunlp-GATE; git pull
 ./complete.sh
 ```
+
+itt érdemes `diff`-elni: `cd /home/gerocs ; diff -r hunlp-GATE.bak hunlp-GATE` 
+
+a deploy-hoz szükséges írási jog a `prod` szerinti kvtárba
 
 ```
 cd /home/gerocs/e-magyar.hu ; git pull
@@ -56,9 +67,12 @@ cd deploy ; ./deploy.sh prod
 ```
 
 a deployban a `download`, `temp` és `parser_logs` kvtárnak rekurzíve
-a `www-data` useré kell lennie csoportilag!
+a `www-data` useré kell lennie csoportilag,
+a `parser_logs/logs.txt`-nek szintén, `664` permission-nel.
  
 ellenõrizni, hogy a `gate-server.props`-ban a port 8000!
+
+itt érdemes `diff`-elni: `diff -r /home/gerocs/infra2.bak /var/www/infra2`
 
 ```
 cd /home/gerocs/hunlp-GATE
