@@ -79,7 +79,16 @@ $config['url_suffix'] = '';
 | than english.
 |
 */
-$config['language']	= 'english';
+$config['language']	= 'hungarian';
+
+/* default language abbreviation */
+$config['language_abbr'] = "hu";
+
+/* set available language abbreviations */
+$config['lang_uri_abbr'] = array("en" => "english", "hu" => "hungarian");
+
+/* hide the language segment (use cookie) */
+$config['lang_ignore'] = FALSE;
 
 /*
 |--------------------------------------------------------------------------

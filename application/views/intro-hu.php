@@ -28,10 +28,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <p>
                 Fontos cél volt, hogy az elemző eszközöket nyílt forráskóddal szabadon elérhetővé tegyük a kutatás-fejlesztés és
                 az ipari felhasználás számára. A szakmai felhasználók, fejlesztők mellett a technológiai kérdésekben járatlan kutatók
-                illetve a nagyközönség igényeit két módon is igyekszünk kiszolgálni. Egyrészt a honlapon üzemeltetünk egy <a href="<?php echo base_url(); ?>parser">webszolgáltatást</a>,
+                illetve a nagyközönség igényeit két módon is igyekszünk kiszolgálni. Egyrészt a honlapon üzemeltetünk egy <a href="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/parser">webszolgáltatást</a>,
                 amely az oldalra bemásolt szövegeket elemzett alakban adja vissza. Az összetettebb elemzést igénylők az e-magyar.hu eszközöket
                 beépülő modulként használhatják a nemzetközileg is ismert GATE nyelvelemző rendszerben.
-                (Erről a lehetőségről további részletek <a href="<?php echo base_url(); ?>textmodules/gate">itt</a> találhatók).
+                (Erről a lehetőségről további részletek <a href="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/textmodules/gate">itt</a> találhatók).
             </p>
             <br/>
             <p>
@@ -42,8 +42,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 műhelyekben készült eszközöket. 
             </p>
             <p>
-                Az infrastruktúra két részből áll. Az egyik rész az írott szöveg elemzésével foglalkozik (részletesebben lásd <a href="<?php echo base_url(); ?>textmodules/textoverview">itt</a>),
-                a másik rész a beszédfeldolgozást segíti egy beszédadatbázissal és beszédelemző modulokkal (további információ <a href="<?php echo base_url(); ?>speechmodules/speechoverview">itt</a>). 
+                Az infrastruktúra két részből áll. Az egyik rész az írott szöveg elemzésével foglalkozik (részletesebben lásd <a href="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/textmodules/textoverview">itt</a>),
+                a másik rész a beszédfeldolgozást segíti egy beszédadatbázissal és beszédelemző modulokkal (további információ <a href="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/speechmodules/speechoverview">itt</a>). 
                 A munkálatokat <strong>Váradi Tamás</strong> koordinálta, a szövegfeldolgozó részt <strong>Oravecz Csaba</strong>, a beszédfeldolgozási munkát <strong>Kornai András</strong> irányította.
             </p>
             <br/>

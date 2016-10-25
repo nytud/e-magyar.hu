@@ -8,13 +8,14 @@ class IndexController extends CI_Controller {
 
     function __construct() {
         parent::__construct();
-        $language = $this->session->userdata('language');
-        if (!isset($language)) {
-            $this->session->set_userdata('language', "hu");
-        }
-        //$this->language = "hu";
-        $this->language = $this->session->userdata('language');	
-        $this->lang->load($this->language . "_lang", $this->language);
+//        $language = $this->session->userdata('language');
+//        if (!isset($language)) {
+//            $this->session->set_userdata('language', "hu");
+//        }
+//        //$this->language = "hu";
+//        $this->language = $this->session->userdata('language');	
+//        $this->lang->load($this->language . "_lang", $this->language);
+        $this->lang->load($this->config->item('language_abbr') . "_lang", $this->config->item('language'));
     }
 
     public function index() {
@@ -34,7 +35,7 @@ class IndexController extends CI_Controller {
     }
 
     public function intro() {
-        $data['content'] = "intro-" . $this->language;
+        $data['content'] = "intro-" . $this->config->item('language_abbr');
         $data['menuitems'] = array(
             'home' => "",
             'intro' => "active",
@@ -46,7 +47,7 @@ class IndexController extends CI_Controller {
     }
     
     public function textmodules($module) {
-        $data['content'] = "modules-" . $this->language . "/" . $module;
+        $data['content'] = "modules-" . $this->config->item('language_abbr') . "/" . $module;
         $data['menuitems'] = array(
             'home' => "",
             'intro' => "",
@@ -58,7 +59,7 @@ class IndexController extends CI_Controller {
     }
     
     public function speechmodules($module) {
-        $data['content'] = "modules-" . $this->language . "/" . $module;
+        $data['content'] = "modules-" . $this->config->item('language_abbr') . "/" . $module;
         $data['menuitems'] = array(
             'home' => "",
             'intro' => "",
@@ -86,18 +87,18 @@ class IndexController extends CI_Controller {
         $this->load->view('_layout/default', $data);
     }
 
-    function setSiteLang($lang = "hu") {
-        try {
-            $this->session->set_userdata('language', $lang);
-            if ($this->input->is_ajax_request()) {
-                echo json_encode(array('status' => true));
-                exit();
-            } else {
-                redirect();
-            }
-        } catch (Exception $ex) {
-            die($ex->getMessage());
-        }
-    }
+//    function setSiteLang($lang = "hu") {
+//        try {
+//            $this->session->set_userdata('language', $lang);
+//            if ($this->input->is_ajax_request()) {
+//                echo json_encode(array('status' => true));
+//                exit();
+//            } else {
+//                redirect();
+//            }
+//        } catch (Exception $ex) {
+//            die($ex->getMessage());
+//        }
+//    }
 
 }

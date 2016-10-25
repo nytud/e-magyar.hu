@@ -17,13 +17,14 @@ class ParserController extends CI_Controller {
 
     function __construct() {
         parent::__construct();
-        $language = $this->session->userdata('language');
-        if (!isset($language)) {
-            $this->session->set_userdata('language', "hu");
-        }
-        //$this->language = "hu";
-        $this->language = $this->session->userdata('language');
-        $this->lang->load($this->language . "_lang", $this->language);
+//        $language = $this->session->userdata('language');
+//        if (!isset($language)) {
+//            $this->session->set_userdata('language', "hu");
+//        }
+//        //$this->language = "hu";
+//        $this->language = $this->session->userdata('language');
+//        $this->lang->load($this->language . "_lang", $this->language);
+        $this->lang->load($this->config->item('language_abbr') . "_lang", $this->config->item('language'));
 
         $this->hunlppath = $this->config->item("hunlp_path");
         $this->gatepath = $this->config->item("gate_path");
@@ -63,22 +64,12 @@ class ParserController extends CI_Controller {
             $input = $this->cleanText($text);
 
             file_put_contents($this->temppath . "/" . $tempname . "_orig.txt", htmlspecialchars($input));
-
-            //régi pipeline
-            //$configfile = $this->getConfig($modules);
-            //file_put_contents($this->temppath . "/" . $tempname . "_config.config", $configfile); 
-            //compiles shell command
-            //$xml = shell_exec('cd ' . $this->hunlppath . '; make GATE_HOME=' . $this->gatepath . ' PIPELINE_INPUT=' . $this->temppath . '/' . $tempname . '_orig.txt CONFIG=' . $this->temppath . "/" . $tempname . "_config.config" . ' pipeline');
-            //$xml = shell_exec('cd ' . $this->hunlppath . '; make GATE_HOME=' . $this->gatepath . ' PIPELINE_INPUT=' . $this->temppath . '/' . $tempname . '_orig.txt CONFIG=' . $configfile . ' pipeline');
-            //új pipeline
+            
             $config = $this->getConfig($modules);
 
-            //$xml = file_get_contents("http://localhost:8000/process?run=QT,HFST,ML3-PosLem,ML3-Dep,ML3-Cons,Preverb,IOB4NP&text=A+kutya+nem+ugat,+hanem+el+is+alszik.");
-            //$xml = file_get_contents("http://localhost:8000/process?run=QT,HFST,ML2-PosLem,ML3-PosLem,ML3-Dep,ML3-Cons,huntag3-NP,Preverb,IOB4NP&text=A+kutya+nem+ugat,+hanem+el+is+alszik.");
-            //$url = "http://localhost:8000/process?run=" . $config . "&text=" . urlencode($text);
             //hack!
             $url = "http://localhost:" . $this->config->item('port') . "/process?run=" . $config . "&text=" . str_replace("%0D%0A", "%0A", urlencode($text));
-
+            
             set_time_limit(300);
             $xml = file_get_contents($url);
 

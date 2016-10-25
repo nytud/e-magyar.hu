@@ -21,10 +21,13 @@ echo "Directory $path does not exist."
 exit 1
 fi
 
-rsync -rlptoD .. $path --exclude=deploy --exclude=nbproject
+rsync -rlptoD .. $path --exclude=deploy --exclude=nbproject --exclude=parser_logs 
 # azert nem -a, mert abban -g is lenne (ami group infot is masol),
 # es az alabbi 3 kvtarra meg akarjuk tartani a www-data -t mint group-ot!
 
+mkdir -p $path/download
+mkdir -p $path/temp
+mkdir -p $path/parser_logs
 chmod 775 $path/download
 chmod 775 $path/temp
 chmod 775 $path/parser_logs

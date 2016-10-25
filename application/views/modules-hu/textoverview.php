@@ -19,21 +19,21 @@
             </p>
             <ul>
                 <li>Szövegegység tagoló (tokenizáló) – 
-                    <a href="<?php echo base_url(); ?>textmodules/emtoken">emToken</a></li>
+                    <a href="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/textmodules/emtoken">emToken</a></li>
                 <li>Morfológiai elemző – 
-                    <a href="<?php echo base_url(); ?>textmodules/emmorph">emMorph</a></li>
+                    <a href="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/textmodules/emmorph">emMorph</a></li>
                 <li>Szótövező (lemmatizáló) – 
-                    <a href="<?php echo base_url(); ?>textmodules/emlem">emLem</a></li>
+                    <a href="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/textmodules/emlem">emLem</a></li>
                 <li>Egyértelműsítő (tagger) – 
-                    <a href="<?php echo base_url(); ?>textmodules/emtag">emTag</a></li>
+                    <a href="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/textmodules/emtag">emTag</a></li>
                 <li>Függőségi mondatelemző (dependency parser) – 
-                    <a href="<?php echo base_url(); ?>textmodules/emdep">emDep</a></li>
+                    <a href="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/textmodules/emdep">emDep</a></li>
                 <li>Összetevős mondatelemző (constituent parser) – 
-                    <a href="<?php echo base_url(); ?>textmodules/emcons">emCons</a></li>
+                    <a href="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/textmodules/emcons">emCons</a></li>
                 <li>Részleges mondatelemző (chunker) – 
-                    <a href="<?php echo base_url(); ?>textmodules/emchunk">emChunk</a></li>
+                    <a href="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/textmodules/emchunk">emChunk</a></li>
                 <li>Névkifejezés elemző (named entity recognizer) – 
-                    <a href="<?php echo base_url(); ?>textmodules/emner">emNer</a></li>
+                    <a href="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/textmodules/emner">emNer</a></li>
             </ul>
             <p>
                 Az egyes eszközök működésének leírása az adott eszköznél található.         

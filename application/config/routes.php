@@ -53,11 +53,13 @@ $route['default_controller'] = 'IndexController';
 $route['404_override'] = 'IndexController/error404';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['home'] = 'IndexController/home';
-$route['intro'] = 'IndexController/intro';
-$route['textmodules/(:any)'] = 'IndexController/textmodules/$1';
-$route['speechmodules/(:any)'] = 'IndexController/speechmodules/$1';
-$route['parser'] = 'IndexController/parser';
-$route['parser/(:any)'] = 'ParserController/$1';
+$route['(\w{2})/home'] = 'IndexController/home';
+$route['(\w{2})/intro'] = 'IndexController/intro';
+$route['(\w{2})/textmodules/(:any)'] = 'IndexController/textmodules/$2';
+$route['(\w{2})/speechmodules/(:any)'] = 'IndexController/speechmodules/$2';
+$route['(\w{2})/parser'] = 'IndexController/parser';
+$route['(\w{2})/parser/(:any)'] = 'ParserController/$2';
 
-$route['language/(:any)'] = 'IndexController/setSiteLang/$1';
+$route['(\w{2})/language/(:any)'] = 'IndexController/setSiteLang/$2';
+
+$route['(\w{2})'] = $route['default_controller'];

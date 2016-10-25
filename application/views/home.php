@@ -12,7 +12,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <img src="<?php echo base_url(); ?>css/images/e-magyar-logo-white.png" class="img-responsive" />
             </div>
             <p class="text-center">
-                <a href="<?php echo base_url(); ?>intro" class="btn"><?= $this->lang->line('enter'); ?></a>
+                <a href="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/intro" class="btn"><?= $this->lang->line('enter'); ?></a>
             </p>            
         </div> 
     </div> 

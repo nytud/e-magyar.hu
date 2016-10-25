@@ -27,7 +27,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </p>
                 </div>
             </div>
-            <form id="form" method="post" action="<?php echo base_url(); ?>parser/check" autocomplete="off" novalidate>
+            <form id="form" method="post" action="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/parser/check" autocomplete="off" novalidate>
                 <div class="row">
                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 col-sm-push-8 col-md-push-8 col-lg-push-8">
                         <label class="control-label"><?= $this->lang->line("modules"); ?></label>

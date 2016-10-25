@@ -395,36 +395,36 @@ $(document).ready(function () {
     });
 
     //switch language
-    $("#langswitch, #langswitch-xs").on("click", "a", function (e) {
-        e.preventDefault();
-        var $element = $(this);
-        if ($element.hasClass('active')) {
-            return false;
-        }
-
-        var refresh_url = window.location.href;
-        var href = $element.attr('href');
-        var re = /#(.*)?$/g;
-        var match = re.exec(refresh_url);
-        if (match) {
-            refresh_url = refresh_url.replace(match[0], "");
-        }
-
-        var request = $.ajax({
-            type: "POST",
-            context: this,
-            url: href,
-            dataType: "json"
-        });
-        request.done(function (response) {
-            if (response.status === true) {
-                window.location.href = refresh_url;
-            }
-        });
-        request.fail(function (jqXHR, exception) {
-            displayError(jqXHR, exception);
-        });
-    });
+//    $("#langswitch, #langswitch-xs").on("click", "a", function (e) {
+//        e.preventDefault();
+//        var $element = $(this);
+//        if ($element.hasClass('active')) {
+//            return false;
+//        }
+//
+//        var refresh_url = window.location.href;
+//        var href = $element.attr('href');
+//        var re = /#(.*)?$/g;
+//        var match = re.exec(refresh_url);
+//        if (match) {
+//            refresh_url = refresh_url.replace(match[0], "");
+//        }
+//
+//        var request = $.ajax({
+//            type: "POST",
+//            context: this,
+//            url: href,
+//            dataType: "json"
+//        });
+//        request.done(function (response) {
+//            if (response.status === true) {
+//                window.location.href = refresh_url;
+//            }
+//        });
+//        request.fail(function (jqXHR, exception) {
+//            displayError(jqXHR, exception);
+//        });
+//    });
 
     //switch view
     $("#controls #viewswitch").bootstrapSwitch({
