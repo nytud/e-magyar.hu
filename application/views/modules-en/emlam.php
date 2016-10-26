@@ -29,7 +29,7 @@
                 <table class="table table-striped">
                     <tr>
                         <td>Forrás</td>
-                        <td><a href="<?php echo base_url(); ?>emlam/lemmad_u50_krs_lm5.gz" download>egy deglutenizált (ragok külön tokenek) 5-gram modell</a></td>
+                        <td><a href="<?php echo base_url(); ?>emlam/lemmad_u50_krs.lm5.gz" download>egy deglutenizált (ragok külön tokenek) 5-gram modell</a></td>
                     </tr>
                     <tr>
                         <td>Forrásnyelv</td>
