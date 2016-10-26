@@ -29,7 +29,7 @@
                 <table class="table table-striped">
                     <tr>
                         <td>Forrás</td>
-                        <td><a href="http://sandbox.mokk.bme.hu/~ndavid/tmp/" target="_blank">http://sandbox.mokk.bme.hu/~ndavid/tmp/</a></td>
+                        <td><a href="<?php echo base_url(); ?>emlam/lemmad_u50_krs_lm5.gz" download>egy deglutenizált (ragok külön tokenek) 5-gram modell</a></td>
                     </tr>
                     <tr>
                         <td>Forrásnyelv</td>
@@ -37,7 +37,7 @@
                     </tr>
                     <tr>
                         <td>Input</td>
-                        <td>Soronként egy mondat, a tokenek között space (tokenizálásra használható az emToken). A legjobb változatnál a lemma (esetleg képzőkkel együtt) és a ragok külön tokenek.</td>
+                        <td>Soronként egy mondat, a tokenek között space (tokenizálásra használható az emToken). A fenti változatnál a lemma (esetleg képzőkkel együtt) és a ragok külön tokenek.</td>
                     </tr>
                     <tr>
                         <td>Output</td>
@@ -50,7 +50,7 @@
                             <br/>
                             <span class="code">ngram -order 5 -lm lemmad_u50_krs.lm5.gz -ppl &lt;szöveg file&gt;</span>                            
                             <br/>
-                            Paraméterek: -order 5: 5-grammokat használjon (jelenleg ez a legnagyobb); -lm lemmad_u50_krs.lm5.gz: a "gluténmentes" modellt használja, ami az 50-nél nagyobb előfordulású szavakon tanult; -ppl &lt;szöveg file&gt;: itt a mi szövegfile-unkat adjuk meg
+                            Paraméterek: -order 5: 5-grammokat használjon (jelenleg ez a legnagyobb); -lm lemmad_u50_krs.lm5.gz: a fenti "gluténmentes" modellt használja, ami az 50-nél nagyobb előfordulású szavakon tanult; -ppl &lt;szöveg file&gt;: itt a mi szövegfile-unkat adjuk meg
                         </td>
                     </tr>
                     <tr>
