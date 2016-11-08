@@ -48,6 +48,7 @@ $lang['emlam'] = "nyelvmodell";
 $lang['emsad'] = "beszéddetektáló";
 $lang['emdia'] = "beszélő diarizáló";
 $lang['emlid'] = "nyelvfelismerő";
+$lang['prosotool'] = "beszéddallam elemző";
 $lang['speechdb'] = "beszédarchívum";
 
 $lang['syntax_anal'] = "szintaktikai elemző";
