@@ -16,9 +16,8 @@
                 valamelyikét kapja meg. A második szint a dallamenetek kezdő és végpontjait helyezi el a beszélő egyedi, öt szintre felosztott hangterjedelmében (L2 &lt; L1 &lt; M &lt; H1 &lt; H2). 
                 A harmadik szint az előző szint relatív értékeihez az eredeti, Hertzben mért értékeket társítja hozzá. A negyedik szint a beszéd zöngés ("V") és zöngétlen ("U") szakaszait különíti el.</p>
             <h5>Egy példa a működésre.</h5>
-            <p>A forráskód <i>input</i> könyvtárában elhelyezett példa (<i>sample.wav</i>, <i>sample.TextGrid</i>) egy dialógus archivált hangfelvételét (a felvételen az anonimizálás érdekében csak beszélők intonációja hallható) és a megnyilatkozások beszélőnkénti ("speakerA" és "speakerB")
+            <p>A forráskód <i>input</i> könyvtárában elhelyezett példa (<i>sample.wav</i>, <i>sample.TextGrid</i>) egy dialógus archivált hangfelvételét (a felvételen az anonimizálás érdekében csak a beszélők intonációja hallható) és a megnyilatkozások beszélőnkénti ("speakerA" és "speakerB")
                 intervallumait tartalmazza. A kimenet az <i>output</i> könytárban található <i>sample_pitch.TextGrid</i> fájl, ami 8 (4 + 4) annotációs szinten jegyzi le a megnyilatkozások intonációját. Az átfedő beszédek nem kerülnek elemzésre.</p>
-            
             <h4>Fejlesztőknek</h4>
 
             <div class="table-responsive">
@@ -50,8 +49,8 @@
                             <ul>
                                 <li><i>input</i> : A bemeneti könyvtár elérési útja. Értéktartomány: sztring
                                 <li><i>2</i> : Az F0 görbe stilizálásának felbontása. Magasabb érték erősebb stilizálást (durvább felbontást) eredményez. Értéktartomány: egész szám
-                                <li><i>1.5</i> : Az F0 görbe simítását meghatározó paraméter (valós szám). Alacsonyabb érték erősebb simítást eredményez. Értéktartomány: valós szám
-                                <li><i>dynamic</i> : Az F0 mérések paramétereinek (alsó és felső küszöbének meghatározási módja. Értéktartomány: standard | dynamic
+                                <li><i>1.5</i> : Az F0 görbe simítását meghatározó paraméter. Alacsonyabb érték erősebb simítást eredményez. Értéktartomány: valós szám
+                                <li><i>dynamic</i> : Az F0 mérések paramétereinek (alsó és felső küszöb) meghatározási módja. Értéktartomány: standard | dynamic
                                 <li><i>windows</i> : Futtatási környezet. Megadása könyvtárműveletek miatt szükséges. Értéktartomány: windows | unix
                             </ul>
                         </td>
@@ -62,7 +61,6 @@
                     </tr>                   
                 </table>
             </div>
-
         </article>
     </div>
 </section>
