@@ -20,8 +20,8 @@
             <p>Ha például a modell szerint egy az egymillióban, akkor átlagosan egymillióból egy pont a mi mondatunk lesz. 
                 Generáló üzemmódban a modell szöveget is tud írni, különösebb konzisztenciát elvárni tőle azonban nem érdemes.
             </p>
-
-            <br/>
+            
+            <?php $this->load->view('emlam-demo'); ?>
 
             <h4>Fejlesztőknek</h4>
 

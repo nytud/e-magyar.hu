@@ -59,6 +59,7 @@ $route['(\w{2})/textmodules/(:any)'] = 'IndexController/textmodules/$2';
 $route['(\w{2})/speechmodules/(:any)'] = 'IndexController/speechmodules/$2';
 $route['(\w{2})/parser'] = 'IndexController/parser';
 $route['(\w{2})/parser/(:any)'] = 'ParserController/$2';
+$route['(\w{2})/emlam'] = 'ParserController/emlam';
 
 $route['(\w{2})/language/(:any)'] = 'IndexController/setSiteLang/$2';
 

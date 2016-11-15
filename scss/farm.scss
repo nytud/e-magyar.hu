@@ -71,6 +71,10 @@ body {
     font-size: 16px;    
 }
 
+textarea {
+    resize: vertical;
+}
+
 .ui-widget, .btn {
     font-family: inherit;  
     font-size: 1em;

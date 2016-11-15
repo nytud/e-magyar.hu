@@ -196,8 +196,6 @@ body > .container-fluid {
       min-height: 280px;
       max-height: 600px;
       height: 280px;
-      resize: vertical;
-      /*                    border: 2px solid #333;*/
       animation: none; }
       #main-content #tabs #input #form textarea.error {
         -webkit-animation: borderBlink 0.2s 3;
@@ -366,6 +364,30 @@ body > .container-fluid {
     left: 25px; }
     #deptree_modal table tr td {
       padding: 2px 5px; }
+
+#emlam textarea {
+  min-height: 85px;
+  font-size: inherit; }
+#emlam #suggestions {
+  list-style-type: none;
+  padding-left: 0;
+  min-height: 150px; }
+  #emlam #suggestions li {
+    padding: 10px;
+    min-height: 42px; }
+    #emlam #suggestions li:hover, #emlam #suggestions li:active {
+      cursor: pointer;
+      background-color: #F8F5F0; }
+      #emlam #suggestions li:hover .word, #emlam #suggestions li:active .word {
+        color: #005283; }
+    #emlam #suggestions li.selected {
+      cursor: default; }
+      #emlam #suggestions li.selected .word {
+        color: #005283; }
+    #emlam #suggestions li .prob {
+      float: right; }
+  #emlam #suggestions.clicked li:not(.selected) {
+    color: #aaa; }
 
 #please_wait {
   position: absolute;

@@ -14,6 +14,7 @@ class ParserController extends CI_Controller {
     private $tempurl;
     private $zipurl;
     private $zip_ext;
+    private $emlamurl;
 
     function __construct() {
         parent::__construct();
@@ -37,6 +38,8 @@ class ParserController extends CI_Controller {
         $this->zipurl = base_url() . "download";
         $this->zip_ext = ".zip";
         $this->load->library('zip');
+
+        $this->emlamurl = "http://nessie.ilab.sztaki.hu:8421/hu/lmanswer";
     }
 
     public function check() {
@@ -64,19 +67,19 @@ class ParserController extends CI_Controller {
             $input = $this->cleanText($text);
 
             file_put_contents($this->temppath . "/" . $tempname . "_orig.txt", htmlspecialchars($input));
-            
+
             $config = $this->getConfig($modules);
 
             //hack!
             $url = "http://localhost:" . $this->config->item('port') . "/process?run=" . $config . "&text=" . str_replace("%0D%0A", "%0A", urlencode($text));
-            
+
             set_time_limit(300);
             $xml = file_get_contents($url);
 
             /* $xml = preg_replace('/(.*)?(<GateDocument .*)/s', '$2', $xml);
               $xml = "<?xml version='1.0' encoding='UTF-8'?>\n" . $xml; */
 
-            file_put_contents($this->temppath . "/" . $tempname . "_output.xml", $xml);                  
+            file_put_contents($this->temppath . "/" . $tempname . "_output.xml", $xml);
 
             $this->createTSV($this->temppath, $tempname . "_output.xml", $tempname . "_output.tsv");
 
@@ -322,6 +325,48 @@ class ParserController extends CI_Controller {
             if (file_exists($file)) {
                 unlink($file);
             }
+        }
+    }
+
+    public function emlam() {
+
+        try {
+            
+            $text = $this->input->post("query_text");           
+            if(empty($text)) {
+                throw new Exception("No text received.");
+            }
+            
+            $ch = curl_init();
+
+            curl_setopt($ch, CURLOPT_URL, $this->emlamurl);
+            curl_setopt($ch, CURLOPT_POST, 1);
+            curl_setopt($ch, CURLOPT_FAILONERROR, 1);
+            curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query(array('query_text' => $text))); //   "postvar1=value1&postvar2=value2&postvar3=value3");
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_TIMEOUT, 15);
+
+            $server_output = curl_exec($ch);
+
+            curl_close($ch);
+
+            $doc = new DOMDocument();
+            $doc->loadXML($server_output);
+            $candidates = $doc->getElementsByTagName("LMAnswer")->item(0)->getElementsByTagName("Candidate");
+
+            $results = array();
+
+            foreach ($candidates as $cand) {
+                $word = $cand->getAttribute('word');
+                $prob = $cand->getAttribute('prob');
+                $results[] = array('word' => $word, 'prob' => $prob);
+            }
+
+            echo json_encode(array('status' => true, 'results' => $results), JSON_PRETTY_PRINT);
+            exit();
+        } catch (Exception $ex) {
+            die($ex->getMessage());
         }
     }
 
