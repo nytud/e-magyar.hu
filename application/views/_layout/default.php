@@ -71,7 +71,7 @@
         <script type="text/javascript" src="<?php echo base_url(); ?>vendor/trianglify/dist/trianglify.min.js"></script>
         <script>
             var base_url = '<?php echo base_url(); ?>';
-            var language = '<?php echo $this->session->userdata("language"); ?>';
+            var language = '<?= $this->config->item('language_abbr'); ?>';
             var maxchar = '<?php echo $this->config->item("maxchar"); ?>';
             var translations = {
                 dep_tree: '<?= $this->lang->line("dep_tree"); ?>',

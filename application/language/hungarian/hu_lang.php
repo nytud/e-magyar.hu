@@ -77,6 +77,9 @@ $lang['syntaxanal_desc'] = "csoportokba rendezi az egy jelentéses egységet alk
 $lang['emchunk_desc'] = "azonosítja a szövegben található főnévi csoportokat";
 $lang['emner_desc'] = "azonosítja a szövegben található tulajdonneveket";
 
+$lang['start_typing'] = "Kezdj el írni valamit...";
+$lang['suggestions'] = "Javaslatok:";
+
 //FOOTER
 $lang['partners'] = "Partnerek";
 $lang['developers'] = "Fejlesztők";

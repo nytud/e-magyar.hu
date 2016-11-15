@@ -385,6 +385,50 @@ $(document).ready(function () {
         parser.highlightSegment(item, checked);
     });
 
+    //get emlam alternatives on key-up
+    $("#emlam #textbox").keyup(function () {
+        var $element = $(this);
+        if($element.val() === "") {
+             $("#suggestions").removeClass("clicked").html("");
+        }
+        var last = $element.val().substr($element.val().length - 1);
+        if (last !== " ") {
+            return false;
+        }
+        var lastfourwords = [];
+        var regex = /[^ ]+/g;
+        var words = ($element.val().match(regex) || []);
+        var limit = words.length >= 4 ? 4 : words.length;
+        for (var i = limit; i >= 1; i--) {
+            lastfourwords.push(words[words.length - i].trim());
+        }
+        var text = lastfourwords.join(' ');
+        if (/\S/.test(text)) {
+            parser.getProbs(text);
+        }
+    });
+
+    //select from emlam alternatives
+    $("#emlam #suggestions").on("click", "li", function () {
+        var $elem = $(this);
+        if ($elem.hasClass("selected")) {
+            return false;
+        }
+        $elem.parent().find(".selected").removeClass("selected");
+        $elem.addClass("selected");
+        var word = $elem.find(".word").text();
+        var $textbox = $("#textbox");
+        if ($("#suggestions").hasClass("clicked")) {
+            var n = $textbox.val().lastIndexOf(" ");
+            if (n > -1) {
+                $textbox.val($textbox.val().substring(0, n + 1) + word).focus();
+            }
+        } else {
+            $textbox.val($textbox.val() + word).focus();
+        }
+        $elem.parent().addClass("clicked");
+    });
+
     //helper tooltip
     $(".help").tooltip({
         track: true,

@@ -403,7 +403,7 @@ function Parser(_maxchar) {
         if (anas.length < 1) {
             return false;
         }
-        
+
         var ana = anas.split(";");
 
         var annots = [];
@@ -422,7 +422,7 @@ function Parser(_maxchar) {
             annotlist += ana.length > 1 ? '<ol class="annotlist">' : '<ul class="annotlist">';
             lemmalist += ana.length > 1 ? '<ol class="lemmalist">' : '<ul class="lemmalist">';
             for (var j = 0; j < annots.length; j++) {
-                var readable_ana = annots[j].readable_ana.replace(/(\[(.*?)\])/ig, '<span class="morph_label">$1</span>');                
+                var readable_ana = annots[j].readable_ana.replace(/(\[(.*?)\])/ig, '<span class="morph_label">$1</span>');
                 annotlist += '<li>' + readable_ana + '</li>';
             }
             var prev_lemmas = [];
@@ -628,6 +628,36 @@ function Parser(_maxchar) {
             $("#form").find("button[type='submit']").prop('disabled', false);
             $active_boxes.prop('disabled', false);
             $form.find("textarea").prop('disabled', false);
+            displayError(jqXHR, textStatus, exception);
+        });
+    };
+
+    //get data received from emlam service
+    this.getProbs = function (text) {        
+        var request = $.ajax({
+            type: "POST",
+            context: this,
+            url: base_url + language + "/emlam",
+            data: {query_text: (text || "")},
+            timeout: 120000,
+            dataType: "json",
+            beforeSend: function () {
+
+            }
+        });
+        request.done(function (response) {
+            if (response.status === true) {
+                if (response.results) {
+                    console.log(response.results);
+                    var list = "";
+                    $.each(response.results, function (index, item) {
+                        list += '<li><span class="word">' + item.word + '</span> <span class="prob">(' + item.prob + ')</span>' + '</li>';
+                    });
+                    $("#emlam #suggestions").html(list).removeClass("clicked").find("li").removeClass("selected");
+                }
+            }
+        });
+        request.fail(function (jqXHR, textStatus, exception) {
             displayError(jqXHR, textStatus, exception);
         });
     };

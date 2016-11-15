@@ -77,6 +77,9 @@ $lang['syntaxanal_desc'] = "";
 $lang['emchunk_desc'] = "";
 $lang['emner_desc'] = "";
 
+$lang['start_typing'] = "Start typing something...";
+$lang['suggestions'] = "Suggestions:";
+
 //FOOTER
 $lang['partners'] = "Partners";
 $lang['developers'] = "Developers";
