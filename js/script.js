@@ -388,21 +388,30 @@ $(document).ready(function () {
     //get emlam alternatives on key-up
     $("#emlam #textbox").keyup(function () {
         var $element = $(this);
-        if($element.val() === "") {
-             $("#suggestions").removeClass("clicked").html("");
+        if ($element.val() === "" || $element.val().length > 3000) {
+            $("#suggestions").removeClass("clicked").html("");
+            return false;
         }
-        var last = $element.val().substr($element.val().length - 1);
+        var input = $element.val();
+        var last = input.substr(input.length - 1);
         if (last !== " ") {
             return false;
         }
+        var symbol = "</s>";
+        var n = input.lastIndexOf(symbol);
+        if (n > -1) {
+            input = input.substring(n + symbol.length + 1, input.length);     
+            $("#suggestions").removeClass("clicked").html("");
+        }
+        
         var lastfourwords = [];
         var regex = /[^ ]+/g;
-        var words = ($element.val().match(regex) || []);
+        var words = (input.match(regex) || []);
         var limit = words.length >= 4 ? 4 : words.length;
         for (var i = limit; i >= 1; i--) {
             lastfourwords.push(words[words.length - i].trim());
         }
-        var text = lastfourwords.join(' ');
+        var text = lastfourwords.join(' ');        
         if (/\S/.test(text)) {
             parser.getProbs(text);
         }

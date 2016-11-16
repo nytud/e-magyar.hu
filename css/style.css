@@ -371,7 +371,8 @@ body > .container-fluid {
 #emlam #suggestions {
   list-style-type: none;
   padding-left: 0;
-  min-height: 150px; }
+  min-height: 150px;
+  position: relative; }
   #emlam #suggestions li {
     padding: 10px;
     min-height: 42px; }
@@ -388,6 +389,16 @@ body > .container-fluid {
       float: right; }
   #emlam #suggestions.clicked li:not(.selected) {
     color: #aaa; }
+  #emlam #suggestions.loading:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: url("../loader.gif");
+    background-repeat: no-repeat;
+    background-position: center; }
 
 #please_wait {
   position: absolute;

@@ -642,13 +642,13 @@ function Parser(_maxchar) {
             timeout: 120000,
             dataType: "json",
             beforeSend: function () {
-
+                $("#suggestions").addClass("loading");
             }
         });
         request.done(function (response) {
+            $("#suggestions").removeClass("loading");
             if (response.status === true) {
-                if (response.results) {
-                    console.log(response.results);
+                if (response.results) {                    
                     var list = "";
                     $.each(response.results, function (index, item) {
                         list += '<li><span class="word">' + item.word + '</span> <span class="prob">(' + Math.pow(10, item.prob).toFixed(3) + ')</span>' + '</li>';
