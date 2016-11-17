@@ -411,7 +411,7 @@ $(document).ready(function () {
         for (var i = limit; i >= 1; i--) {
             lastfourwords.push(words[words.length - i].trim());
         }
-        var text = lastfourwords.join(' ');        
+        var text = lastfourwords.join(' ');             
         if (/\S/.test(text)) {
             parser.getProbs(text);
         }
