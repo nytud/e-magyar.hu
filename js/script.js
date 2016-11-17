@@ -397,14 +397,13 @@ $(document).ready(function () {
         if (last !== " ") {
             $("#suggestions").removeClass("clicked").html("");
             return false;
-        }        
+        }
         var symbol = $("<textarea/>").html("&#9166;").text();
         var n = input.lastIndexOf(symbol);
         if (n > -1) {
             input = input.substring(n + symbol.length + 1, input.length);
             $("#suggestions").removeClass("clicked").html("");
         }
-        $element.focus();
 
         var lastfourwords = [];
         var regex = /[^ ]+/g;
@@ -439,7 +438,9 @@ $(document).ready(function () {
         }
         //$elem.parent().addClass("clicked");
         $textbox.trigger('keyup');
-        $textbox.focus();
+        setTimeout(function () {
+            $textbox.focus();
+        }, 100);
     });
 
     //helper tooltip
