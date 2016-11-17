@@ -404,6 +404,7 @@ $(document).ready(function () {
             input = input.substring(n + symbol.length + 1, input.length);
             $("#suggestions").removeClass("clicked").html("");
         }
+        $element.focus();
 
         var lastfourwords = [];
         var regex = /[^ ]+/g;
@@ -431,13 +432,14 @@ $(document).ready(function () {
         if ($("#suggestions").hasClass("clicked")) {
             var n = $textbox.val().lastIndexOf(" ");
             if (n > -1) {
-                $textbox.val($textbox.val().substring(0, n + 1) + word + " ").focus();
+                $textbox.val($textbox.val().substring(0, n + 1) + word + " ");
             }
         } else {
-            $textbox.val($textbox.val() + word + " ").focus();
+            $textbox.val($textbox.val() + word + " ");
         }
         //$elem.parent().addClass("clicked");
         $textbox.trigger('keyup');
+        $textbox.focus();
     });
 
     //helper tooltip
