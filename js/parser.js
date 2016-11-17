@@ -633,7 +633,7 @@ function Parser(_maxchar) {
     };
 
     //get data received from emlam service
-    this.getProbs = function (text) {        
+    this.getProbs = function (text) {
         var request = $.ajax({
             type: "POST",
             context: this,
@@ -648,10 +648,11 @@ function Parser(_maxchar) {
         request.done(function (response) {
             $("#suggestions").removeClass("loading");
             if (response.status === true) {
-                if (response.results) {                    
+                if (response.results) {
                     var list = "";
                     $.each(response.results, function (index, item) {
-                        list += '<li><span class="word">' + item.word + '</span> <span class="prob">(' + Math.pow(10, item.prob).toFixed(3) + ')</span>' + '</li>';
+                        var word = item.word.replace(/<\/s>/g, '&#9166;');
+                        list += '<li><span class="word">' + word + '</span> <span class="prob">(' + Math.pow(10, item.prob).toFixed(3) + ')</span>' + '</li>';
                     });
                     $("#emlam #suggestions").html(list).removeClass("clicked").find("li").removeClass("selected");
                 }

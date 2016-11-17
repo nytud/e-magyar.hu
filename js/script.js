@@ -397,13 +397,13 @@ $(document).ready(function () {
         if (last !== " ") {
             return false;
         }
-        var symbol = "</s>";
+        var symbol = $("<textarea/>").html("&#9166;").text();
         var n = input.lastIndexOf(symbol);
         if (n > -1) {
-            input = input.substring(n + symbol.length + 1, input.length);     
+            input = input.substring(n + symbol.length + 1, input.length);
             $("#suggestions").removeClass("clicked").html("");
         }
-        
+
         var lastfourwords = [];
         var regex = /[^ ]+/g;
         var words = (input.match(regex) || []);
@@ -411,7 +411,7 @@ $(document).ready(function () {
         for (var i = limit; i >= 1; i--) {
             lastfourwords.push(words[words.length - i].trim());
         }
-        var text = lastfourwords.join(' ');             
+        var text = lastfourwords.join(' ');
         if (/\S/.test(text)) {
             parser.getProbs(text);
         }
@@ -430,12 +430,13 @@ $(document).ready(function () {
         if ($("#suggestions").hasClass("clicked")) {
             var n = $textbox.val().lastIndexOf(" ");
             if (n > -1) {
-                $textbox.val($textbox.val().substring(0, n + 1) + word).focus();
+                $textbox.val($textbox.val().substring(0, n + 1) + word + " ").focus();
             }
         } else {
-            $textbox.val($textbox.val() + word).focus();
+            $textbox.val($textbox.val() + word + " ").focus();
         }
-        $elem.parent().addClass("clicked");
+        //$elem.parent().addClass("clicked");
+        $textbox.trigger('keyup');
     });
 
     //helper tooltip
