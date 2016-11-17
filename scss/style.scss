@@ -590,6 +590,7 @@ body > .container-fluid {
 }
 
 #emlam {
+    padding: 20px 0;
     textarea {
         min-height: 85px;
         font-size: inherit;
@@ -602,11 +603,14 @@ body > .container-fluid {
         li {
             padding: 10px;
             min-height: 42px;
+            .word {
+                font-weight: 600;
+            }
             &:hover, &:active {
                 cursor: pointer;
                 background-color: #F8F5F0;
                 .word {
-                    color: #005283;
+                    color: #005283;                    
                 }
             }
             &.selected {

@@ -42,7 +42,7 @@ if (empty($menuitems)) {
         <li class="divider"></li>
         <li><a href="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/speechmodules/emsad"><?= $this->lang->line("emsad"); ?></a></li>
         <li><a href="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/speechmodules/emdia"><?= $this->lang->line("emdia"); ?></a></li>
-        <li><a href="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/speechmodules/emlid"><?= $this->lang->line("emlid"); ?></a></li>               
+        <!--<li><a href="<?php //echo base_url(); ?><?php //echo $this->config->item('language_abbr'); ?>/speechmodules/emlid"><?php //echo $this->lang->line("emlid"); ?></a></li>-->               
         <li><a href="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/speechmodules/prosotool"><?= $this->lang->line("prosotool"); ?></a></li>               
         <li class="divider"></li>
         <li><a href="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/speechmodules/speechdb"><?= $this->lang->line("speechdb"); ?></a></li> 
