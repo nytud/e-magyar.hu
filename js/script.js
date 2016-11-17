@@ -395,8 +395,9 @@ $(document).ready(function () {
         var input = $element.val();
         var last = input.substr(input.length - 1);
         if (last !== " ") {
+            $("#suggestions").removeClass("clicked").html("");
             return false;
-        }
+        }        
         var symbol = $("<textarea/>").html("&#9166;").text();
         var n = input.lastIndexOf(symbol);
         if (n > -1) {
