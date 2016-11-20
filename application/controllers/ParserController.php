@@ -213,11 +213,11 @@ class ParserController extends CI_Controller {
             function getLine($features) {
                 $line = "";
                 if (array_key_exists('string', $features)) {
-                    $line .= $features['string'];
+                    $line .= $features['string'];                    
                 }
                 $line .= "\t";
                 if (array_key_exists('anas', $features)) {
-                    $line .= $features['anas'];
+                    $line .= $features['anas'];                    
                 }
                 $line .= "\t";
                 if (array_key_exists('feature', $features)) {
@@ -225,27 +225,35 @@ class ParserController extends CI_Controller {
                 }
                 $line .= "\t";
                 if (array_key_exists('lemma', $features)) {
-                    $line .= $features['lemma'];
+                    $line .= $features['lemma'];                   
                 }
                 $line .= "\t";
                 if (array_key_exists('hfstana', $features)) {
-                    $line .= $features['hfstana'];
+                    $line .= $features['hfstana'];                    
                 }
                 $line .= "\t";
                 if (array_key_exists('pos', $features)) {
-                    $line .= $features['pos'];
+                    $line .= $features['pos'];                    
+                }
+                $line .= "\t";
+                if (array_key_exists('NP-BIO', $features)) {
+                    $line .= $features['NP-BIO'];                   
                 }
                 $line .= "\t";
                 if (array_key_exists('depType', $features)) {
-                    $line .= $features['depType'];
+                    $line .= $features['depType'];                    
                 }
                 $line .= "\t";
                 if (array_key_exists('depTarget', $features)) {
-                    $line .= $features['depTarget'];
+                    $line .= $features['depTarget'];                    
                 }
                 $line .= "\t";
                 if (array_key_exists('cons', $features)) {
-                    $line .= $features['cons'];
+                    $line .= $features['cons'];                    
+                }
+                $line .= "\t";
+                if (array_key_exists('NER-BIO1', $features)) {
+                    $line .= $features['NER-BIO1'];                    
                 }
                 $line .= "\t";
 
@@ -278,8 +286,8 @@ class ParserController extends CI_Controller {
         }
 
         $handle = fopen($this->temppath . "/" . $tsvname, "a");
-
-        fwrite($handle, "ID\tstring\tanas\tfeature\tlemma\thfstana\tpos\tdepType\tdepTarget\tcons\n");
+        
+        fwrite($handle, "ID\tstring\tanas\tfeature\tlemma\thfstana\tpos\tchunk\tdepType\tdepTarget\tcons\tNER\n");
 
         foreach ($annotations as $annot) {
             $fullline = "";

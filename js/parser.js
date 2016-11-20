@@ -180,9 +180,11 @@ function Parser(_maxchar) {
                     'hfstana': (featureSet.hfstana || ""),
                     //'msd': (featureSet.msd || ""),
                     'pos': (featureSet.pos || ""),
+                    'chunk' : (featureSet["NP-BIO"] || ""),
                     'deptype': (featureSet.depType || ""),
                     'target_id': (featureSet.depTarget || ""),
-                    'cons': (featureSet.cons || "")
+                    'cons': (featureSet.cons || ""),
+                    'ner': (featureSet["NER-BIO1"] || "")
                 };
 
                 tokens.push(token);
@@ -203,7 +205,7 @@ function Parser(_maxchar) {
         $parsed.html("");
 
         $.each(self.tokens, function (index, token) {
-            var tokenElement = '<span id="' + token.id + '" class="' + token.cls + ' tooltipper" data-start="' + token.start + '" data-end="' + token.end + '" data-lemma="' + token.lemma + '" data-anas="' + token.anas + '" data-hfstana="' + token.hfstana + '" data-pos="' + token.pos + '" data-deptype="' + token.deptype + '" data-target_id="' + token.target_id + '" data-cons="' + token.cons + '" title="">' + token.content + '</span>';
+            var tokenElement = '<span id="' + token.id + '" class="' + token.cls + ' tooltipper" data-start="' + token.start + '" data-end="' + token.end + '" data-lemma="' + token.lemma + '" data-anas="' + token.anas + '" data-hfstana="' + token.hfstana + '" data-pos="' + token.pos + '" data-chunk="' + token.chunk + '" data-deptype="' + token.deptype + '" data-target_id="' + token.target_id + '" data-cons="' + token.cons + '" data-ner="' + token.ner + '" title="">' + token.content + '</span>';
             $parsed.append(tokenElement);
         });
 
