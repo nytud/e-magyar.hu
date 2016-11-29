@@ -48,7 +48,7 @@ $lang['emlam'] = "language model";
 $lang['emsad'] = "speech detector";
 $lang['emdia'] = "speaker diarizer";
 $lang['emlid'] = "language identifier";
-$lang['prosotool'] = "prosody parser";
+$lang['empros'] = "prosody parser";
 $lang['speechdb'] = "speech database";
 
 $lang['syntax_anal'] = "syntactical analyzer";

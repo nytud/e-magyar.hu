@@ -43,6 +43,7 @@
                         <li>Schreiner József</li>
                         <li>Siklósi Borbála</li>
                         <li>Simon Eszter</li>
+                        <li>Szekrényes István</li>
                         <li>Takács Dávid</li>
                         <li>Váradi Tamás</li>
                         <li>Vincze Veronika</li>

@@ -1,7 +1,7 @@
 <section class="fullpanel">
     <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 col-sm-offset-1 col-md-offset-2 col-lg-offset-3 text-justify">
         <article>
-            <h3><span>ProsoTool</span> - beszéddallam elemző</h3>
+            <h3><span>emPros</span> - beszéddallam elemző</h3>
             <h4>Az eszközről</h4>
             <h5>Mire jó? Mit csinál?</h5>
             <p>A program az élőnyelvi kommunikációban előforduló verbális megnyilatkozások intonációjának elemzésére és lejegyzésére szolgál. Az archivált hangfelvételekből kinyerhető akusztikai paraméterek beszélőnkénti feldolgozása
