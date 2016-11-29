@@ -114,8 +114,8 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Licensz</td>
-                            <td>LGPL-3.0</td>
+                            <td>Licenc</td>
+                            <td>LGPL v3.0</td>
                         </tr>
                         <tr>
                             <td>További információk</td>

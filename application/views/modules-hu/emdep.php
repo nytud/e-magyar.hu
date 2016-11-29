@@ -165,7 +165,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Licensz</td>
+                            <td>Licenc</td>
                             <td>Az adatbázisra a Creative Commons Attribution-ShareAlike 4.0 (CC-BY-SA) licenc vonatkozik. Az adatbázis elsõdleges forrásának konverzióját végzõ kód licence GNU General Public License (GPL v3).</td>
                         </tr>                       
                     </tbody>

@@ -106,7 +106,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Licensz</td>
+                            <td>Licenc</td>
                             <td>GNU Lesser General Public License v3.0</td>
                         </tr>                       
                     </tbody>

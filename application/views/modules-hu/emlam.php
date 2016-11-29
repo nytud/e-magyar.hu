@@ -54,7 +54,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>Licensz</td>
+                        <td>Licenc</td>
                         <td>nyílt CC BY</td>
                     </tr>                   
                 </table>

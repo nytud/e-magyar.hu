@@ -6,12 +6,16 @@
 
             <h4>Az eszközről</h4>
             <h5>Mire jó? Mit csinál?</h5>
-            <p>Az emChunk modul kétféle kimenetet produkál: i) azonosítja a szövegben a maximális NP-ket, illetve ii) azonosít a szövegben minden típusú frázist.</p>
-            <h5>Mi a bemenet?</h5>
+            
+<!--	<p>Az emChunk modul kétféle kimenetet produkál: i) azonosítja a szövegben a maximális NP-ket, illetve ii) azonosít a szövegben minden típusú frázist.</p>
+--> 
+            <p>Az emChunk modul a szövegben a maximális NP-ket azonosítja, vagyis olyan NP-ket, melyek nem részei egy magasabb
+                szintű NP-nek sem.</p>    
+        <h5>Mi a bemenet?</h5>
             <p>Az elemzőlánc előző szintjein feldolgozott magyar nyelvű szövegekkel dolgozik, amelyek már i) szavakra és mondatokra vannak bontva, 
                 ii) a szavakhoz hozzá van rendelve a teljes morfológiai elemzésük. A chunker modul hatékony működéséhez szükségesek ezek az információk.</p>
             <h5>Mi a kimenet?</h5>
-            <p>A modul a szavakra és mondatokra bontott szövegben minden tokenhez hozzárendel egy címkét, ami a kétféle módnak megfelelően kétféle
+<!--            <p>A modul a szavakra és mondatokra bontott szövegben minden tokenhez hozzárendel egy címkét, ami a kétféle módnak megfelelően kétféle
                 lehet.
                 <br/>Az első esetben a címke azt jelöli, hogy az adott szó i) eleme-e egy maximális főnévi frázisnak, ha igen, 
                 akkor ii) egy- vagy többelemű-e, ha ez utóbbi, akkor iii) a frázis kezdő, közbülső vagy záró eleme-e. 
@@ -24,6 +28,14 @@
                 <br/>A példamondatban két maximális NP-t és két O-val jelölt elemet találunk, ez utóbbiak nem NP-k. A 'B' jelöli a frázisok 
                 kezdetét, az 'E' a frázisok végét, az 'I' pedig azt, hogy az adott token a frázis közbülső eleme.
             <p>
+-->
+            <p>A modul a szavakra és mondatokra bontott szövegben minden tokenhez hozzárendel egy címkét, amely azt jelöli, hogy az adott szó i) eleme-e egy maximális főnévi frázisnak, ha igen, 
+                akkor ii) egy- vagy többelemű-e, ha ez utóbbi, akkor iii) a frázis kezdő, közbülső vagy záró eleme-e. 
+                A kimenetben az előző szintek elemzése is megmarad, és a chunker modul is hozzáteszi a saját címkéit.</p>
+            <h5>Egy példa a működésre.</h5>
+                A példamondatban két maximális NP-t és két O-val jelölt elemet találunk, ez utóbbiak nem NP-k. A 'B' jelöli a frázisok 
+                kezdetét, az 'E' a frázisok végét, az 'I' pedig azt, hogy az adott token a frázis közbülső eleme.
+
             <p><i>A szállásunk egy Balaton melletti kis üdülőfaluban, Zamárdiban volt.</i></p>
             <div class="table-responsive">
                 <table class="table">
@@ -74,6 +86,7 @@
                 </table>
             </div>
 
+<!--
             <p>A második működési mód során minden típusú frázist azonosítunk a mondatban.
                 <br/>A példamondatban egy kételemű NP-t, egy egyelemű NP-t és két egyelemű ADVP-t (határozói frázist) találunk:
             <p>
@@ -119,6 +132,7 @@
                 </table>
             </div>
 
+-->
             <br/>
 
             <h4>Fejlesztőknek</h4>
@@ -146,7 +160,7 @@
                         <td>Lásd a README-ben: <a href="https://github.com/ppke-nlpg/HunTag3" target="_blank">https://github.com/ppke-nlpg/HunTag3</a></td>
                     </tr>
                     <tr>
-                        <td>Licensz</td>
+                        <td>Licenc</td>
                         <td>GNU Lesser General Public License v3.0
                         </td>
                     </tr>               

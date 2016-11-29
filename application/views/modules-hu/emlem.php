@@ -99,7 +99,7 @@
                         <td><span class="code">java -jar hfst-wrapper.jar</span></td>
                     </tr>
                     <tr>
-                        <td>Licensz</td>
+                        <td>Licenc</td>
                         <td>GNU Lesser General Public License (LGPL v3)</td>
                     </tr>
                     <tr>

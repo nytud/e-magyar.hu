@@ -56,7 +56,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>Licensz</td>
+                        <td>Licenc</td>
                         <td>GPL</td>
                     </tr>                   
                 </table>

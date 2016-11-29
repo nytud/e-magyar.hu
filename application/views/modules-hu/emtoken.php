@@ -56,7 +56,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Licensz</td>
+                            <td>Licenc</td>
                             <td>GNU GPLv3</td>
                         </tr>
                     </tbody>
