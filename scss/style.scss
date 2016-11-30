@@ -367,8 +367,23 @@ body > .container-fluid {
                     left: 50%;
                     top: 50%;
                     margin-left: -32px;   
-                    margin-top: -32px;
+                    margin-top: -48px;
                     z-index: 999999;                    
+                }
+                #please_wait {
+                    position: absolute;
+                    bottom: 74px;
+                    left:15px;
+                    right:15px;
+                    height: 60px;    
+                    @include border-radius(0 0 4px 4px);    
+                    p {       
+                        margin: 6px 0;        
+                        text-align: center;
+                        font-size: 10px;
+                        @include animation(flash 2s infinite ease-in-out);
+                        color: #000;
+                    }
                 }
                 .help {
                     float: right;
@@ -642,22 +657,6 @@ body > .container-fluid {
                 background-position: center;
             }
         }
-    }
-}
-
-#please_wait {
-    position: absolute;
-    bottom: 34px;
-    left:15px;
-    right:15px;
-    height: 60px;    
-    @include border-radius(0 0 4px 4px);    
-    p {       
-        margin: 6px 0;        
-        text-align: center;
-        font-size: 10px;
-        @include animation(flash 2s infinite ease-in-out);
-        color: #000;
     }
 }
 

@@ -212,8 +212,28 @@ body > .container-fluid {
       left: 50%;
       top: 50%;
       margin-left: -32px;
-      margin-top: -32px;
+      margin-top: -48px;
       z-index: 999999; }
+    #main-content #tabs #input #form #please_wait {
+      position: absolute;
+      bottom: 74px;
+      left: 15px;
+      right: 15px;
+      height: 60px;
+      -webkit-border-radius: 0 0 4px 4px;
+      border-radius: 0 0 4px 4px;
+      background-clip: padding-box;
+      /* stops bg color from leaking outside the border: */ }
+      #main-content #tabs #input #form #please_wait p {
+        margin: 6px 0;
+        text-align: center;
+        font-size: 10px;
+        -webkit-animation: flash 2s infinite ease-in-out;
+        -moz-animation: flash 2s infinite ease-in-out;
+        -ms-animation: flash 2s infinite ease-in-out;
+        -o-animation: flash 2s infinite ease-in-out;
+        animation: flash 2s infinite ease-in-out;
+        color: #000; }
     #main-content #tabs #input #form .help {
       float: right;
       font-size: 1.2em;
@@ -404,27 +424,6 @@ body > .container-fluid {
       background-image: url("../loader.gif");
       background-repeat: no-repeat;
       background-position: center; }
-
-#please_wait {
-  position: absolute;
-  bottom: 34px;
-  left: 15px;
-  right: 15px;
-  height: 60px;
-  -webkit-border-radius: 0 0 4px 4px;
-  border-radius: 0 0 4px 4px;
-  background-clip: padding-box;
-  /* stops bg color from leaking outside the border: */ }
-  #please_wait p {
-    margin: 6px 0;
-    text-align: center;
-    font-size: 10px;
-    -webkit-animation: flash 2s infinite ease-in-out;
-    -moz-animation: flash 2s infinite ease-in-out;
-    -ms-animation: flash 2s infinite ease-in-out;
-    -o-animation: flash 2s infinite ease-in-out;
-    animation: flash 2s infinite ease-in-out;
-    color: #000; }
 
 .loader {
   position: fixed;
