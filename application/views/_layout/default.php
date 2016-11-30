@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>e-magyar.hu</title>
-        <meta name="keywords" content="">
-        <meta name="description" content="">
+        <meta name="keywords" content="NLP, nyelvtechnológia">
+        <meta name="description" content="e-magyar digitális nyelvfeldolgozó rendszer">
         <meta name="author" content="MTA Nyelvtudományi Intézet">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -42,7 +42,7 @@
         <!-- Add your site or application content here -->
         <div class="container-fluid">
 
-            <!--<div class="loader"></div>-->      
+            <div class="loader"></div>      
 
             <!--NAVIGATION-->
             <?php $this->load->view('_layout/navigation'); ?>
@@ -81,9 +81,14 @@
                 text_view: '<?= $this->lang->line("horizontal"); ?>',
                 list_view: '<?= $this->lang->line("vertical"); ?>'
             };
-        </script>
+        </script>        
+        <script type="text/javascript" src="<?php echo base_url(); ?>js/options.js"></script>
+        <script type="text/javascript" src="<?php echo base_url(); ?>js/tabulator.js"></script>
+        <script type="text/javascript" src="<?php echo base_url(); ?>js/deptree-builder.js"></script>
+        <script type="text/javascript" src="<?php echo base_url(); ?>js/consttree-builder.js"></script>
+        <script type="text/javascript" src="<?php echo base_url(); ?>js/parser.js"></script>  
         <script type="text/javascript" src="<?php echo base_url(); ?>js/script.js"></script>
-        <script type="text/javascript" src="<?php echo base_url(); ?>js/parser.js"></script>        
+
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

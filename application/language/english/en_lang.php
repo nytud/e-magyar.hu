@@ -54,6 +54,7 @@ $lang['speechdb'] = "speech database";
 $lang['syntax_anal'] = "syntactical analyzer";
 
 $lang['more_about_modules'] = "more about the modules...";
+$lang['try_emlam'] = "Check out the <a href='textmodules/emlam#emlam'>Language Model (emLam)</a> tool!";
 $lang['placeholder'] = "Type or copy&paste the text here you want to parse.";
 $lang['submit'] = "Submit";
 

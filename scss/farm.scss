@@ -390,6 +390,15 @@ textarea {
     textarea {
         border: 1px solid #4a4a4a;
     }    
+    a {
+        color: #0091D7;
+        &:hover, &:active {
+            color: #0091D7;
+        }
+        &:visited {
+            color: #005283;
+        }
+    }
 }
 
 article {

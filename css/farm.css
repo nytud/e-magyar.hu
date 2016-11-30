@@ -284,6 +284,12 @@ textarea {
 
 #form textarea {
   border: 1px solid #4a4a4a; }
+#form a {
+  color: #0091D7; }
+  #form a:hover, #form a:active {
+    color: #0091D7; }
+  #form a:visited {
+    color: #005283; }
 
 article a {
   color: #0091D7; }

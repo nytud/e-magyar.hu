@@ -53,7 +53,8 @@ $lang['speechdb'] = "beszédarchívum";
 
 $lang['syntax_anal'] = "szintaktikai elemző";
 
-$lang['more_about_modules'] = "még a modulokról...";
+$lang['more_about_modules'] = "további információ a modulokról...";
+$lang['try_emlam'] = "Próbáld ki a <a href='textmodules/emlam#emlam'>Nyelvmodell (emLam)</a> eszközt is!";
 $lang['placeholder'] = "Gépeld be vagy másold ide a szöveget, amit szeretnél elemezni.";
 $lang['submit'] = "Elküld";
 

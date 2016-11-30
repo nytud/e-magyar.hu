@@ -58,7 +58,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <input type="checkbox" name="module[]" id="ner" value="ner"><label for="ner"><?= $this->lang->line("emner"); ?></label>
                             <span class="help" title="<?= $this->lang->line("emner_desc"); ?>"><i class="fa fa-question-circle"></i></span>
                         </div>  
-                        <!--<p><a href="<?php //echo base_url(); ?>modules"><?php // $this->lang->line("more_about_modules"); ?></a></p>-->
+                        <p><a href="<?php echo base_url(); ?>textmodules/textoverview"><?php echo $this->lang->line("more_about_modules"); ?></a></p>
                         <div class="row">
                             <div class="col-xs-12 hidden-xs">
                                 <button type="submit" class="btn btn-primary"><i class="fa fa-gears"></i> <?= $this->lang->line("submit"); ?></button>  
@@ -76,9 +76,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="visible-xs">
                             <button type="submit" class="btn btn-primary"><i class="fa fa-gears"></i> <?= $this->lang->line("submit"); ?></button>  
                         </div>  
+                        <p><?= $this->lang->line("try_emlam"); ?></p>
                     </div>                     
                 </div>                               
-            </form>           
+            </form>   
+            
         </div>
 
         <div id="output" class="fullpage">
