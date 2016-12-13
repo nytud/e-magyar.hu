@@ -102,9 +102,6 @@ function Parser(_maxchar) {
             //set url of download link
             $("#download_link").attr("href", self.zipurl);
 
-            //in script.js
-            initOutputLayout();
-
         } catch (err) {
             $spinner.addClass("hidden");
             var $form = $("#form");
@@ -314,10 +311,9 @@ function Parser(_maxchar) {
                 var lists = self.getAnnotList(token.anas, "vertical");
                 rows += '<td>' + (lists.annotlist || "") + '</td>';
                 rows += '<td>' + (lists.lemmalist || "") + '</td>';
-
             }
             if ($.inArray('pos', self.modules) > 0) {
-                rows += '<td>' + token.lemma + '</br>' + token.hfstana + '</br><b>' + token.pos + '</b></td>';
+                rows += '<td>' + token.lemma + '</br><span class="morph_label">' + token.hfstana + '</span></br><b>' + token.pos + '</b></td>';
             }
             if ($.inArray('syntax', self.modules) > 0) {
                 rows += '<td>' + token.deptype + '</td>';
@@ -444,26 +440,13 @@ function Parser(_maxchar) {
         }
     };
 
-    
+
 
     //check input length and submit form
-    this.submitInput = function (url, serialized) {
+    this.submitInput = function (url, serialized, callback) {
         var self = this;
         //get url to GATE output, zipurl to archive and the selected modules
-        var callback = function (response) {
-            if (response.status === true) {
-                var xml = response.xml;
-                var zipurl = response.zipurl;
-                var modules = response.modules;
-                if (xml && zipurl && modules) {
-                    self.$xml = $(xml);
-                    self.zipurl = zipurl;
-                    self.modules = modules;
-                    //console.log(self.modules);
-                    self.getParsed(self.orientation);
-                }
-            }
-        };
+
         var request = $.ajax({
             type: "POST",
             context: this,
@@ -471,7 +454,7 @@ function Parser(_maxchar) {
             data: serialized,
             timeout: 120000,
             dataType: "json",
-            beforeSend: function () {                
+            beforeSend: function () {
                 $active_boxes = self.$form.find("input[type='checkbox']").not(":disabled");
                 self.$form.find("input[type='checkbox'], button[type='submit']").prop('disabled', true);
                 self.$form.find("textarea").prop('disabled', true);
@@ -479,13 +462,15 @@ function Parser(_maxchar) {
             }
         });
         request.done(function (response) {
+            $spinner.addClass("hidden");
             if (callback && typeof (callback) === 'function') {
                 callback(response);
             }
         });
-        request.fail(function (jqXHR, textStatus, exception) {  
+        request.fail(function (jqXHR, textStatus, exception) {
+            $spinner.addClass("hidden");
             $active_boxes.prop('disabled', false);
-            self.$form.find("button[type='submit']").prop('disabled', false);            
+            self.$form.find("button[type='submit']").prop('disabled', false);
             self.$form.find("textarea").prop('disabled', false);
             displayError(jqXHR, textStatus, exception);
         });

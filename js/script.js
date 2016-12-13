@@ -9,6 +9,7 @@ $(document).ready(function () {
     //instantiate parser class    
     try {
         parser = new Parser(maxchar);
+
     } catch (err) {
         console.log("Parser class not found.");
     }
@@ -20,9 +21,6 @@ $(document).ready(function () {
             create: function () {
                 $(this).tabs("disable", 1);
             }
-//        activate: function (event, ui) {
-//            var tabindex = ui.newTab.index();           
-//        }
         });
         $tabs.show();
     }
@@ -99,12 +97,22 @@ $(document).ready(function () {
 
     //show modal on token click
     $("#parsed").on("click", ".token", function () {
+        if ($.inArray('morph', parser.modules) < 0) {
+            return false;
+        }
         var $token = $(this);
         var html = parser.getAnnotList($token.data('anas'), "horizontal");
         if (html) {
             var $modal = $("#annot_modal");
             $modal.html(html);
             var dialog = $modal.dialog(dialog_options);
+            dialog.on("dialogopen", function (event, ui) {
+                $("#annot_modal").tooltip(morph_label_options);
+            });
+            dialog.on("dialogclose", function (event, ui) {
+                $("#annot_modal").tooltip("destroy");
+                dialog.unbind("dialogclose");
+            });
             dialog.dialog({title: $token.text()}).dialog('open').unbind('dialogopen');
         }
     });
@@ -177,7 +185,22 @@ $(document).ready(function () {
             return false;
         }
         $form.find("#form-feedback").text("");
-        parser.submitInput($form.attr("action"), $form.serialize());
+        var callback = function (response) {
+            if (response.status === true) {
+                var xml = response.xml;
+                var zipurl = response.zipurl;
+                var modules = response.modules;
+                if (xml && zipurl && modules) {
+                    parser.$xml = $(xml);
+                    parser.zipurl = zipurl;
+                    parser.modules = modules;
+                    //console.log(self.modules);
+                    parser.getParsed(parser.orientation);
+                    initOutputLayout();
+                }
+            }
+        };
+        parser.submitInput($form.attr("action"), $form.serialize(), callback);
         return false;
     });
 
@@ -314,6 +337,10 @@ $(document).ready(function () {
         $("#orientation_switch > label").toggleClass("active");
         $(".ui-tooltip").hide();
         parser.getParsed(orientation);
+        if (parser.orientation === "horizontal") {
+            $("#datatable").tooltip("destroy");
+        }
+        initOutputLayout();
     });
 
     //render home page decoration
@@ -341,26 +368,26 @@ function addError($form, msg) {
 
 //init output layout
 function initOutputLayout() {
-
-    $spinner.addClass("hidden");
     var $form = $("#form");
     $form.find("button[type='submit']").prop('disabled', false);
     $active_boxes.prop('disabled', false);
     $form.find("textarea").prop('disabled', false);
     tabber.tabs("enable", 1);
     $("#tabs").tabs("option", "active", 1);
-    $("#parsed").tooltip({
-        items: '.tooltipper',
-        content: function (event, ui) {
-            var $token = $(this);
-            var html = parser.getAnnotList($token.data('anas'), "horizontal");
-            return html;
-        },
-        open: function (event, ui) {
-            ui.tooltip.css("max-width", "100%");
-        },
-        tooltipClass: "my-tooltip"
-    });
+    if ($.inArray('morph', parser.modules) > 0) {
+        $("#parsed").tooltip({
+            items: '.tooltipper',
+            content: function (event, ui) {
+                var $token = $(this);
+                var html = parser.getAnnotList($token.data('anas'), "horizontal");
+                return html;
+            },
+            open: function (event, ui) {
+                ui.tooltip.css("max-width", "100%");
+            },
+            tooltipClass: "my-tooltip"
+        });
+    }
     initDataTable();
     $(document).scrollTop(0);
 }
@@ -370,6 +397,9 @@ function initDataTable() {
         tabulator = new Tabulator();
         tabulator.init(datatable_options);
         tabulator.createSelectFilter();
+        if ($.inArray('morph', parser.modules) > 0) {
+            $("#datatable").tooltip(morph_label_options);
+        }
     }
 }
 

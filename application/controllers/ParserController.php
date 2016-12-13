@@ -72,7 +72,8 @@ class ParserController extends CI_Controller {
 
             //hack!
             $url = "http://localhost:" . $this->config->item('port') . "/process?run=" . $config . "&text=" . str_replace("%0D%0A", "%0A", urlencode($text));
-                        
+            //for testing            
+            //$url = $this->config->item("base_url") . "samples/sample.xml";            
             set_time_limit(300);
             $xml = file_get_contents($url);
 

@@ -10,11 +10,11 @@ var Tabulator = function () {
     this.$element;
     this.instance;
     this.init = function (options) {
-        var self = this;
+        var self = this;        
         self.$element = $("#datatable");
         if (language === "hu") {
             options.oLanguage = oLanguage;
-        }
+        }            
         self.instance = self.$element.DataTable(options);
         self.$element.find("thead .filters input").on('keyup change', function () {
             self.instance
@@ -23,7 +23,6 @@ var Tabulator = function () {
                     .draw();
         });
         self.$element.find("thead .filters select").on('change', function () {
-
             if ($(this).hasClass("posfilter") && this.value) {
                 self.instance
                         .column($(this).parent('td').index() + ':visible')
@@ -74,7 +73,7 @@ var Tabulator = function () {
         });
     };
     this.destroy = function () {
-        var self = this;
+        var self = this;        
         self.instance.destroy();
     };
 };

@@ -74,62 +74,39 @@ textarea {
       -ms-transform: translateY(-50%);
       transform: translateY(-50%);
       margin-left: 8em; }
-      .navbar.navbar-default .navbar-nav-wrapper .nav li {
-        /*              &:hover ~ hr {
-                            visibility: visible;
-                        &.one:hover ~ hr {
-                            margin-left: 0px;                    
-                        }
-                        &.one.active ~ hr {
-                            margin-left: 0;
-                        }
-                        &.two:hover ~ hr {
-                            margin-left: 150px;                    
-                        }
-                        &.two.active ~ hr {
-                            margin-left: 150px;
-                        }
-                        &.three:hover ~ hr {
-                            margin-left: 300px;
-                        }
-                        &.three.active ~ hr {
-                            margin-left: 300px;
-                        }*/ }
-        .navbar.navbar-default .navbar-nav-wrapper .nav li a {
-          /*width: 220px;*/
-          text-align: center;
-          color: #005283;
+      .navbar.navbar-default .navbar-nav-wrapper .nav li a {
+        /*width: 220px;*/
+        text-align: center;
+        color: #005283;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+        background-clip: padding-box;
+        /* stops bg color from leaking outside the border: */
+        padding-top: 8px;
+        padding-bottom: 8px;
+        font-size: 1.5em; }
+      .navbar.navbar-default .navbar-nav-wrapper .nav li .dropdown-menu li {
+        margin-right: 0; }
+        .navbar.navbar-default .navbar-nav-wrapper .nav li .dropdown-menu li a {
+          width: auto;
+          font-size: 1em;
           -webkit-border-radius: 0;
           border-radius: 0;
           background-clip: padding-box;
-          /* stops bg color from leaking outside the border: */
-          padding-top: 8px;
-          padding-bottom: 8px;
-          font-size: 1.5em; }
-        .navbar.navbar-default .navbar-nav-wrapper .nav li .dropdown-menu {
-          /*min-width: 220px;*/ }
-          .navbar.navbar-default .navbar-nav-wrapper .nav li .dropdown-menu li {
-            margin-right: 0; }
-            .navbar.navbar-default .navbar-nav-wrapper .nav li .dropdown-menu li a {
-              width: auto;
-              font-size: 1em;
-              -webkit-border-radius: 0;
-              border-radius: 0;
-              background-clip: padding-box;
-              /* stops bg color from leaking outside the border: */ }
-              .navbar.navbar-default .navbar-nav-wrapper .nav li .dropdown-menu li a:hover, .navbar.navbar-default .navbar-nav-wrapper .nav li .dropdown-menu li a:active {
-                background-color: #005283;
-                color: #fff; }
-          .navbar.navbar-default .navbar-nav-wrapper .nav li .dropdown-menu .divider {
+          /* stops bg color from leaking outside the border: */ }
+          .navbar.navbar-default .navbar-nav-wrapper .nav li .dropdown-menu li a:hover, .navbar.navbar-default .navbar-nav-wrapper .nav li .dropdown-menu li a:active {
             background-color: #005283;
-            opacity: 0.2;
-            filter: alpha(opacity=20); }
-        .navbar.navbar-default .navbar-nav-wrapper .nav li:hover > a, .navbar.navbar-default .navbar-nav-wrapper .nav li.active > a {
-          color: #029FEC; }
-        .navbar.navbar-default .navbar-nav-wrapper .nav li.active > a {
-          background: none; }
-        .navbar.navbar-default .navbar-nav-wrapper .nav li:hover, .navbar.navbar-default .navbar-nav-wrapper .nav li .open > a, .navbar.navbar-default .navbar-nav-wrapper .nav li.open > a {
-          background-color: rgba(255, 255, 255, 0.2); }
+            color: #fff; }
+      .navbar.navbar-default .navbar-nav-wrapper .nav li .dropdown-menu .divider {
+        background-color: #005283;
+        opacity: 0.2;
+        filter: alpha(opacity=20); }
+      .navbar.navbar-default .navbar-nav-wrapper .nav li:hover > a, .navbar.navbar-default .navbar-nav-wrapper .nav li.active > a {
+        color: #029FEC; }
+      .navbar.navbar-default .navbar-nav-wrapper .nav li.active > a {
+        background: none; }
+      .navbar.navbar-default .navbar-nav-wrapper .nav li:hover, .navbar.navbar-default .navbar-nav-wrapper .nav li .open > a, .navbar.navbar-default .navbar-nav-wrapper .nav li.open > a {
+        background-color: rgba(255, 255, 255, 0.2); }
       .navbar.navbar-default .navbar-nav-wrapper .nav hr {
         height: 2px;
         width: 80px;
@@ -216,9 +193,15 @@ textarea {
           background-color: #fff;
           color: #005283; }
 
+.morph_label {
+  color: #b5b5b5; }
+  .morph_label:hover, .morph_label:active {
+    cursor: default;
+    color: #029FEC; }
+
 #tabs {
   background: transparent;
-  padding-top: 86px;
+  padding-top: 96px;
   border: none; }
   #tabs .ui-tabs-nav {
     position: absolute;

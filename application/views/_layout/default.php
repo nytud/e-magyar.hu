@@ -18,7 +18,7 @@
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>vendor/bootstrap-switch/css/bootstrap-switch.min.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>vendor/jquery-ui/jquery-ui.min.css">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>vendor/datatables/media/css/dataTables.bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>vendor/datatables/extensions/FixedHeader/css/dataTables.fixedHeader.min.css">
+        <!--<link rel="stylesheet" type="text/css" href="<?php //echo base_url(); ?>vendor/datatables/extensions/FixedHeader/css/dataTables.fixedHeader.min.css">-->
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>vendor/treant/Treant.css">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>vendor/font-awesome/css/font-awesome.min.css" />
         <link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>css/style.css">
@@ -64,10 +64,11 @@
         <script type="text/javascript" src="<?php echo base_url(); ?>vendor/jquery-ui/jquery-ui.min.js"></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>vendor/datatables/media/js/jquery.dataTables.min.js"></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>vendor/datatables/media/js/dataTables.bootstrap.min.js"></script>        
-        <script type="text/javascript" src="<?php echo base_url(); ?>vendor/datatables/extensions/FixedHeader/js/dataTables.fixedHeader.min.js"></script>        
+        <!--<script type="text/javascript" src="<?php //echo base_url(); ?>vendor/datatables/extensions/FixedHeader/js/dataTables.fixedHeader.min.js"></script>-->        
         <script type="text/javascript" src="<?php echo base_url(); ?>vendor/treant/vendor/raphael.js"></script>        
         <script type="text/javascript" src="<?php echo base_url(); ?>vendor/treant/Treant.js"></script>        
         <script type="text/javascript" src="<?php echo base_url(); ?>vendor/xregexp/xregexp-all.js"></script>  
+        <script type="text/javascript" src="<?php echo base_url(); ?>vendor/defiant/defiant.min.js"></script>  
         <script type="text/javascript" src="<?php echo base_url(); ?>vendor/trianglify/dist/trianglify.min.js"></script>
         <script>
             var base_url = '<?php echo base_url(); ?>';
@@ -82,6 +83,7 @@
                 list_view: '<?= $this->lang->line("vertical"); ?>'
             };
         </script>        
+        <script type="text/javascript" src="<?php echo base_url(); ?>js/morph_code_list.js"></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>js/options.js"></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>js/tabulator.js"></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>js/deptree-builder.js"></script>

@@ -155,8 +155,7 @@ textarea {
                     padding-bottom: 8px;
                     font-size: 1.5em; 
                 }
-                .dropdown-menu {
-                    /*min-width: 220px;*/
+                .dropdown-menu {                    
                     li {
                         margin-right: 0;                        
                         a {
@@ -183,26 +182,6 @@ textarea {
                 &:hover, .open > a, &.open > a {
                     background-color: rgba(255, 255, 255, 0.2); 
                 }
-                /*              &:hover ~ hr {
-                                    visibility: visible;
-                                &.one:hover ~ hr {
-                                    margin-left: 0px;                    
-                                }
-                                &.one.active ~ hr {
-                                    margin-left: 0;
-                                }
-                                &.two:hover ~ hr {
-                                    margin-left: 150px;                    
-                                }
-                                &.two.active ~ hr {
-                                    margin-left: 150px;
-                                }
-                                &.three:hover ~ hr {
-                                    margin-left: 300px;
-                                }
-                                &.three.active ~ hr {
-                                    margin-left: 300px;
-                                }*/
             }
             hr {
                 height: 2px;
@@ -300,9 +279,20 @@ textarea {
     }    
 }
 
+
+
+.morph_label {
+    color: #b5b5b5;
+    &:hover, &:active {
+        cursor: default;
+        color: #029FEC;
+    }
+}
+
+
 #tabs {
     background: transparent;
-    padding-top: 86px;   
+    padding-top: 96px;   
     border: none;
     .ui-tabs-nav {
         position: absolute;

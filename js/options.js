@@ -61,3 +61,30 @@ var datatable_options = {
         });
     }
 };
+var morph_label_options = {
+    items: '.morph_label',
+    content: function (event, ui) {
+        var $elem = $(this);
+        var label = $elem.text();
+        var item = JSON.search(morph_code_list, '//*[code="' + label + '"]')[0];
+        if (!item) {
+            return false;
+        }
+        var content = "";
+        if (item.deriv !== "") {
+            content += item.deriv !== "" ? '<b>képző: </b>' + item.deriv + '</br>' : "";
+        }
+        if (item.deriv !== "" && item.wordcat !== "") {
+            content += '<b>képzett szó szófaja: </b>';
+        }
+        if (item.wordcat !== "") {
+            content += item.wordcat + '</br>';
+        }
+        content += item.infl !== "" ? item.infl : "";
+        return content;
+    },
+    open: function (event, ui) {
+        ui.tooltip.css("max-width", "100%");
+    },
+    tooltipClass: "my-tooltip"
+};

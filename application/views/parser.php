@@ -86,7 +86,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div id="output" class="fullpage">
             <div class="row">
                 <div id="controls">                                       
-                    <div id="filter" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div id="filter" class="col-xs-12 col-sm-6 col-md-6 col-lg-6 no-padding">
                         <div class="checkbox">
                             <input type="checkbox" id="tokens" value="token"><label for="tokens"><?= $this->lang->line("tokens"); ?></label>
                         </div>
@@ -100,7 +100,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <input type="checkbox" id="nes" value="ne"><label for="nes"><?= $this->lang->line("nes"); ?></label>
                         </div>
                     </div>              
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 no-padding">
                         <div id="download" class="pull-right">                        
                             <a id="download_link" href="" class="btn btn-sm btn-primary pull-right" download><i class="fa fa-download"></i> <?= $this->lang->line("download_output"); ?></a>                        
                         </div> 
