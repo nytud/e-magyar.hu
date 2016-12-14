@@ -339,8 +339,18 @@ body > .container-fluid {
         border-bottom: 1px solid red; }
       #main-content #tabs #output #parsed span.ne.ne_highlight.ne_end:after {
         right: 6px; }
+    #main-content #tabs #output #parsed tr.ne td:nth-child(2) .ner_label {
+      font-variant-position: sub;
+      color: #b5b5b5;
+      display: none; }
+      #main-content #tabs #output #parsed tr.ne td:nth-child(2) .ner_label:before {
+        content: '['; }
+      #main-content #tabs #output #parsed tr.ne td:nth-child(2) .ner_label:after {
+        content: ']'; }
     #main-content #tabs #output #parsed tr.ne.ne_highlight td:nth-child(2) {
       color: red; }
+      #main-content #tabs #output #parsed tr.ne.ne_highlight td:nth-child(2) .ner_label {
+        display: inline; }
     #main-content #tabs #output #parsed tr.target_highlight td:first-of-type {
       color: red; }
     #main-content #tabs #output #parsed .dep_toggle, #main-content #tabs #output #parsed .const_toggle {

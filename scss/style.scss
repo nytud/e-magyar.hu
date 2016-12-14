@@ -538,10 +538,29 @@ body > .container-fluid {
                         right: 6px;
                     }
                 }
+                
+                tr.ne {
+                    td:nth-child(2) {                        
+                        .ner_label {                            
+                            font-variant-position: sub;
+                            color: #b5b5b5;
+                            display: none;
+                            &:before {
+                                content: '[';
+                            }
+                            &:after {
+                                content: ']';
+                            }
+                        }
+                    }
+                }
 
                 tr.ne.ne_highlight {
                     td:nth-child(2) {
                         color: red;
+                        .ner_label {
+                            display: inline;
+                        }
                     }
                 }     
 

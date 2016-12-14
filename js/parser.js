@@ -305,7 +305,8 @@ function Parser(_maxchar) {
         $.each(self.tokens, function (index, token) {
             rows += '<tr id="' + token.id + '">';
             rows += '<td class="token" data-start="' + token.start + '" data-end="' + token.end + '">' + token.id + '</td>';
-            rows += '<td>' + token.content + '</td>';
+            var ner = token.ner !== "O" ? token.ner : "";
+            rows += '<td>' + token.content + ' <span class="ner_label">' + ner + '</span>' + '</td>';
 
             if ($.inArray('morph', self.modules) > 0) {
                 var lists = self.getAnnotList(token.anas, "vertical");
