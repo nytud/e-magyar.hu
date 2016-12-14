@@ -313,7 +313,12 @@ function Parser(_maxchar) {
                 rows += '<td>' + (lists.lemmalist || "") + '</td>';
             }
             if ($.inArray('pos', self.modules) > 0) {
-                rows += '<td>' + token.lemma + '</br><span class="morph_label">' + token.hfstana + '</span></br><b>' + token.pos + '</b></td>';
+                var morphs = token.hfstana.split(/(?=\[)/g);                      
+                rows += '<td>' + token.lemma + '</br>';
+                for (var i in morphs) {
+                   rows += '<span class="morph_label">' + morphs[i] + '</span>';
+                }        
+                rows += '</br><b>' + token.pos + '</b></td>';
             }
             if ($.inArray('syntax', self.modules) > 0) {
                 rows += '<td>' + token.deptype + '</td>';
