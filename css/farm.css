@@ -347,7 +347,7 @@ article .help {
 footer {
   padding: 3em 1em; }
   footer div[class*="col-"] {
-    padding: 1em; }
+    /*        padding: 1em;*/ }
     footer div[class*="col-"] h4 {
       color: #005283; }
     footer div[class*="col-"] img {

@@ -18,7 +18,7 @@ $lang['enter'] = "Enter";
 $lang['input_tab'] = "Input";
 $lang['input_tab_text'] = "Copy&Paste some text into the box.";
 $lang['output_tab'] = "Output";
-$lang['output_tab_text'] = "Enjoy!";
+$lang['output_tab_text'] = "&nbsp;";
 
 $lang['how_to_use'] =  "How to use the Parser?";
 $lang['demo_guide'] = "(1) Copy&Paste or type the text you want to parse into the field below. (2) Select the modules you want to run on the text. (3) Click on 'Submit'. (4) You can browse the results on the 'Output' panel and you can also download the results by clicking on the 'Download output' button.";

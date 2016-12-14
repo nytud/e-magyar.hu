@@ -372,7 +372,8 @@ body > .container-fluid {
   min-width: 300px; }
 
 #deptree_modal {
-  max-height: 350px !important;
+  max-height: 100vh !important;
+  min-width: 100%;
   overflow: scroll !important; }
   #deptree_modal .wrapper {
     display: block;
@@ -446,6 +447,9 @@ body > .container-fluid {
   background: url("../loader.gif") 50% 50% no-repeat #f9f9f9; }
 
 @media screen and (max-width: 767px) {
+  #deptree_modal {
+    max-height: 80vh !important; }
+
   #controls > div {
     padding: 0; }
   #controls #filter .checkbox {
@@ -461,11 +465,12 @@ body > .container-fluid {
       float: left; }
     #tabs #input #form button[type="submit"] {
       width: 100%;
-      margin-top: 0 !important; }
+      margin-top: 0 !important;
+      margin-bottom: 10px; }
     #tabs #input #form .help {
       margin-right: 15px; }
     #tabs #input #form #spinner {
-      margin-top: -60px !important; }
+      margin-top: -80px !important; }
     #tabs #output #parsed {
       height: auto !important;
       min-height: calc(100vh - 285px) !important;
@@ -475,6 +480,6 @@ body > .container-fluid {
     padding-bottom: 1em; }
 
   #please_wait {
-    bottom: 84px; } }
+    bottom: 144px !important; } }
 
 /*# sourceMappingURL=style.css.map */

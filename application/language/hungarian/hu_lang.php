@@ -18,7 +18,7 @@ $lang['enter'] = "Belépés";
 $lang['input_tab'] = "Bemenet";
 $lang['input_tab_text'] = "Másold az elemzendő szöveget az ablakba.";
 $lang['output_tab'] = "Kimenet";
-$lang['output_tab_text'] = "...";
+$lang['output_tab_text'] = "&nbsp;";
 
 $lang['how_to_use'] =  "Hogyan működik az Elemző?";
 $lang['demo_guide'] = "(1) Másold vagy gépeld be az elemzendő szöveget a lenti mezőbe. (2) Válaszd ki azokat az elemző modulokat, amelyeket le szeretnél futtatni a szövegen. (3) Kattints az 'Elküld' gombra. (4) Az elemzés eredményét megnézheted a 'Kimenet' panelen, illetve a 'Elemzés letöltése' gombra kattintva le is töltheted.";

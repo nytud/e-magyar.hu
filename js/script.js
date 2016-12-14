@@ -126,7 +126,7 @@ $(document).ready(function () {
             title: $modal.attr("title"),
             width: 'auto',
             height: 'auto',
-            resizable: false,
+            resizable: true,
             draggable: true,
             modal: true,
             open: function (event, ui) {

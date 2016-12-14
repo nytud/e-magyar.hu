@@ -277,7 +277,7 @@ function Parser(_maxchar) {
         var table = "";
 
         table += '<div class="table-responsive"><table id="datatable" class="table table-hover">';
-        table += '<thead><tr class="filters"><td></td><td class="form-group form-group-sm"><input type="text" class="form-control" placeholder="string"/></td></tr><tr class="headers"><th>id</th><th class="no-order">string</th></thead>';
+        table += '<thead><tr class="filters"><td></td><td class="form-group form-group-sm"><input type="text" class="form-control" placeholder="string"/></td></tr><tr class="headers"><th>id</th><th class="no-order">emToken</th></thead>';
         table += '<tbody></tbody>';
         table += '</table></div>';
 
