@@ -70,17 +70,7 @@ var morph_label_options = {
         if (!item) {
             return false;
         }
-        var content = "";
-        if (item.deriv !== "") {
-            content += item.deriv !== "" ? '<b>képző: </b>' + item.deriv + '</br>' : "";
-        }
-        if (item.deriv !== "" && item.wordcat !== "") {
-            content += '<b>képzett szó szófaja: </b>';
-        }
-        if (item.wordcat !== "") {
-            content += item.wordcat + '</br>';
-        }
-        content += item.infl !== "" ? item.infl : "";
+        var content = item.desc !== "" ? item.desc : "";
         return content;
     },
     open: function (event, ui) {

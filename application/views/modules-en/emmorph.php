@@ -69,6 +69,12 @@
            
             <br/>
             
+            <p>
+                <a href="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/textmodules/emmorph_codelist" target="_blank">A morfológiai kódok teljes listája</a>
+            </p>
+            
+            <br/>
+                        
             <h4>Fejlesztőknek</h4>
 
             <div class="table-responsive">
@@ -77,12 +83,13 @@
                         <tr>
                             <td>Forrás</td>
                             <td>
-
+				<a href="https://github.com/dlt-rilmta/emMorph" target="_blank">https://github.com/dlt-rilmta/emMorph</a>
                             </td>
                         </tr>
                         <tr>
                             <td>Forrásnyelv</td>
-                            <td>Az elemzõ alapvetõen egy véges állapotú fordító eszköz (transzdúcer), amely a felszíni szóalakot (karaktersorozatot) a tõtár, a toldaléktár és a morfofonológiai leírás (nyelvtan) alapján egy morfémákból és morfológiai kódokból álló másik karaktersorozatra alakítja. Az elemzõ adatbázisa a nyelvi információk meghatározott formátumban történõ leírását tartalmazza, a transzdúcer elkészítéséhez és az elemzõ futtatásához a Helsinki Finite-State Transducer (HFST) eszközkészlet áll rendelkezésre. Ennek implementációs nyelve: C++.</td>
+                            <td>Az elemző alapvetően egy véges állapotú fordító eszköz (transzdúcer), amely a felszíni szóalakot (karaktersorozatot) a tőtár, a toldaléktár és a morfofonológiai leírás (nyelvtan) alapján egy morfémákból és morfológiai kódokból álló másik karaktersorozatra alakítja. Az elemző adatbázisa a nyelvi információk meghatározott formátumban történő leírását tartalmazza, a transzdúcer elkészítéséhez és az elemző futtatásához a Helsinki Finite-State Transducer (HFST) eszközkészlet áll rendelkezésre. Ennek implementációs nyelve: C++. 
+			    A HFST compilere számára értelmezhető lexc nyelvű lexikont a morfológia elsődleges forrásából perl nyelven implementált programok állítják elő.</td>
                         </tr>
                         <tr>
                             <td>Input</td>
@@ -95,14 +102,17 @@
                         <tr>
                             <td>Futtatás</td>
                             <td>
-                                <span class="code">hfst-lookup &lt;elemzo_transzducer&gt;</span>
+                                <span class="code">hfst-lookup --cascade=composition hu.hfst</span>
                                 <br/>
-                                Az elemzõ a HFST eszközkészlet lookup programjaival futtatható.
+                                <span class="code">hfst-lookup --pipe-mode=input --cascade=composition hu.hfstol &lt;intext &gt;outtext</span>
+                                <br/>
+				
+                                Az elemző a HFST eszközkészlet lookup programjaival futtatható.
                             </td>
                         </tr>
                         <tr>
-                            <td>Licensz</td>
-                            <td>Az adatbázisra a Creative Commons Attribution-ShareAlike 4.0 (CC-BY-SA) licenc vonatkozik. Az adatbázis elsõdleges forrásának konverzióját végzõ kód licence GNU General Public License (GPL v3).</td>
+                            <td>Licenc</td>
+                            <td>Az adatbázisra a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 (CC BY-NC-SA) licenc vonatkozik. Az adatbázis elsődleges forrásának konverzióját végző kód licence GNU General Public License (GPL v3).</td>
                         </tr>
                     </tbody>
                 </table>

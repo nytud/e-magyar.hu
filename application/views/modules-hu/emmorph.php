@@ -69,6 +69,12 @@
            
             <br/>
             
+            <p>
+                <a href="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/textmodules/emmorph_codelist" target="_blank">A morfológiai kódok teljes listája</a>
+            </p>
+            
+            <br/>
+                        
             <h4>Fejlesztőknek</h4>
 
             <div class="table-responsive">
