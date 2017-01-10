@@ -26,19 +26,19 @@ var morph_code_list =
   },
   {
     "code": "[Abl]",
-    "desc": "-tÓl\" ablatívuszi esetrag"
+    "desc": "\"-tÓl\" ablatívuszi esetrag"
   },
   {
     "code": "[Acc]",
-    "desc": "-t\" tárgyesetrag"
+    "desc": "\"-t\" tárgyesetrag"
   },
   {
     "code": "[Ade]",
-    "desc": "-nÁl\" adessivusi esetrag"
+    "desc": "\"-nÁl\" adessivusi esetrag"
   },
   {
     "code": "[All]",
-    "desc": "-hOz\" allativusi esetrag"
+    "desc": "\"-hOz\" allativusi esetrag"
   },
   {
     "code": "[AnP.Pl]",
@@ -50,7 +50,7 @@ var morph_code_list =
   },
   {
     "code": "[Cau]",
-    "desc": "-ért\" ok- és célhatározói eset ragja"
+    "desc": "\"-ért\" ok- és célhatározói eset ragja"
   },
   {
     "code": "[Cond.1Sg›2]",
@@ -110,31 +110,31 @@ var morph_code_list =
   },
   {
     "code": "[Dat]",
-    "desc": "-nAk\" dativusi esetrag"
+    "desc": "\"-nAk\" dativusi esetrag"
   },
   {
     "code": "[Del]",
-    "desc": "-rÓl\" delativusi esetrag"
+    "desc": "\"-rÓl\" delativusi esetrag"
   },
   {
     "code": "[Ela]",
-    "desc": "-bÓl\" elativusi esetrag"
+    "desc": "\"-bÓl\" elativusi esetrag"
   },
   {
     "code": "[EssFor:ként]",
-    "desc": "-ként\" essivusi állapothatározói esetrag"
+    "desc": "\"-ként\" essivusi állapothatározói esetrag"
   },
   {
     "code": "[EssFor:képp]",
-    "desc": "-képp\" essivusi állapothatározói esetrag"
+    "desc": "\"-képp\" essivusi állapothatározói esetrag"
   },
   {
     "code": "[EssFor:képpen]",
-    "desc": "-képpen\" essivusi állapothatározói esetrag"
+    "desc": "\"-képpen\" essivusi állapothatározói esetrag"
   },
   {
     "code": "[Ess]",
-    "desc": "-Ul\" essivusi esetrag"
+    "desc": "\"-Ul\" essivusi esetrag"
   },
   {
     "code": "[Fam.Pl]",
@@ -154,11 +154,11 @@ var morph_code_list =
   },
   {
     "code": "[Ill]",
-    "desc": "-bA\" illativusi esetrag"
+    "desc": "\"-bA\" illativusi esetrag"
   },
   {
     "code": "[Ine]",
-    "desc": "-bAn\" inessivusi esetrag"
+    "desc": "\"-bAn\" inessivusi esetrag"
   },
   {
     "code": "[Inf.1Pl]",
@@ -194,11 +194,11 @@ var morph_code_list =
   },
   {
     "code": "[Ins]",
-    "desc": "-vAl\" eszközhatározói esetrag"
+    "desc": "\"-vAl\" eszközhatározói esetrag"
   },
   {
     "code": "[Loc]",
-    "desc": "-Ott/-t\" helyhatározói esetrag"
+    "desc": "\"-Ott/-t\" helyhatározói esetrag"
   },
   {
     "code": "[Nom]",
@@ -366,7 +366,7 @@ var morph_code_list =
   },
   {
     "code": "[QPtcl]",
-    "desc": "-e\" kérdő partikula"
+    "desc": "\"-e\" kérdő partikula"
   },
   {
     "code": "[Sbjv.1Sg›2]",
@@ -422,23 +422,23 @@ var morph_code_list =
   },
   {
     "code": "[Subl]",
-    "desc": "-rA\" sublativusi esetrag"
+    "desc": "\"-rA\" sublativusi esetrag"
   },
   {
     "code": "[Supe]",
-    "desc": "-On\" superessivusi esetrag"
+    "desc": "\"-On\" superessivusi esetrag"
   },
   {
     "code": "[Temp]",
-    "desc": "-kor\" temporalis esetrag"
+    "desc": "\"-kor\" temporalis esetrag"
   },
   {
     "code": "[Ter]",
-    "desc": "-ig\" terminativusi esetrag"
+    "desc": "\"-ig\" terminativusi esetrag"
   },
   {
     "code": "[Transl]",
-    "desc": "-vÁ\" translativusi esetrag"
+    "desc": "\"-vÁ\" translativusi esetrag"
   },
   {
     "code": "[/Adj]",
@@ -746,279 +746,279 @@ var morph_code_list =
   },
   {
     "code": "[_Abe/Adj]",
-    "desc": "-A?tlAn, -tAlAn\" főnév > melléknév képző"
+    "desc": "\"-A?tlAn, -tAlAn\" főnév > melléknév képző"
   },
   {
     "code": "[_AdjVbz_Ntr/V]",
-    "desc": "-Vs?Odik, -Ul\" melléknév > ige képző"
+    "desc": "\"-Vs?Odik, -Ul\" melléknév > ige képző"
   },
   {
     "code": "[_AdjVbz_Tr/V]",
-    "desc": "-ít\" melléknév > ige képző"
+    "desc": "\"-ít\" melléknév > ige képző"
   },
   {
     "code": "[_Adjz:i/Adj]",
-    "desc": "-i\" főnév > melléknév képző"
+    "desc": "\"-i\" főnév > melléknév képző"
   },
   {
     "code": "[_Adjz:s/Adj]",
-    "desc": "-Vs\" főnév > melléknév képző"
+    "desc": "\"-Vs\" főnév > melléknév képző"
   },
   {
     "code": "[_Adjz:Ó/Adj]",
-    "desc": "-Ó\" ige > melléknév képző"
+    "desc": "\"-Ó\" ige > melléknév képző"
   },
   {
     "code": "[_Adjz:Ú/Adj]",
-    "desc": "-Ú\" főnév > melléknév képző"
+    "desc": "\"-Ú\" főnév > melléknév képző"
   },
   {
     "code": "[_Adjz_Hab/Adj]",
-    "desc": "-Ós\" ige > melléknév képző"
+    "desc": "\"-Ós\" ige > melléknév képző"
   },
   {
     "code": "[_Adjz_Loc:beli/Adj]",
-    "desc": "-beli\" főnév > melléknév képző"
+    "desc": "\"-beli\" főnév > melléknév képző"
   },
   {
     "code": "[_Adjz_Ord:VdlAgOs/Adj]",
-    "desc": "-VdlAgOs\" számnév > melléknév képző"
+    "desc": "\"-VdlAgOs\" számnév > melléknév képző"
   },
   {
     "code": "[_Adjz_Quant/Adj]",
-    "desc": "-nyi\" főnév > melléknév képző"
+    "desc": "\"-nyi\" főnév > melléknév képző"
   },
   {
     "code": "[_Adjz_Type:fajta/Adj]",
-    "desc": "-fajta\" számnév > melléknév képző"
+    "desc": "\"-fajta\" számnév > melléknév képző"
   },
   {
     "code": "[_Adjz_Type:forma/Adj]",
-    "desc": "-forma\" főnév > melléknév képző"
+    "desc": "\"-forma\" főnév > melléknév képző"
   },
   {
     "code": "[_Adjz_Type:féle/Adj]",
-    "desc": "-féle\" számnév > melléknév képző"
+    "desc": "\"-féle\" számnév > melléknév képző"
   },
   {
     "code": "[_Adjz_Type:szerű/Adj]",
-    "desc": "-szerű\" főnév > melléknév képző"
+    "desc": "\"-szerű\" főnév > melléknév képző"
   },
   {
     "code": "[_AdvPerfPtcp/Adv]",
-    "desc": "-vÁn\" ige > határozószó képző"
+    "desc": "\"-vÁn\" ige > határozószó képző"
   },
   {
     "code": "[_AdvPtcp/Adv]",
-    "desc": "-vA\" ige > határozószó képző"
+    "desc": "\"-vA\" ige > határozószó képző"
   },
   {
     "code": "[_AdvPtcp:ttOn/Adv]",
-    "desc": "-ttOn\" ige > határozószó képző"
+    "desc": "\"-ttOn\" ige > határozószó képző"
   },
   {
     "code": "[_AdvPtcp:vÁst/Adv]",
-    "desc": "-vÁst\" ige > határozószó képző"
+    "desc": "\"-vÁst\" ige > határozószó képző"
   },
   {
     "code": "[_Advz:rét/Adv]",
-    "desc": "-rét\" számnév > határozószó képző"
+    "desc": "\"-rét\" számnév > határozószó képző"
   },
   {
     "code": "[_Advz_LocDistr:szerte/Adv]",
-    "desc": "-rét\" főnév > határozószó képző"
+    "desc": "\"-rét\" főnév > határozószó képző"
   },
   {
     "code": "[_Advz_Quant:szám/Adv]",
-    "desc": "-szám\" főnév > határozószó képző"
+    "desc": "\"-szám\" főnév > határozószó képző"
   },
   {
     "code": "[_Aggreg/Adv]",
-    "desc": "-An\" számnév > határozószó határozó"
+    "desc": "\"-An\" számnév > határozószó határozó"
   },
   {
     "code": "[_Caus/V]",
-    "desc": "-t?At\" ige > ige képző"
+    "desc": "\"-t?At\" ige > ige képző"
   },
   {
     "code": "[_Com:stUl/Adv]",
-    "desc": "-stUl\" főnév > határozószó képző"
+    "desc": "\"-stUl\" főnév > határozószó képző"
   },
   {
     "code": "[_Comp/Adj]",
-    "desc": "-bb\" melléknév > melléknév képző"
+    "desc": "\"-bb\" melléknév > melléknév képző"
   },
   {
     "code": "[_Comp/Adv]",
-    "desc": "-bb\" határozószó > határozószó képző"
+    "desc": "\"-bb\" határozószó > határozószó képző"
   },
   {
     "code": "[_Comp/Adv|Pro]",
-    "desc": "-bb\" határozószó/névmás > határozószó/névmás képző"
+    "desc": "\"-bb\" határozószó/névmás > határozószó/névmás képző"
   },
   {
     "code": "[_Comp/Num]",
-    "desc": "-bb\" számnév > számnév képző"
+    "desc": "\"-bb\" számnév > számnév képző"
   },
   {
     "code": "[_Comp/Post|(Abl)]",
-    "desc": "-bb\" névutó/határozószó > névutó/határozószó képző"
+    "desc": "\"-bb\" névutó/határozószó > névutó/határozószó képző"
   },
   {
     "code": "[_Des/N]",
-    "desc": "-hatnék\" ige > főnév képző"
+    "desc": "\"-hatnék\" ige > főnév képző"
   },
   {
     "code": "[_Design/Adj]",
-    "desc": "-(bb)ik\" főnév > melléknév képző"
+    "desc": "\"-(bb)ik\" főnév > melléknév képző"
   },
   {
     "code": "[_Dim:cskA/Adj]",
-    "desc": "-VcskA\" melléknév > melléknév képző"
+    "desc": "\"-VcskA\" melléknév > melléknév képző"
   },
   {
     "code": "[_Dim:cskA/N]",
-    "desc": "-VcskA\" főnév > főnév képző"
+    "desc": "\"-VcskA\" főnév > főnév képző"
   },
   {
     "code": "[_Distr:nként/Adv]",
-    "desc": "-Vnként\" főnév > határozószó képző"
+    "desc": "\"-Vnként\" főnév > határozószó képző"
   },
   {
     "code": "[_DistrFrq:ntA/Adv]",
-    "desc": "-Ant\" főnév > határozószó képző"
+    "desc": "\"-Ant\" főnév > határozószó képző"
   },
   {
     "code": "[_Frac/Num]",
-    "desc": "-Vd\" számnév > számnév képző"
+    "desc": "\"-Vd\" számnév > számnév képző"
   },
   {
     "code": "[_Freq/V]",
-    "desc": "-O?gAt\" ige > ige képző"
+    "desc": "\"-O?gAt\" ige > ige képző"
   },
   {
     "code": "[_FutPtcp/Adj]",
-    "desc": "-AndÓ\" ige > melléknév képző"
+    "desc": "\"-AndÓ\" ige > melléknév képző"
   },
   {
     "code": "[_Ger/N]",
-    "desc": "-Ás\" ige > főnév képző"
+    "desc": "\"-Ás\" ige > főnév képző"
   },
   {
     "code": "[_Ger:tA/N]",
-    "desc": "-tA\" ige > főnév képző"
+    "desc": "\"-tA\" ige > főnév képző"
   },
   {
     "code": "[_ImpfPtcp/Adj]",
-    "desc": "-Ó\" ige > melléknév képző"
+    "desc": "\"-Ó\" ige > melléknév képző"
   },
   {
     "code": "[_Manner/Adv]",
-    "desc": "-An, -Ul\" melléknév > határozószó képző"
+    "desc": "\"-An, -Ul\" melléknév > határozószó képző"
   },
   {
     "code": "[_Manner:0/Adv]",
-    "desc": "-A?tlAn/-tAlAn\" melléknév > határozószó képző"
+    "desc": "\"-A?tlAn/-tAlAn\" melléknév > határozószó képző"
   },
   {
     "code": "[_MedPass/V]",
-    "desc": "-Ódik\" ige > ige képző"
+    "desc": "\"-Ódik\" ige > ige képző"
   },
   {
-    "code": "[_Mlt-Iter/Adv]",
-    "desc": "-szOr\" számnév > határozószó képző"
+    "code": "[_Mlt\"-Iter/Adv]",
+    "desc": "\"-szOr\" számnév > határozószó képző"
   },
   {
     "code": "[_MltComp/Adv]",
-    "desc": "-Adv\" számnév > határozószó képző"
+    "desc": "\"-Adv\" számnév > határozószó képző"
   },
   {
     "code": "[_Mod/V]",
-    "desc": "-hAt\" ige > ige képző"
+    "desc": "\"-hAt\" ige > ige képző"
   },
   {
     "code": "[_ModPtcp/Adj]",
-    "desc": "-hAtÓ\" ige > melléknév képző"
+    "desc": "\"-hAtÓ\" ige > melléknév képző"
   },
   {
     "code": "[_Mrs/N]",
-    "desc": "-né\" főnév > főnév képző"
+    "desc": "\"-né\" főnév > főnév képző"
   },
   {
     "code": "[_NAdvz:ilAg/Adv]",
-    "desc": "-ilAg\" főnév > határozószó képző"
+    "desc": "\"-ilAg\" főnév > határozószó képző"
   },
   {
     "code": "[_NVbz_Ntr:zik/V]",
-    "desc": "-zik\" főnév > ige képző"
+    "desc": "\"-zik\" főnév > ige képző"
   },
   {
     "code": "[_NVbz_Tr:z/V]",
-    "desc": "-z\" főnév > ige képző"
+    "desc": "\"-z\" főnév > ige képző"
   },
   {
     "code": "[_NegModPtcp/Adj]",
-    "desc": "-hAtAtlAn\" ige > melléknév képző"
+    "desc": "\"-hAtAtlAn\" ige > melléknév képző"
   },
   {
     "code": "[_NegPtcp/Adj]",
-    "desc": "-AtlAn\" ige > melléknév képző"
+    "desc": "\"-AtlAn\" ige > melléknév képző"
   },
   {
     "code": "[_Nz:s/N]",
-    "desc": "-Vs\" főnév > főnév képző"
+    "desc": "\"-Vs\" főnév > főnév képző"
   },
   {
     "code": "[_Nz_Abstr/N]",
-    "desc": "-sÁg\" főnév > főnév képző"
+    "desc": "\"-sÁg\" főnév > főnév képző"
   },
   {
     "code": "[_Nz_Type:féleség/N]",
-    "desc": "-féleség\" melléknév > főnév képző"
+    "desc": "\"-féleség\" melléknév > főnév képző"
   },
   {
     "code": "[_Nz_Type:szerűség/N]",
-    "desc": "-szerűség\" főnév > főnév képző"
+    "desc": "\"-szerűség\" főnév > főnév képző"
   },
   {
     "code": "[_Ord/Adj]",
-    "desc": "-Vdik\" számnév > melléknév képző"
+    "desc": "\"-Vdik\" számnév > melléknév képző"
   },
   {
     "code": "[_OrdDate/N]",
-    "desc": "-Vdika\" számnév > főnév képző"
+    "desc": "\"-Vdika\" számnév > főnév képző"
   },
   {
     "code": "[_Pass/V]",
-    "desc": "-t?Atik\" ige > ige képző"
+    "desc": "\"-t?Atik\" ige > ige képző"
   },
   {
     "code": "[_PerfPtcp/Adj]",
-    "desc": "-O?tt\" ige > melléknév képző"
+    "desc": "\"-O?tt\" ige > melléknév képző"
   },
   {
     "code": "[_PerfPtcp_Subj=tA/Adj]",
-    "desc": "-tA\" ige > melléknév képző"
+    "desc": "\"-tA\" ige > melléknév képző"
   },
   {
     "code": "[_Tmp_Ante/Adv]",
-    "desc": "-jA\" főnév > határozószó képző"
+    "desc": "\"-jA\" főnév > határozószó képző"
   },
   {
     "code": "[_Tmp_Loc/Adv]",
-    "desc": "-vAl, -0\" főnév > határozószó"
+    "desc": "\"-vAl, -0\" főnév > határozószó"
   },
   {
     "code": "[_VAdvz:ÓlAg/Adv]",
-    "desc": "-ÓlAg\" ige > határozószó képző"
+    "desc": "\"-ÓlAg\" ige > határozószó képző"
   },
   {
     "code": "[_VNz:nivaló/N]",
-    "desc": "-nivaló\" ige > főnév képző"
+    "desc": "\"-nivaló\" ige > főnév képző"
   },
   {
     "code": "[_Vbz:kOd/V]",
-    "desc": "-s?kOdik\" melléknév > ige képző"
+    "desc": "\"-s?kOdik\" melléknév > ige képző"
   }
 ]
 ;
