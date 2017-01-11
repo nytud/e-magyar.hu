@@ -100,95 +100,95 @@
                         <tr><td>[Pst.NDef.3Pl]</td><td>múlt idő, általános ragozás, többes szám, harmadik személy</td><td>mondtak</td><td>mond[/V]tak[Pst.NDef.3Pl]</td></tr>
                         <tr><td>[Pst.NDef.3Sg]</td><td>múlt idő, általános ragozás, egyes szám, harmadik személy</td><td>mondott</td><td>mond[/V]ott[Pst.NDef.3Sg]</td></tr>
                         <tr><td>[Punct]</td><td>írásjel</td><td>megy,</td><td>megy[/V][Prs.NDef.3Sg]comma[Punct]</td></tr>
-                        <tr><td>[Sbjv.1Sg›2]</td><td>kötőmód (felszólító), egyes szám, 1. személyű alany, 2. személyű tárgy</td><td>jön-e</td><td>jön[/V][Prs.NDef.3Sg]-e[QPtcl]</td></tr>
-                        <tr><td>[Sbjv.Def.1Pl]</td><td>kötőmód (felszólító), határozott ragozás, többes szám, első személy</td><td>ismerjelek</td><td>ismer[/V]jelek[Sbjv.1Sg›2]</td></tr>
-                        <tr><td>[Sbjv.Def.1Sg]</td><td>kötőmód (felszólító), határozott ragozás, egyes szám, első személy</td><td>törjük</td><td>törik[/V]jük[Sbjv.Def.1Pl]</td></tr>
-                        <tr><td>[Sbjv.Def.2Pl]</td><td>kötőmód (felszólító), határozott ragozás, többes szám, második személy</td><td>törjem</td><td>törik[/V]jem[Sbjv.Def.1Sg]</td></tr>
-                        <tr><td>[Sbjv.Def.2Sg]</td><td>kötőmód (felszólító), határozott ragozás, egyes szám, második személy</td><td>törjétek</td><td>törik[/V]jétek[Sbjv.Def.2Pl]</td></tr>
-                        <tr><td>[Sbjv.Def.3Pl]</td><td>kötőmód (felszólító), határozott ragozás, többes szám, harmadik személy</td><td>törd</td><td>törik[/V]d[Sbjv.Def.2Sg]</td></tr>
-                        <tr><td>[Sbjv.Def.3Sg]</td><td>kötőmód (felszólító), határozott ragozás, egyes szám, harmadik személy</td><td>törjék</td><td>törik[/V]jék[Sbjv.Def.3Pl]</td></tr>
-                        <tr><td>[Sbjv.NDef.1Pl]</td><td>kötőmód (felszólító), általános ragozás, többes szám, első személy</td><td>törje</td><td>törik[/V]je[Sbjv.Def.3Sg]</td></tr>
-                        <tr><td>[Sbjv.NDef.1Sg]</td><td>kötőmód (felszólító), általános ragozás, egyes szám, első személy</td><td>mondjunk</td><td>mond[/V]junk[Sbjv.NDef.1Pl]</td></tr>
-                        <tr><td>[Sbjv.NDef.2Pl]</td><td>kötőmód (felszólító), általános ragozás, többes szám, második személy</td><td>mondjak</td><td>mond[/V]jak[Sbjv.NDef.1Sg]</td></tr>
-                        <tr><td>[Sbjv.NDef.2Sg]</td><td>kötőmód (felszólító), általános ragozás, egyes szám, második személy</td><td>mondjatok</td><td>mond[/V]jatok[Sbjv.NDef.2Pl]</td></tr>
-                        <tr><td>[Sbjv.NDef.3Pl]</td><td>kötőmód (felszólító), általános ragozás, többes szám, harmadik személy</td><td>mondj</td><td>mond[/V]j[Sbjv.NDef.2Sg]</td></tr>
-                        <tr><td>[Sbjv.NDef.3Sg]</td><td>kötőmód (felszólító), általános ragozás, egyes szám, harmadik személy</td><td>mondjanak</td><td>mond[/V]janak[Sbjv.NDef.3Pl]</td></tr>
-                        <tr><td>[Subl]</td><td>"-rA" sublativusi esetrag</td><td>mondjon</td><td>mond[/V]jon[Sbjv.NDef.3Sg]</td></tr>
-                        <tr><td>[Supe]</td><td>"-On" superessivusi esetrag</td><td>telekre</td><td>telek[/N]re[Subl]</td></tr>
-                        <tr><td>[Temp]</td><td>"-kor" temporalis esetrag</td><td>tetőn</td><td>tető[/N]n[Supe]</td></tr>
-                        <tr><td>[Ter]</td><td>"-ig" terminativusi esetrag</td><td>nyolckor</td><td>nyolc[/Num]kor[Temp]</td></tr>
-                        <tr><td>[Transl]</td><td>"-vÁ" translativusi esetrag</td><td>estig</td><td>est[/N]ig[Ter]</td></tr>
-                        <tr><td>[/Adj]</td><td>melléknév</td><td>elnökké</td><td>elnök[/N]ké[Transl]</td></tr>
-                        <tr><td>[/Adj|Abbr]</td><td>melléknév, rövidítés</td><td>szép</td><td>szép[/Adj][Nom]</td></tr>
-                        <tr><td>[/Adj|Attr]</td><td>csak jelzőként használt melléknév</td><td>ún.</td><td>ún.[/Adj|Abbr][Nom]</td></tr>
-                        <tr><td>[/Adj|Attr|Abbr]</td><td>csak jelzőként használt melléknév, rövidítés</td><td>kis</td><td>kis[/Adj|Attr][Nom]</td></tr>
-                        <tr><td>[/Adj|Attr|Pro]</td><td>csak jelzőként használt melléknév, névmás</td><td>ifj.</td><td>ifj.[/Adj|Attr|Abbr][Nom]</td></tr>
-                        <tr><td>[/Adj|Pred]</td><td>csak állítmányként használt melléknév</td><td>oly</td><td>oly[/Adj|Attr|Pro][Nom]</td></tr>
-                        <tr><td>[/Adj|Pro]</td><td>melléknév, névmás</td><td>mindegy</td><td>mindegy[/Adj|Pred]</td></tr>
-                        <tr><td>[/Adj|Pro|Int]</td><td>melléknév, kérdő névmás</td><td>olyan</td><td>olyan[/Adj|Pro][Nom]</td></tr>
-                        <tr><td>[/Adj|Pro|Rel]</td><td>melléknév, vonatkozó névmás</td><td>milyen</td><td>milyen[/Adj|Pro|Int][Nom]</td></tr>
-                        <tr><td>[/Adj|Unit]</td><td>melléknév, mértékegység</td><td>amilyen</td><td>amilyen[/Adj|Pro|Rel][Nom]</td></tr>
-                        <tr><td>[/Adj|col]</td><td>melléknév, színnév</td><td>perces</td><td>perces[/Adj|Unit][Nom]</td></tr>
-                        <tr><td>[/Adj|nat]</td><td>melléknév, nemzetiség/nyelv</td><td>piros</td><td>piros[/Adj|col][Nom]</td></tr>
-                        <tr><td>[/Adv]</td><td>határozószó</td><td>német</td><td>német[/Adj|nat][Nom]</td></tr>
-                        <tr><td>[/Adv|(Adj)]</td><td>határozószó</td><td>szinte</td><td>szinte[/Adv]</td></tr>
-                        <tr><td>[/Adv|(Num)]</td><td>határozószó</td><td>túl</td><td>túl[/Adv|(Adj)]</td></tr>
-                        <tr><td>[/Adv|Abbr]</td><td>határozószó, rövidítés</td><td>ízben</td><td>ízben[/Adv|(Num)]</td></tr>
-                        <tr><td>[/Adv|Acronx]</td><td>határozószó, betűző kiejtésű betűszó</td><td>pl.</td><td>pl.[/Adv|Abbr]</td></tr>
-                        <tr><td>[/Adv|AdjMod]</td><td>határozószó, melléknév modifier</td><td>kábé</td><td>kábé[/Adv|Acronx]</td></tr>
-                        <tr><td>[/Adv|Pro]</td><td>határozószó, névmás</td><td>egész</td><td>egész[/Adv|AdjMod]</td></tr>
-                        <tr><td>[/Adv|Pro|Int]</td><td>határozószó, kérdő névmás</td><td>úgy</td><td>úgy[/Adv|Pro]</td></tr>
-                        <tr><td>[/Adv|Pro|Rel]</td><td>határozószó, vonatkozó névmás</td><td>hogyan</td><td>hogyan[/Adv|Pro|Int]</td></tr>
-                        <tr><td>[/CmpdPfx]</td><td>önállóan nem élő összetételi előtag</td><td>ahogyan</td><td>ahogyan[/Adv|Pro|Rel]</td></tr>
-                        <tr><td>[/Cnj]</td><td>kötőszó</td><td>almenü</td><td>al[/CmpdPfx]menü[/N][Nom]</td></tr>
-                        <tr><td>[/Cnj|Abbr]</td><td>kötőszó, rövidítés</td><td>és</td><td>és[/Cnj]</td></tr>
-                        <tr><td>[/Det]</td><td>determináns</td><td>ill.</td><td>ill.[/Cnj|Abbr]</td></tr>
-                        <tr><td>[/Det|Art.Def]</td><td>determináns, határozott névelő</td><td>holmi</td><td>holmi[/Det]</td></tr>
-                        <tr><td>[/Det|Art.NDef]</td><td>determináns, határozatlan névelő</td><td>az</td><td>az[/Det|Art.Def]</td></tr>
-                        <tr><td>[/Det|Pro]</td><td>determináns, névmás</td><td>egy</td><td>egy[/Det|Art.NDef]</td></tr>
-                        <tr><td>[/Det|Pro|(Post)]</td><td>determináns, névmás, mássalhangzó kezdetű névutók előtt</td><td>ez</td><td>ez[/Det|Pro][Nom]</td></tr>
-                        <tr><td>[/Det|Pro|Int]</td><td>determináns, kérdő névmás</td><td>e (mögött a ház mögött)</td><td>e[/Det|Pro|(Post)]</td></tr>
-                        <tr><td>[/Det|Pro|Rel]</td><td>determináns, vonatkozó névmás</td><td>melyik</td><td>melyik[/Det|Pro|Int]</td></tr>
-                        <tr><td>[/Det|Pro|def]</td><td>determináns, névmás</td><td>amelyik</td><td>amelyik[/Det|Pro|Rel]</td></tr>
-                        <tr><td>[/Det|Q.NDef]</td><td>határozatlan kvantordetermináns</td><td>azon</td><td>azon[/Det|Pro|def]</td></tr>
-                        <tr><td>[/Det|Q]</td><td>kvantordetermináns</td><td>minden</td><td>minden[/Det|Q.NDef]</td></tr>
-                        <tr><td>[/Inj-Utt]</td><td>indulatszó/mondatszó</td><td>némi</td><td>némi[/Det|Q]</td></tr>
-                        <tr><td>[/N]</td><td>főnév</td><td>nos</td><td>nos[/Inj-Utt]</td></tr>
-                        <tr><td>[/Num]</td><td>számnév</td><td>ház</td><td>ház[/N][Nom]</td></tr>
-                        <tr><td>[/Num|Abbr]</td><td>számnév, rövidítés</td><td>öt</td><td>öt[/Num][Nom]</td></tr>
-                        <tr><td>[/Num|Attr]</td><td>csak jelzőként használt számnév</td><td>Mrd</td><td>Mrd[/Num|Abbr][Nom]</td></tr>
-                        <tr><td>[/Num|Digit]</td><td>számnév, számjegyekkel írva</td><td>két</td><td>két[/Num|Attr][Nom]</td></tr>
-                        <tr><td>[/Num|Pro]</td><td>számnév, névmás</td><td>7</td><td>7[/Num|Digit][Nom]</td></tr>
-                        <tr><td>[/Num|Pro|Int]</td><td>számnév, kérdő névmás</td><td>annyi</td><td>annyi[/Num|Pro][Nom]</td></tr>
-                        <tr><td>[/Num|Pro|Rel]</td><td>számnév, vonatkozó névmás</td><td>mennyi</td><td>mennyi[/Num|Pro|Int][Nom]</td></tr>
-                        <tr><td>[/Num|Roman]</td><td>római számmal írt számnév</td><td>amennyi</td><td>amennyi[/Num|Pro|Rel][Nom]</td></tr>
-                        <tr><td>[/N|Abbr]</td><td>főnév, rövidítés</td><td>III</td><td>III[/Num|Roman][Nom]</td></tr>
-                        <tr><td>[/N|Abbr|ChemSym]</td><td>főnév, rövidítés, kémiai elem jele</td><td>szerk.</td><td>szerk.[/N|Abbr][Nom]</td></tr>
-                        <tr><td>[/N|Acron]</td><td>főnév, betűszó</td><td>Pb</td><td>Pb[/N|Abbr|ChemSym][Nom]</td></tr>
-                        <tr><td>[/N|Acronx]</td><td>főnév, betűző kiejtésű betűszó</td><td>DVD</td><td>DVD[/N|Acron][Nom]</td></tr>
-                        <tr><td>[/N|Ltr]</td><td>főnév, betű</td><td>ábécé</td><td>ábécé[/N|Acronx][Nom]</td></tr>
-                        <tr><td>[/N|Pro]</td><td>főnév, névmás</td><td>c</td><td>c[/N|Ltr][Nom]</td></tr>
-                        <tr><td>[/N|Pro|(Post)]</td><td>főnév, névmás, mássalhangzó kezdetű névutók előtt</td><td>ők</td><td>ők[/N|Pro]k[3Pl][Nom]</td></tr>
-                        <tr><td>[/N|Pro|Abbr]</td><td>főnév, névmás, rövidítés</td><td>e(mellett)</td><td>e[/N|Pro|(Post)][Nom]</td></tr>
-                        <tr><td>[/N|Pro|Int]</td><td>főnév, kérdő névmás</td><td>ua.</td><td>ua.[/N|Pro|Abbr][Nom]</td></tr>
-                        <tr><td>[/N|Pro|Rel]</td><td>főnév, vonatkozó névmás</td><td>kivel</td><td>ki[/N|Pro|Int]vel[Ins]</td></tr>
-                        <tr><td>[/N|Unit]</td><td>főnév, mértékegység</td><td>akivel</td><td>aki[/N|Pro|Rel]vel[Ins]</td></tr>
-                        <tr><td>[/N|Unit|Abbr]</td><td>főnév, mértékegység, rövidítés</td><td>méter</td><td>méter[/N|Unit][Nom]</td></tr>
-                        <tr><td>[/N|lat]</td><td>latin főnév</td><td>cm</td><td>cm[/N|Unit|Abbr][Nom]</td></tr>
-                        <tr><td>[/N|mat]</td><td>főnév, anyagnév</td><td>cellulitis</td><td>cellulitis[/N|lat][Nom]</td></tr>
-                        <tr><td>[/Post]</td><td>névutó</td><td>arany</td><td>arany[/N|mat][Nom]</td></tr>
-                        <tr><td>[/Post|(Abl)]</td><td>névutó/határozószó ablativusi vonzattal</td><td>között</td><td>között[/Post]</td></tr>
-                        <tr><td>[/Post|(All)]</td><td>névutó/határozószó allativusi vonzattal</td><td>távol</td><td>távol[/Post|(Abl)]</td></tr>
-                        <tr><td>[/Post|(Ela)]</td><td>névutó/határozószó elativusi vonzattal</td><td>képest</td><td>képest[/Post|(All)]</td></tr>
-                        <tr><td>[/Post|(Ins)]</td><td>névutó/határozószó eszköz- és társhatározói vonzattal</td><td>kifolyólag</td><td>kifolyólag[/Post|(Ela)]</td></tr>
-                        <tr><td>[/Post|(N0)]</td><td>névutó/határozószó puszta főnévi vonzattal</td><td>ellentétben</td><td>ellentétben[/Post|(Ins)]</td></tr>
-                        <tr><td>[/Post|(Poss)]</td><td>névutó/határozószó, vonzatával együtt birtokos szerkezetet alkot</td><td>számba</td><td>számba[/Post|(N0)]</td></tr>
-                        <tr><td>[/Post|(Subl)]</td><td>névutó/határozószó sublativusi vonzattal</td><td>számára</td><td>számára[/Post|(Poss)][Poss.3Sg]</td></tr>
-                        <tr><td>[/Post|(Supe)]</td><td>névutó/határozószó superessivusi vonzattal</td><td>tekintettel</td><td>tekintettel[/Post|(Subl)]</td></tr>
-                        <tr><td>[/Post|(Ter)]</td><td>névutó/határozószó terminativusi vonzattal</td><td>kívül</td><td>kívül[/Post|(Supe)]</td></tr>
-                        <tr><td>[/Prep]</td><td>prepozíció</td><td>bezárólag</td><td>bezárólag[/Post|(Ter)]</td></tr>
-                        <tr><td>[/Prev]</td><td>igekötő</td><td>mint elnök vesz részt</td><td>mint[/Prep]</td></tr>
-                        <tr><td>[/QPtcl]</td><td>"-e" kérdő partikula</td><td>össze</td><td>össze[/Prev]</td></tr>
+                        <tr><td>[Sbjv.1Sg›2]</td><td>kötőmód (felszólító), egyes szám, 1. személyű alany, 2. személyű tárgy</td><td>ismerjelek</td><td>ismer[/V]jelek[Sbjv.1Sg›2]</td></tr>
+                        <tr><td>[Sbjv.Def.1Pl]</td><td>kötőmód (felszólító), határozott ragozás, többes szám, első személy</td><td>törjük</td><td>törik[/V]jük[Sbjv.Def.1Pl]</td></tr>
+                        <tr><td>[Sbjv.Def.1Sg]</td><td>kötőmód (felszólító), határozott ragozás, egyes szám, első személy</td><td>törjem</td><td>törik[/V]jem[Sbjv.Def.1Sg]</td></tr>
+                        <tr><td>[Sbjv.Def.2Pl]</td><td>kötőmód (felszólító), határozott ragozás, többes szám, második személy</td><td>törjétek</td><td>törik[/V]jétek[Sbjv.Def.2Pl]</td></tr>
+                        <tr><td>[Sbjv.Def.2Sg]</td><td>kötőmód (felszólító), határozott ragozás, egyes szám, második személy</td><td>törd</td><td>törik[/V]d[Sbjv.Def.2Sg]</td></tr>
+                        <tr><td>[Sbjv.Def.3Pl]</td><td>kötőmód (felszólító), határozott ragozás, többes szám, harmadik személy</td><td>törjék</td><td>törik[/V]jék[Sbjv.Def.3Pl]</td></tr>
+                        <tr><td>[Sbjv.Def.3Sg]</td><td>kötőmód (felszólító), határozott ragozás, egyes szám, harmadik személy</td><td>törje</td><td>törik[/V]je[Sbjv.Def.3Sg]</td></tr>
+                        <tr><td>[Sbjv.NDef.1Pl]</td><td>kötőmód (felszólító), általános ragozás, többes szám, első személy</td><td>mondjunk</td><td>mond[/V]junk[Sbjv.NDef.1Pl]</td></tr>
+                        <tr><td>[Sbjv.NDef.1Sg]</td><td>kötőmód (felszólító), általános ragozás, egyes szám, első személy</td><td>mondjak</td><td>mond[/V]jak[Sbjv.NDef.1Sg]</td></tr>
+                        <tr><td>[Sbjv.NDef.2Pl]</td><td>kötőmód (felszólító), általános ragozás, többes szám, második személy</td><td>mondjatok</td><td>mond[/V]jatok[Sbjv.NDef.2Pl]</td></tr>
+                        <tr><td>[Sbjv.NDef.2Sg]</td><td>kötőmód (felszólító), általános ragozás, egyes szám, második személy</td><td>mondj</td><td>mond[/V]j[Sbjv.NDef.2Sg]</td></tr>
+                        <tr><td>[Sbjv.NDef.3Pl]</td><td>kötőmód (felszólító), általános ragozás, többes szám, harmadik személy</td><td>mondjanak</td><td>mond[/V]janak[Sbjv.NDef.3Pl]</td></tr>
+                        <tr><td>[Sbjv.NDef.3Sg]</td><td>kötőmód (felszólító), általános ragozás, egyes szám, harmadik személy</td><td>mondjon</td><td>mond[/V]jon[Sbjv.NDef.3Sg]</td></tr>
+                        <tr><td>[Subl]</td><td>"-rA" sublativusi esetrag</td><td>telekre</td><td>telek[/N]re[Subl]</td></tr>
+                        <tr><td>[Supe]</td><td>"-On" superessivusi esetrag</td><td>tetőn</td><td>tető[/N]n[Supe]</td></tr>
+                        <tr><td>[Temp]</td><td>"-kor" temporalis esetrag</td><td>nyolckor</td><td>nyolc[/Num]kor[Temp]</td></tr>
+                        <tr><td>[Ter]</td><td>"-ig" terminativusi esetrag</td><td>estig</td><td>est[/N]ig[Ter]</td></tr>
+                        <tr><td>[Transl]</td><td>"-vÁ" translative</td><td>elnökké</td><td>elnök[/N]ké[Transl]</td></tr>
+                        <tr><td>[/Adj]</td><td>melléknév</td><td>szép</td><td>szép[/Adj][Nom]</td></tr>
+                        <tr><td>[/Adj|Abbr]</td><td>melléknév, rövidítés</td><td>ún.</td><td>ún.[/Adj|Abbr][Nom]</td></tr>
+                        <tr><td>[/Adj|Attr]</td><td>csak jelzőként használt melléknév</td><td>kis</td><td>kis[/Adj|Attr][Nom]</td></tr>
+                        <tr><td>[/Adj|Attr|Abbr]</td><td>csak jelzőként használt melléknév, rövidítés</td><td>ifj.</td><td>ifj.[/Adj|Attr|Abbr][Nom]</td></tr>
+                        <tr><td>[/Adj|Attr|Pro]</td><td>csak jelzőként használt melléknév, névmás</td><td>oly</td><td>oly[/Adj|Attr|Pro][Nom]</td></tr>
+                        <tr><td>[/Adj|Pred]</td><td>csak állítmányként használt melléknév</td><td>mindegy</td><td>mindegy[/Adj|Pred]</td></tr>
+                        <tr><td>[/Adj|Pro]</td><td>melléknév, névmás</td><td>olyan</td><td>olyan[/Adj|Pro][Nom]</td></tr>
+                        <tr><td>[/Adj|Pro|Int]</td><td>melléknév, kérdő névmás</td><td>milyen</td><td>milyen[/Adj|Pro|Int][Nom]</td></tr>
+                        <tr><td>[/Adj|Pro|Rel]</td><td>melléknév, vonatkozó névmás</td><td>amilyen</td><td>amilyen[/Adj|Pro|Rel][Nom]</td></tr>
+                        <tr><td>[/Adj|Unit]</td><td>melléknév, mértékegység</td><td>perces</td><td>perces[/Adj|Unit][Nom]</td></tr>
+                        <tr><td>[/Adj|col]</td><td>melléknév, színnév</td><td>piros</td><td>piros[/Adj|col][Nom]</td></tr>
+                        <tr><td>[/Adj|nat]</td><td>melléknév, nemzetiség/nyelv</td><td>német</td><td>német[/Adj|nat][Nom]</td></tr>
+                        <tr><td>[/Adv]</td><td>határozószó</td><td>szinte</td><td>szinte[/Adv]</td></tr>
+                        <tr><td>[/Adv|(Adj)]</td><td>határozószó</td><td>túl</td><td>túl[/Adv|(Adj)]</td></tr>
+                        <tr><td>[/Adv|(Num)]</td><td>határozószó</td><td>ízben</td><td>ízben[/Adv|(Num)]</td></tr>
+                        <tr><td>[/Adv|Abbr]</td><td>határozószó, rövidítés</td><td>pl.</td><td>pl.[/Adv|Abbr]</td></tr>
+                        <tr><td>[/Adv|Acronx]</td><td>határozószó, betűző kiejtésű betűszó</td><td>kábé</td><td>kábé[/Adv|Acronx]</td></tr>
+                        <tr><td>[/Adv|AdjMod]</td><td>határozószó, melléknév modifier</td><td>egész</td><td>egész[/Adv|AdjMod]</td></tr>
+                        <tr><td>[/Adv|Pro]</td><td>határozószó, névmás</td><td>úgy</td><td>úgy[/Adv|Pro]</td></tr>
+                        <tr><td>[/Adv|Pro|Int]</td><td>határozószó, kérdő névmás</td><td>hogyan</td><td>hogyan[/Adv|Pro|Int]</td></tr>
+                        <tr><td>[/Adv|Pro|Rel]</td><td>határozószó, vonatkozó névmás</td><td>ahogyan</td><td>ahogyan[/Adv|Pro|Rel]</td></tr>
+                        <tr><td>[/CmpdPfx]</td><td>önállóan nem élő összetételi előtag</td><td>almenü</td><td>al[/CmpdPfx]menü[/N][Nom]</td></tr>
+                        <tr><td>[/Cnj]</td><td>kötőszó</td><td>és</td><td>és[/Cnj]</td></tr>
+                        <tr><td>[/Cnj|Abbr]</td><td>kötőszó, rövidítés</td><td>ill.</td><td>ill.[/Cnj|Abbr]</td></tr>
+                        <tr><td>[/Det]</td><td>determináns</td><td>holmi</td><td>holmi[/Det]</td></tr>
+                        <tr><td>[/Det|Art.Def]</td><td>determináns, határozott névelő</td><td>az</td><td>az[/Det|Art.Def]</td></tr>
+                        <tr><td>[/Det|Art.NDef]</td><td>determináns, határozatlan névelő</td><td>egy</td><td>egy[/Det|Art.NDef]</td></tr>
+                        <tr><td>[/Det|Pro]</td><td>determináns, névmás</td><td>ez</td><td>ez[/Det|Pro][Nom]</td></tr>
+                        <tr><td>[/Det|Pro|(Post)]</td><td>determináns, névmás, mássalhangzó kezdetű névutók előtt</td><td>e (mögött a ház mögött)</td><td>e[/Det|Pro|(Post)]</td></tr>
+                        <tr><td>[/Det|Pro|Int]</td><td>determináns, kérdő névmás</td><td>melyik</td><td>melyik[/Det|Pro|Int]</td></tr>
+                        <tr><td>[/Det|Pro|Rel]</td><td>determináns, vonatkozó névmás</td><td>amelyik</td><td>amelyik[/Det|Pro|Rel]</td></tr>
+                        <tr><td>[/Det|Pro|def]</td><td>determináns, névmás</td><td>azon</td><td>azon[/Det|Pro|def]</td></tr>
+                        <tr><td>[/Det|Q.NDef]</td><td>határozatlan kvantordetermináns</td><td>minden</td><td>minden[/Det|Q.NDef]</td></tr>
+                        <tr><td>[/Det|Q]</td><td>kvantordetermináns</td><td>némi</td><td>némi[/Det|Q]</td></tr>
+                        <tr><td>[/Inj-Utt]</td><td>indulatszó/mondatszó</td><td>nos</td><td>nos[/Inj-Utt]</td></tr>
+                        <tr><td>[/N]</td><td>főnév</td><td>ház</td><td>ház[/N][Nom]</td></tr>
+                        <tr><td>[/Num]</td><td>számnév</td><td>öt</td><td>öt[/Num][Nom]</td></tr>
+                        <tr><td>[/Num|Abbr]</td><td>számnév, rövidítés</td><td>Mrd</td><td>Mrd[/Num|Abbr][Nom]</td></tr>
+                        <tr><td>[/Num|Attr]</td><td>csak jelzőként használt számnév</td><td>két</td><td>két[/Num|Attr][Nom]</td></tr>
+                        <tr><td>[/Num|Digit]</td><td>számnév, számjegyekkel írva</td><td>7</td><td>7[/Num|Digit][Nom]</td></tr>
+                        <tr><td>[/Num|Pro]</td><td>számnév, névmás</td><td>annyi</td><td>annyi[/Num|Pro][Nom]</td></tr>
+                        <tr><td>[/Num|Pro|Int]</td><td>számnév, kérdő névmás</td><td>mennyi</td><td>mennyi[/Num|Pro|Int][Nom]</td></tr>
+                        <tr><td>[/Num|Pro|Rel]</td><td>számnév, vonatkozó névmás</td><td>amennyi</td><td>amennyi[/Num|Pro|Rel][Nom]</td></tr>
+                        <tr><td>[/Num|Roman]</td><td>római számmal írt számnév</td><td>III</td><td>III[/Num|Roman][Nom]</td></tr>
+                        <tr><td>[/N|Abbr]</td><td>főnév, rövidítés</td><td>szerk.</td><td>szerk.[/N|Abbr][Nom]</td></tr>
+                        <tr><td>[/N|Abbr|ChemSym]</td><td>főnév, rövidítés, kémiai elem jele</td><td>Pb</td><td>Pb[/N|Abbr|ChemSym][Nom]</td></tr>
+                        <tr><td>[/N|Acron]</td><td>főnév, betűszó</td><td>DVD</td><td>DVD[/N|Acron][Nom]</td></tr>
+                        <tr><td>[/N|Acronx]</td><td>főnév, betűző kiejtésű betűszó</td><td>ábécé</td><td>ábécé[/N|Acronx][Nom]</td></tr>
+                        <tr><td>[/N|Ltr]</td><td>főnév, betű</td><td>c</td><td>c[/N|Ltr][Nom]</td></tr>
+                        <tr><td>[/N|Pro]</td><td>főnév, névmás</td><td>ők</td><td>ők[/N|Pro]k[3Pl][Nom]</td></tr>
+                        <tr><td>[/N|Pro|(Post)]</td><td>főnév, névmás, mássalhangzó kezdetű névutók előtt</td><td>e(mellett)</td><td>e[/N|Pro|(Post)][Nom]</td></tr>
+                        <tr><td>[/N|Pro|Abbr]</td><td>főnév, névmás, rövidítés</td><td>ua.</td><td>ua.[/N|Pro|Abbr][Nom]</td></tr>
+                        <tr><td>[/N|Pro|Int]</td><td>főnév, kérdő névmás</td><td>kivel</td><td>ki[/N|Pro|Int]vel[Ins]</td></tr>
+                        <tr><td>[/N|Pro|Rel]</td><td>főnév, vonatkozó névmás</td><td>akivel</td><td>aki[/N|Pro|Rel]vel[Ins]</td></tr>
+                        <tr><td>[/N|Unit]</td><td>főnév, mértékegység</td><td>méter</td><td>méter[/N|Unit][Nom]</td></tr>
+                        <tr><td>[/N|Unit|Abbr]</td><td>főnév, mértékegység, rövidítés</td><td>cm</td><td>cm[/N|Unit|Abbr][Nom]</td></tr>
+                        <tr><td>[/N|lat]</td><td>latin főnév</td><td>cellulitis</td><td>cellulitis[/N|lat][Nom]</td></tr>
+                        <tr><td>[/N|mat]</td><td>főnév, anyagnév</td><td>arany</td><td>arany[/N|mat][Nom]</td></tr>
+                        <tr><td>[/Post]</td><td>névutó</td><td>között</td><td>között[/Post]</td></tr>
+                        <tr><td>[/Post|(Abl)]</td><td>névutó/határozószó ablativusi vonzattal</td><td>távol</td><td>távol[/Post|(Abl)]</td></tr>
+                        <tr><td>[/Post|(All)]</td><td>névutó/határozószó allativusi vonzattal</td><td>képest</td><td>képest[/Post|(All)]</td></tr>
+                        <tr><td>[/Post|(Ela)]</td><td>névutó/határozószó elativusi vonzattal</td><td>kifolyólag</td><td>kifolyólag[/Post|(Ela)]</td></tr>
+                        <tr><td>[/Post|(Ins)]</td><td>névutó/határozószó eszköz- és társhatározói vonzattal</td><td>ellentétben</td><td>ellentétben[/Post|(Ins)]</td></tr>
+                        <tr><td>[/Post|(N0)]</td><td>névutó/határozószó puszta főnévi vonzattal</td><td>számba</td><td>számba[/Post|(N0)]</td></tr>
+                        <tr><td>[/Post|(Poss)]</td><td>névutó/határozószó, vonzatával együtt birtokos szerkezetet alkot</td><td>számára</td><td>számára[/Post|(Poss)][Poss.3Sg]</td></tr>
+                        <tr><td>[/Post|(Subl)]</td><td>névutó/határozószó sublativusi vonzattal</td><td>tekintettel</td><td>tekintettel[/Post|(Subl)]</td></tr>
+                        <tr><td>[/Post|(Supe)]</td><td>névutó/határozószó superessivusi vonzattal</td><td>kívül</td><td>kívül[/Post|(Supe)]</td></tr>
+                        <tr><td>[/Post|(Ter)]</td><td>névutó/határozószó terminativusi vonzattal</td><td>bezárólag</td><td>bezárólag[/Post|(Ter)]</td></tr>
+                        <tr><td>[/Prep]</td><td>prepozíció</td><td>mint elnök vesz részt</td><td>mint[/Prep]</td></tr>
+                        <tr><td>[/Prev]</td><td>igekötő</td><td>össze</td><td>össze[/Prev]</td></tr>
+                        <tr><td>[/QPtcl]</td><td>"-e" kérdő partikula</td><td>jön-e</td><td>jön[/V][Prs.NDef.3Sg]-e[QPtcl]</td></tr>
                         <tr><td>[/Space]</td><td>szóköz (a helyesírási normától eltérően egybeírt szerkezetekbe beszúrva)</td><td>balpart</td><td>bal[/Adj] [/Space]part[/N][Nom]</td></tr>
                         <tr><td>[/Supl]</td><td>felsőfok</td><td>leg-</td><td>leg[/Supl]nagy[/Adj]obb[_Comp/Adj][Nom]</td></tr>
                         <tr><td>[/S|Abbr]</td><td>mondat, rövidítés</td><td>K.m.f.</td><td>K.m.f.[/S|Abbr]</td></tr>
@@ -265,7 +265,7 @@
                         <tr><td>[_VNz:nivaló/N]</td><td>"-nivaló" főnévképző</td><td>falnivaló</td><td>fal[/V]nivaló[_VNz:nivaló/N][Nom]</td></tr>
                         <tr><td>[_Vbz:kOd/V]</td><td>"-s?kOdik" denominális igeképző</td><td>katonáskodik</td><td>katonás[/Adj]kodik[_Vbz:kOd/V][Prs.NDef.3Sg]</td></tr>
                     </tbody>
-                </table>
+                </table>                
             </div>
 
         </article>
