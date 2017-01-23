@@ -3,33 +3,35 @@
         <article>
             <h3 id="emmorph"><span>emMorph</span> - morfológiai elemző</h3>
 
-            <h4>Az eszközről</h4>
-            <h5>Mire jó? Mit csinál?</h5>
-            <p>Az elemzőlánc morfológiai elemző része a szöveg minden egyes szóalakjához hozzárendeli az összes lehetséges morfológiai,
-                morfoszintaktikai elemzését. Feladata minden olyan elemzés meghatározása, amely az adott szóalakra környezettől 
-                függetlenül érvényes lehet (például a <i>vár</i> esetében azt is hozzáadja, hogy főnév és azt is, hogy ige). Megállapítja a szótőt,
-                a szófaji főkategóriát, elemzi a toldalékokat, megadja a szóalak morfémákra bontásának lehetőségeit, így a szóösszetételi határokat
-                is.
-                <br>Az elemző a magyar nyelvre eddig elérhető eszközök tudását összegző, a fejlesztők szándéka szerint az eddigi legpontosabb
-                és legtöbb szóalakot ismerő, szabadon hozzáférhető és egyedi nyelvfeldolgozási igényekhez, nyelvváltozatokhoz testre szabható 
-                eszköz, amely a leggyorsabb működést biztosító számítógépes nyelvészeti modellen (ún. véges állapotú technológián) alapul.</p>
-            <h5>Mi a bemenet?</h5>
-            <p>A teljes rendszer alapvetően egy elemzési lánc egymásra épülő elemzési lépésekkel. Ebből következően a morfológiai elemző 
-                bemenete egy sorban egy szóalak.
-                <br>A szóalakok határait megállapító megelőző nyelvfeldolgozási lépést a szövegtagoló, a többféle lehetséges elemzés közül 
-                a szövegkörnyezetben éppen megfelelő kiválasztását, a következő elemzési lépés, az egyértelműsítő (emTag) végzi.</p>
-            <h5>Mi a kimenet?</h5>
-            <p>Az elemző kimenete az összes olyan morfémasorozat a hozzátartozó elemzéssel, amiből az aktuális karaktersorozat a magyar nyelv
-                szabályai szerint felépülhet. Ez sokszor olyan nagy számú elemzéshez vezet, melyeknek többsége az emberi beszélőben nem is
-                tudatosul. Ezeknek az elemzési útvonalaknak a többségét a morfológia elemzőt felhasználó magasabb szintű feladat igényeihez 
-                igazodva lehet aztán kiszűrni, az elemzési lehetőségeket szűkíteni.</p>
-            <h5>Egy példa a működésre.</h5>
-            <p>Az alábbi példa egyrészt a beszélő számára nehezen tetten érhető többértelműséget is szemlélteti, másrészt illusztrálja
-                azt a jelenséget is, amikor az elemző szótárában egy egységként tárolt szóalakok további alkotóelemekre bonthatók. 
-                Alkalmazástól függően többnyire a beszélők számára is legkézenfekvőbb ['fejetlenség' + tárgyeset] elemzés elegendő, 
-                melyet a szótövesítő programot felhasználva meg is kaphatunk, viszont az ebben megmaradó szemantikai többértelműséget
-                (a 'fej' alak igei vagy főnévi értelmezésétől függően) a morfológiai elemzés (és a szófaji egyértelműsítés) szintjén
-                nem lehet feloldani.
+            <h4>About the tool</h4>
+            <h5>What does it do?</h5>
+            <p>The task of the morphological tagger in the toolchain is to assign all possible morphological and morphosyntactic analyses to 
+            each word of the input text. It determines every possible analyis that could apply to a given word form irrespective of its context 
+            (<i>vár</i>, e.g. would have an analysis as a noun and as a verb, too (Engl.: <i>wait</i> / <i>castle</i>)). The tool lemmatises the 
+            word form, determines the main POS categories, analyses the endings, marks possible morpheme boundaries, and so the boundaries of 
+            compunds, as well.
+                <br>The tagger integrates the knowledge of other similar tools that have so far been available for Hungarian. According to 
+                its developers it is the most accurate tool of its kind with the widest lexicon to rely on. It is freely accessible, customisable 
+                to specific NLP requirements and to language varieties, while being based on a computational linguistic model (so-called 
+                finite-state technology) that ensures the fastest possible runtime.</p>
+            <h5>What is the input?</h5>
+            <p>The system presented here being a toolchain, with analysing steps building one on the other, respectively, the input of the 
+            morphological tagger is a word form in a row.
+                <br>The previous language processing step (determining sentence- and word boundaries), is carried out by the tokeniser (emToken), 
+                while the following step (choosing the right morphological analysis from those offered by emMorph) is then carried out by a 
+                disambiguation algorithm, emTag.</p>
+            <h5>What is the output?</h5>
+            <p>The output of the tagger is the totality of morpheme-sequences with their respective analyses that could make up the character 
+            string in question according to the rules of Hungarian. This often amounts to a huge number of possible analyses most of which a 
+            speaker would not even be aware of. The majority of these analysis routes can then be filtered out depending on the higher level 
+            task using the morphological tagger, thus constraining possible analyses.</p>
+            <h5>An example of the tagging.</h5>
+            <p>The example below is supposed to illustrate two phenomena: on the one hand a disambiguity that is hard to detect for a speaker, 
+            on the other hand the case of a word form stored as one unit in the lexicon of the tagger but being able to be decomposed into 
+            further components. Depending on the application needed, the analysis ['fejetlenség' + accusative] (which is also the most obvious 
+            alternative for speakers) is sufficient in most cases. Using emLem, we we do arrive at this analysis, but the remaining semantic 
+            disambiguity (depending on whether fej is interpreted as a noun or a verb) cannot be resolved on the level of a morphological 
+            analysis or part-of-speech disambiguation.
             <div class="table-responsive">
                 <table class="table">
                     <thead>
@@ -59,60 +61,60 @@
                 </table>
             </div>
             <p>
-                [/N] főnév
-                <br>[/Adj] melléknév
-                <br>[_Abe/Adj] névszói fosztóképző (eredménye: melléknév)
-                <br>[Acc] tárgyeset (accusativus)
-                <br>[_Nz_Abstr/N] absztrakt tulajdonságnév-képző (eredménye: főnév)
-                <br>[_NegPtcp/Adj] igei fosztóképző (eredménye: melléknév)
+                [/N] noun
+                <br>[/Adj] adjective
+                <br>[_Abe/Adj] adjectivizer negative suffix (its result: adjective)
+                <br>[Acc] accusative
+                <br>[_Nz_Abstr/N] derivational suffix: nominalizer suffix (its result: noun)
+                <br>[_NegPtcp/Adj] deverbal negative suffix (its result: adjective)
             </p>
            
             <br/>
             
             <p>
-                <a href="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/textmodules/emmorph_codelist" target="_blank">A morfológiai kódok teljes listája</a>
+                <a href="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/textmodules/emmorph_codelist" target="_blank">The full list of morphological codes</a>
             </p>
             
             <br/>
                         
-            <h4>Fejlesztőknek</h4>
+            <h4>For developers:</h4>
 
             <div class="table-responsive">
                 <table class="table table-striped">                
                     <tbody>
                         <tr>
-                            <td>Forrás</td>
+                            <td>Source</td>
                             <td>
 				<a href="https://github.com/dlt-rilmta/emMorph" target="_blank">https://github.com/dlt-rilmta/emMorph</a>
                             </td>
                         </tr>
                         <tr>
-                            <td>Forrásnyelv</td>
-                            <td>Az elemző alapvetően egy véges állapotú fordító eszköz (transzdúcer), amely a felszíni szóalakot (karaktersorozatot) a tőtár, a toldaléktár és a morfofonológiai leírás (nyelvtan) alapján egy morfémákból és morfológiai kódokból álló másik karaktersorozatra alakítja. Az elemző adatbázisa a nyelvi információk meghatározott formátumban történő leírását tartalmazza, a transzdúcer elkészítéséhez és az elemző futtatásához a Helsinki Finite-State Transducer (HFST) eszközkészlet áll rendelkezésre. Ennek implementációs nyelve: C++. 
-			    A HFST compilere számára értelmezhető lexc nyelvű lexikont a morfológia elsődleges forrásából perl nyelven implementált programok állítják elő.</td>
+                            <td>Source language</td>
+                            <td>The tagger is basically a finite state translator (transducer), which – based on a register of lemmata, a register of endings and a morphophonological description (a grammar) – transforms the surface word form (a character string) into another character string made up of morphemes and morphological codes. The database of the tagger contains the description of the linguistic data in a specific format. Preparing the transducer and running the tagger can be carried out via the Helsinki Finite-State Transducer toolkit (HFST), implemented in C++. 
+                            The lexicon that can be interpreted by HFST (in lexc) is produced from the primary source of the morphology by programmes implemented in perl..</td>
                         </tr>
                         <tr>
                             <td>Input</td>
-                            <td>Unicode kódolású szöveg, soronként egy szó.</td>
+                            <td>Text in unicode encoding, one word per row.</td>
                         </tr>
                         <tr>
                             <td>Output</td>
-                            <td>A bemeneti szó elemzéseit (soronként egy) üres sor zárja. Az egyes elemzések alakja: bemeneti szó [tab] elemzés [tab] súly. A súly a jelen implementációban mindig 1, ha van elemzés, végtelen (inf), ha nincs.</td>
+                            <td>The analysis of the input word (one per row) is followed by an empty row. The format of the analysis is: input word [tab] analysis [tab] weight. Weight in the present implementation is set to 1 if an analysis exists, and to infinite (inf) if no analysis is available.</td>
                         </tr>
                         <tr>
-                            <td>Futtatás</td>
+                            <td>Execution</td>
                             <td>
                                 <span class="code">hfst-lookup --cascade=composition hu.hfst</span>
                                 <br/>
                                 <span class="code">hfst-lookup --pipe-mode=input --cascade=composition hu.hfstol &lt;intext &gt;outtext</span>
                                 <br/>
 				
-                                Az elemző a HFST eszközkészlet lookup programjaival futtatható.
+                                The tagger may be run with the lookup programmes of the HFST toolkit.
                             </td>
                         </tr>
                         <tr>
-                            <td>Licenc</td>
-                            <td>Az adatbázisra a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 (CC BY-NC-SA) licenc vonatkozik. Az adatbázis elsődleges forrásának konverzióját végző kód licence GNU General Public License (GPL v3).</td>
+                            <td>Licence</td>
+                            <td>The database is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 (CC BY-NC-SA) licence. Az adatbázis elsődleges forrásának konverzióját végző kód licence GNU General Public License (GPL v3).</td>
                         </tr>
                     </tbody>
                 </table>
