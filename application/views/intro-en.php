@@ -4,62 +4,59 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <section class="fullpanel">
     <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 col-sm-offset-1 col-md-offset-2 col-lg-offset-3 text-justify">        
         <article class="introduction">
-            <h3 class="text-center">Üdvözöljük<br/> az e-magyar.hu Digitális Nyelvfeldolgozó Rendszer honlapján!</h3>
+            <h3 class="text-center">Welcome to the home page of the <br/>e-magyar.hu Digital Language Processing Toolchain!</h3>
             <br/>
             <br/>
             <p>
-                Az <strong>e-magyar.hu</strong> rendszer a magyar nyelv gépi elemzésének alapvető eszközeit tartalmazza egy integrált, szabványos keretben.
-                Olyan eszközöket adunk közre, amelyek külön-külön és rendszerbe szervezve is hasznosak a magyar nyelvű szöveggel, 
-                beszéddel foglalkozó kutatók, intelligens alkalmazást fejlesztők és a nagyközönség számára is.
-                Ezek az eszközök nélkülözhetetlen infrastruktúrát nyújtanak a magyar nyelv digitális elemzésére,
-                a magyar digitális nyelvhasználat támogatására.
+                The toolchain <strong>e-magyar.hu</strong> contains the basic tools for an automated processing of Hungarian in an integrated and 
+                standardised framework. We are offering tools that can prove useful both on their own and as a toolchain for researchers, 
+                developers of intelligent applications, and for the wide public, as well. These tools provide an inevitable infrastructure 
+                for the digital processing of Hungarian, for the support of digital language use in Hungarian.
             </p>
             <p>
-                A magyar nyelv számítógépes elemzése nem (csupán) a nyelvészek érdeklődését szolgálja.
-                A digitális kommunikáció korában manapság laptopok, tabletek és főleg okostelefonok segítségével érintkezünk egymással,
-                és kommunikálunk egyre inkább gépi rendszerekkel.
-                Mindez azonban továbbra is emberi nyelven történik, ami feltételezi azt, hogy ezeknek az eszközöknek és gépi rendszereknek
-                nyelvileg is okosodniuk kell ahhoz, hogy hasznos segítőink legyenek. 
-                A távlati cél az, hogy a gépi rendszerek, alkalmazások értsenek a nyelvünkön.
-                Bár ettől még távol vagyunk, de az itt közreadott eszközök az első lépést jelentik ebben az irányban.
-                Nélkülük nem születhetnek magyar nyelvű intelligens alkalmazások, és tágabb értelemben nélkülük nem lehetséges
-                felzárkóztatni a magyar nyelvet a digitális térben a nagy támogatottsággal rendelkező nyelvekhez.
+                Computational processing of Hungarian is not exclusively linguists’ business. In the age of digital communication we are 
+                connected through notebooks, tablets and smart phones, and we communicate to an increasing extent with machines. All this 
+                takes place in human language, which presupposes that these tools and systems get smarter linguistically, as well, in order 
+                for them to be our useful helpers. The long-term goal is that these tools and applications understand our language. Although 
+                we are far from that at the moment, but the tools presented here are a first step in this direction. No intelligent 
+                application may be devised in Hungarian without these, and in a wider sense without these it is impossible to put Hungarian 
+                on equal terms with languages with greater support in the digital space.
             </p>            
             <p>
-                Fontos cél volt, hogy az elemző eszközöket nyílt forráskóddal szabadon elérhetővé tegyük a kutatás-fejlesztés és
-                az ipari felhasználás számára. A szakmai felhasználók, fejlesztők mellett a technológiai kérdésekben járatlan kutatók
-                illetve a nagyközönség igényeit két módon is igyekszünk kiszolgálni. Egyrészt a honlapon üzemeltetünk egy <a href="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/parser">webszolgáltatást</a>,
-                amely az oldalra bemásolt szövegeket elemzett alakban adja vissza. Az összetettebb elemzést igénylők az e-magyar.hu eszközöket
-                beépülő modulként használhatják a nemzetközileg is ismert GATE nyelvelemző rendszerben.
-                (Erről a lehetőségről további részletek <a href="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/textmodules/gate">itt</a> találhatók).
+                It was an important goal to provide an open source code access for the toolchain for both R&D and industrial use. 
+                Besides addressing professional users, we are trying to meet the needs of laymen and non-professional researchers in 
+                two ways. One way is a <a href="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/parser">web service</a>
+                running on our homepage, which returns the input texts in the analysed format. The other way of meeting the needs of those 
+                requiring a more complex analysis is enabling the integration of the tools in e-magyar.hu in the internationally 
+                well-known language processing architecture GATE. (More details about this option may be read 
+                <a href="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/textmodules/gate">here</a>.
             </p>
             <br/>
             <p>
-                Az <strong>e-magyar.hu</strong> rendszer a Magyar Tudományos Akadémia támogatásával készült a 2015-ben kiírt
-                infrastruktúrafejlesztési pályázat keretében. A munkálatok a pályázat kedvezményezettje, a Nyelvtudományi Intézet
-                koordinálásával széleskörű együttműködés keretében folytak, melyben részt vett a hazai nyelvtechnológia számos vezető
-                kutatás-fejlesztő műhelye. A kifejlesztett új infrastruktúra továbbfejlesztette, szabványosította és integrálta a különböző
-                műhelyekben készült eszközöket. 
+                <strong>e-magyar.hu</strong> was developed with the support of the Hungarian Academy of Sciences, within the framework of 
+                an infrastructure improvement grant starting in 2015. The development was carried out in wide cooperation of several 
+                major Hungarian R&D centres, under the leadership of the Research Institute for Linguistics. The new infrastructure improved, 
+                standardised and integrated the existing tools that had been developed in these centres. 
             </p>
             <p>
-                Az infrastruktúra két részből áll. Az egyik rész az írott szöveg elemzésével foglalkozik (részletesebben lásd <a href="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/textmodules/textoverview">itt</a>),
-                a másik rész a beszédfeldolgozást segíti egy beszédadatbázissal és beszédelemző modulokkal (további információ <a href="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/speechmodules/speechoverview">itt</a>). 
-                A munkálatokat <strong>Váradi Tamás</strong> koordinálta, a szövegfeldolgozó részt <strong>Oravecz Csaba</strong>, a beszédfeldolgozási munkát <strong>Kornai András</strong> irányította.
+                The infrastructure has two distinct components. One of them analysis written texts (for more information see <a href="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/textmodules/textoverview">here</a>),
+                the other aids speech processing with a speech-database and speech analysing modules (for more information see <a href="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/speechmodules/speechoverview">here</a>). 
+                The text processing module was developed under the direction of <strong>Csaba Oravecz</strong>, the speech processing module under the direction of <strong>András Kornai</strong>, while the overall work was coordinated by <strong>Tamás Váradi</strong>.
             </p>
             <br/>
             <br/>
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-5">
                     <p>
-                        Közreműködő partner intézetek:
+                        Partner institutes:
                     </p>
                     <p>
-                        <a href="http://www.nytud.hu/" target="_blank">MTA Nyelvtudományi Intézet</a><br/>
-                        <a href="http://www.aitia.ai/" target="_blank">AITIA International Zrt.</a><br/>
-                        <a href="http://www.u-szeged.hu/" target="_blank">Szegedi Tudományegyetem</a><br/>
-                        <a href="https://www.sztaki.hu/mtasztaki/az_intezet/" target="_blank">MTA SZTAKI</a><br/>
-                        <a href="https://ppke.hu/" target="_blank">Pázmány Péter Katolikus Egyetem</a><br/>
-                        <a href="http://www.morphologic.hu/" target="_blank">Morphologic Kft.</a>
+                        <a href="http://www.nytud.hu/" target="_blank">Research Institute for Linguistics, HAS</a><br/>
+                        <a href="http://www.aitia.ai/" target="_blank">AITIA International Inc.</a><br/>
+                        <a href="http://www.u-szeged.hu/" target="_blank">University of Szeged</a><br/>
+                        <a href="https://www.sztaki.hu/mtasztaki/az_intezet/" target="_blank">Institute for Computer Science and Control, HAS</a><br/>
+                        <a href="https://ppke.hu/" target="_blank">Pázmány Péter Catholic University</a><br/>
+                        <a href="http://www.morphologic.hu/" target="_blank">Morphologic Ltd.</a>
                     </p>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-7">
