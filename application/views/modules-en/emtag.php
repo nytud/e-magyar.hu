@@ -5,17 +5,17 @@
 
             <h3 id="emtag"><span>emTag</span> - egyértelműsítő</h3>
 
-            <h4>Az eszközről</h4>
-            <h5>Mire jó? Mit csinál?</h5>
-            <p>A program a betanult anyag alapján meghatározza a korábban tokenekre bontott mondat minden tokenjének szótövét és szófaját,
-                majd ezt címkével jelöli is. </p>
-            <h5>Mi a bemenet?</h5>
-            <p>A program minden mondatot külön kezel, a bemenet így tokenekre bontott mondatok sorozata.</p>
-            <h5>Mi a kimenet?</h5>
-            <p>A program kimenetként a bemeneti tokenek és az egyes tokenekhez rendelt szótőt és szófaji címkéket adja.</p>
+            <h4>About the tool</h4>
+            <h5>What is it good for? What does it do?</h5>
+            <p>On the basis of the learning data the programme determines the lemma and part-of-speech of every token that had been 
+            identified earlier, and tags these, as well.</p>
+            <h5>What is the input?</h5>
+            <p>The programme deals with every sentence separately. Accordingly, the input is a series of senteces divided into tokens.</p>
+            <h5>What is the output?</h5>
+            <p>The programme returns the input tokens and with their word stem and POS tags, respectively..</p>
 
-            <h5>Egy példa a működésre.</h5>
-            <p><i>A kastély nem vár.</i></p>
+            <h5>An example:</h5>
+            <p><i>A kastély nem vár.]</i></p>
             <div class="table-responsive">
                 <table class="table">
                     <tr>
@@ -84,42 +84,42 @@
 
             <br/>
 
-            <h4>Fejlesztőknek</h4>
+            <h4>For developers:</h4>
 
             <div class="table-responsive">
                 <table class="table table-striped">                
                     <tbody>
                         <tr>
-                            <td>Forrás</td>
+                            <td>Source</td>
                             <td>
                                 <a href="https://github.com/ppke-nlpg/purepos" target="_blank">https://github.com/ppke-nlpg/purepos</a>                             
                             </td>
                         </tr>
                         <tr>
-                            <td>Forrásnyelv</td>
+                            <td>Source code</td>
                             <td>Java</td>
                         </tr>
                         <tr>
                             <td>Input</td>
-                            <td>Soronként egy mondat, a tokenek szóközzel elválasztva.</td>
+                            <td>One sentence per row, the tokens divided by a space.</td>
                         </tr>
                         <tr>
                             <td>Output</td>
-                            <td>Ugyanaz, mint az input, de a tokenekhez # jellel elválasztva hozzá van fűzve a szótő és a címke.</td>
+                            <td>The same as the input, but the token is followed by its lemma and the tag assigned to a it, following a # tag.</td>
                         </tr>
                         <tr>
-                            <td>Futtatás</td>
+                            <td>Execution</td>
                             <td>
                                 <span class="code">java -jar purepos-&lt;version&gt;.jar tag -m betanított.model [-i input.txt] [-o output.txt]</span>                               
                             </td>
                         </tr>
                         <tr>
-                            <td>Licensz</td>
+                            <td>Licence</td>
                             <td>LGPL-3.0</td>
                         </tr>
                         <tr>
-                            <td>További információk</td>
-                            <td>Dependencia a fordításhoz: maven 2.</td>
+                            <td>Further information</td>
+                            <td>Dependency for the translation: maven 2.</td>
                         </tr>
                     </tbody>
                 </table>

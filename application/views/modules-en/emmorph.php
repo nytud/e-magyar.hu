@@ -1,7 +1,7 @@
 <section class="fullpanel">
     <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 col-sm-offset-1 col-md-offset-2 col-lg-offset-3 text-justify">
         <article>
-            <h3 id="emmorph"><span>emMorph</span> - morfológiai elemző</h3>
+            <h3 id="emmorph"><span>emMorph</span> - Morphological analyser</h3>
 
             <h4>About the tool</h4>
             <h5>What does it do?</h5>
@@ -30,7 +30,7 @@
             on the other hand the case of a word form stored as one unit in the lexicon of the tagger but being able to be decomposed into 
             further components. Depending on the application needed, the analysis ['fejetlenség' + accusative] (which is also the most obvious 
             alternative for speakers) is sufficient in most cases. Using emLem, we we do arrive at this analysis, but the remaining semantic 
-            disambiguity (depending on whether fej is interpreted as a noun or a verb) cannot be resolved on the level of a morphological 
+            disambiguity (depending on whether <i>fej</i> is interpreted as a noun or a verb) cannot be resolved on the level of morphological 
             analysis or part-of-speech disambiguation.
             <div class="table-responsive">
                 <table class="table">
@@ -66,7 +66,7 @@
                 <br>[_Abe/Adj] adjectivizer negative suffix (its result: adjective)
                 <br>[Acc] accusative
                 <br>[_Nz_Abstr/N] derivational suffix: nominalizer suffix (its result: noun)
-                <br>[_NegPtcp/Adj] deverbal negative suffix (its result: adjective)
+                <br>[_NegPtcp/Adj] Derivational suffix: negative passive (its result: adjective)
             </p>
            
             <br/>
@@ -91,7 +91,7 @@
                         <tr>
                             <td>Source language</td>
                             <td>The tagger is basically a finite state translator (transducer), which – based on a register of lemmata, a register of endings and a morphophonological description (a grammar) – transforms the surface word form (a character string) into another character string made up of morphemes and morphological codes. The database of the tagger contains the description of the linguistic data in a specific format. Preparing the transducer and running the tagger can be carried out via the Helsinki Finite-State Transducer toolkit (HFST), implemented in C++. 
-                            The lexicon that can be interpreted by HFST (in lexc) is produced from the primary source of the morphology by programmes implemented in perl..</td>
+                            The lexicon that can be interpreted by HFST (in lexc) is generated from the primary source of the morphology by programmes implemented in perl..</td>
                         </tr>
                         <tr>
                             <td>Input</td>
@@ -99,7 +99,7 @@
                         </tr>
                         <tr>
                             <td>Output</td>
-                            <td>The analysis of the input word (one per row) is followed by an empty row. The format of the analysis is: input word [tab] analysis [tab] weight. Weight in the present implementation is set to 1 if an analysis exists, and to infinite (inf) if no analysis is available.</td>
+                            <td>The analyses of the input word (each analysis is in a separate row) are themselves separated by an empty row. The format of the analysis is: input word [tab] analysis [tab] weight. Weight in the present implementation is set to 1 if an analysis exists, and to infinite (inf) if no analysis is available.</td>
                         </tr>
                         <tr>
                             <td>Execution</td>
@@ -114,7 +114,7 @@
                         </tr>
                         <tr>
                             <td>Licence</td>
-                            <td>The database is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 (CC BY-NC-SA) licence. Az adatbázis elsődleges forrásának konverzióját végző kód licence GNU General Public License (GPL v3).</td>
+                            <td>The database is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 (CC BY-NC-SA) licence. GNU General Public License (GPL v3) converts the primary source of the database.</td>
                         </tr>
                     </tbody>
                 </table>

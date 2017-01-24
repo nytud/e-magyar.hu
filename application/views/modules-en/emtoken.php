@@ -2,7 +2,7 @@
     <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 col-sm-offset-1 col-md-offset-2 col-lg-offset-3 text-justify">
         <article>
 
-            <h3 id="emtoken"><span>emToken</span> - tokenizáló</h3>
+            <h3 id="emtoken"><span>emToken</span> - Tokeniser</h3>
 
             <h4>About the tool</h4>
             <h5>What is this tool for? What does it do?</h5>

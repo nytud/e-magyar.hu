@@ -24,15 +24,15 @@
                     <a href="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/textmodules/emmorph">emMorph</a></li>
                 <li>Word stemmer (Lemmatiser) – 
                     <a href="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/textmodules/emlem">emLem</a></li>
-                <li>Tagger – 
+                <li>POS Tagger – 
                     <a href="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/textmodules/emtag">emTag</a></li>
                 <li>Dependency parser – 
                     <a href="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/textmodules/emdep">emDep</a></li>
                 <li>Constituent parser – 
                     <a href="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/textmodules/emcons">emCons</a></li>
-                <li>Chunker (partial syntactic analyser) – 
+                <li>NP Chunker (partial syntactic analyser) – 
                     <a href="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/textmodules/emchunk">emChunk</a></li>
-                <li>Named Entity Recognizer) – 
+                <li>NER Tagger – 
                     <a href="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/textmodules/emner">emNer</a></li>
             </ul>
             <p>
