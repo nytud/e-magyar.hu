@@ -541,11 +541,11 @@ var morph_code_list =
     "desc": "determináns"
   },
   {
-    "code": "[/Det|Art.Def]",
+    "code": "[/Det|art.Def]",
     "desc": "determináns, határozott névelő"
   },
   {
-    "code": "[/Det|Art.NDef]",
+    "code": "[/Det|art.NDef]",
     "desc": "determináns, határozatlan névelő"
   },
   {

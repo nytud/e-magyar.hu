@@ -83,7 +83,7 @@
                 list_view: '<?= $this->lang->line("vertical"); ?>'
             };
         </script>        
-        <script type="text/javascript" src="<?php echo base_url(); ?>js/morph_code_list.js"></script>
+        <script type="text/javascript" src="<?php echo base_url(); ?>js/morph_code_list_<?= $this->config->item('language_abbr'); ?>.js"></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>js/options.js"></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>js/tabulator.js"></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>js/deptree-builder.js"></script>
