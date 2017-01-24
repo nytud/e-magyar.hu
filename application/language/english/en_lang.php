@@ -34,9 +34,9 @@ $lang['no_input'] = "No text input.";
 $lang['too_long'] = "Input is too long. Maximum * characters allowed.";
 
 $lang['overview'] = "overview";
-$lang['emtoken'] = "tokenizer";
-$lang['emmorph'] = "morphological analyzer";
-$lang['emlem'] = "lemmatizer";
+$lang['emtoken'] = "tokeniser";
+$lang['emmorph'] = "morphological analyser";
+$lang['emlem'] = "lemmatiser";
 $lang['emtag'] = "POS tagger";
 $lang['emconst'] = "constituent parser";
 $lang['emdep'] = "dependency parser";
@@ -46,12 +46,12 @@ $lang['gate'] = "pipeline";
 $lang['emlam'] = "language model";
 
 $lang['emsad'] = "speech detector";
-$lang['emdia'] = "speaker diarizer";
+$lang['emdia'] = "speaker diariser";
 $lang['emlid'] = "language identifier";
 $lang['empros'] = "prosody parser";
 $lang['speechdb'] = "speech database";
 
-$lang['syntax_anal'] = "syntactical analyzer";
+$lang['syntax_anal'] = "syntactical analyser";
 
 $lang['more_about_modules'] = "more about the modules...";
 $lang['try_emlam'] = "Check out the <a href='textmodules/emlam#emlam'>Language Model (emLam)</a> tool!";
