@@ -73,7 +73,7 @@
                 Nominal phrases – such as <i>haladó eszméket</i> – are also identified by a specific module. .
             </p>
             <p>
-                The last module of the toolchain marks subclasses of so-called Named Entities, such as location- or organisation names, person 
+                The last module of the toolchain marks subclasses of propoer names, such as place- or organisation names, person 
                 names, such as <i>Jókai Mór</i> in our example.
             </p>
             

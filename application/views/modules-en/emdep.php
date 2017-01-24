@@ -1,22 +1,20 @@
 <section class="fullpanel">
     <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 col-sm-offset-1 col-md-offset-2 col-lg-offset-3 text-justify">
         <article>
-            <h3 id="emdep"><span>emDep</span> - függőségi elemző</h3>
+            <h3 id="emdep"><span>emDep</span> - Dependency parser</h3>
 
-            <h4>Az eszközről</h4>
-            <h5>Mire jó? Mit csinál?</h5>
+            <h4>About the tool</h4>
+            <h5>What is it good for? What does it do?</h5>
             <p>
-                Az eszköz a mondatok szerkezeti egységei (szavak, többszavas kifejezések) közötti
-                <span class="help" title="A függőségi viszony egy – többnyire fejnek nevezett – központi egység és az őt módosító,
-                      az általa megszabott egység közti viszonyt jelenti. Például a 'piros alma' szerkezetben a főnév, az 'alma' a fej,
-                      és az őt módosító egység a melléknév, a 'piros'.">függőségi viszonyokat</span> tárja fel.          
+                The tool reveals the
+                <span class="help" title="Dependency relation is the relation between a central unit – mostly called a head – and another unit modifying it and determinded by it. For example in the phrase 'piros alma' the head is the noun ('alma'), while the unit modifying it is the adjective 'piros'.">dependency relations</span> between the structural units (words, multiword expressions) of a sentence.          
             </p>
-            <h5>Mi a bemenet?</h5>
-            <p>Olyan szöveg, amelyet előzetesen tokenekre bontottak, és morfológiailag egyértelműsítettek. </p>
-            <h5>Mi a kimenet?</h5>
-            <p>Olyan mondatok, amelynek szavai ún. elemzési fába vannak rendezve, amelyek bemutatják a mondat elemei közötti függőségi viszonyokat. 
-                Minden tokenhez hozzá van rendelve a megfelelő elemzési címke és a szülő csomópontja, a fej.</p>
-            <h5>Egy példa a működésre.</h5>
+            <h5>What is the input?</h5>
+            <p>Text that had been tokenised and morphologically disambiguated. </p>
+            <h5>What is the output?</h5>
+            <p>Sentences, the words of which are arranged in so-called parse trees, which reveal the dependency relations between the units of the sentence.  
+                Every token is assigned the appropriate analysis tag and its parent node, the head.</p>
+            <h5>An example:</h5>
             
             <p><i>Az exkatonát kórházba szállították, ahol két műtétet is végrehajtottak rajta.</i></p>
 
@@ -135,38 +133,38 @@
             
             <br/>
             
-            <h4>Fejlesztőknek</h4>
+            <h4>For developers</h4>
 
             <div class="table-responsive">
                 <table class="table table-striped">                
                     <tbody>
                         <tr>
-                            <td>Forrás</td>
+                            <td>Source</td>
                             <td>
                                 <a href="http://rgai.inf.u-szeged.hu/magyarlanc" target="_blank">http://rgai.inf.u-szeged.hu/magyarlanc</a>                                
                             </td>
                         </tr>
                         <tr>
-                            <td>Forrásnyelv</td>
+                            <td>Source code</td>
                             <td>Java</td>
                         </tr>
                         <tr>
                             <td>Input</td>
-                            <td>A POS-tagger kimenete (egy sorban egy token, külön oszlopban a szóalak, szótő, morfológiai elemzéssel ellátva), az egyes mondatok üres sorral elválasztva egymástól.</td>
+                            <td>Input is the output of the POS tagger (one token per row, separate column for the word form with lemma and morphological analysis), the respective sentences divided by an empty line.</td>
                         </tr>
                         <tr>
                             <td>Output</td>
-                            <td>Egy sorban egy token, külön oszlopban a szóalak, szótő, morfológiai elemzés, szülő csomópont és szintaktikai címke.</td>
+                            <td>One token per row, a separate column for word form, lemma, morphological analysis, parent node and syntactic tag.</td>
                         </tr>
                         <tr>
-                            <td>Futtatás</td>
+                            <td>Execution</td>
                             <td>
                                 <span class="code">java -Xmx2G -jar magyarlanc-3.0.jar -mode depparse -input in.txt -output out.txt</span>                               
                             </td>
                         </tr>
                         <tr>
-                            <td>Licensz</td>
-                            <td>Az adatbázisra a Creative Commons Attribution-ShareAlike 4.0 (CC-BY-SA) licenc vonatkozik. Az adatbázis elsõdleges forrásának konverzióját végzõ kód licence GNU General Public License (GPL v3).</td>
+                            <td>Licence</td>
+                            <td>The database is licensed under the Creative Commons Attribution-ShareAlike 4.0 (CC-BY-SA) licence. GNU General Public License (GPL v3) converts the primary source of the database)</td>
                         </tr>                       
                     </tbody>
                 </table>

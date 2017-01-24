@@ -1,16 +1,16 @@
 <section class="fullpanel">
     <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 col-sm-offset-1 col-md-offset-2 col-lg-offset-3 text-justify">
         <article>
-            <h3 id="emcons"><span>emCons</span> - összetevős elemző</h3>
-            <h4>Az eszközről</h4>
-            <h5>Mire jó? Mit csinál?</h5>
-            <p>Mondatok összetevős szerkezeti elemzése azt tárja fel, hogy a szavak egymással kombinálódva milyen kifejezéseket alkotnak, illetve hogyan állnak össze egy mondattá.</p>
-            <h5>Mi a bemenet?</h5>
-            <p>Olyan szöveg, amelyet előzetesen tokenekre bontottak, és morfológiailag egyértelműsítettek. A mondat szavai (bemeneti tokenek) elemzési fába rendezve: minden tokenhez hozzá van rendelve a megfelelő elemzési címke.</p>
-            <h5>Mi a kimenet?</h5>
-            <p>Az elemző kimenete az egyes szavak és az ezekből kialakítható összes kifejezés lehetséges szintaktikai kapcsolata elemzési fába rendezve. </p>
+            <h3 id="emcons"><span>emCons</span> - Constituency parser</h3>
+            <h4>About the tool</h4>
+            <h5>What is it good for? What does it do?</h5>
+            <p>Constituency parsing of a sentence reveals what phrases the words of a sentence can create when combined with each other, and how they create a whole sentence.</p>
+            <h5>What is the input?</h5>
+            <p>The input is a text that had been tokenised and morphologically disambiguated. The words of the sentence (input tokens) arranged in a parse tree: every token is assigned an appropriate tag.</p>
+            <h5>What is the output?</h5>
+            <p>The output is a parse tree of the words of a sentence and of all the potential syntactic relations of every possible phrase that may be created of these. </p>
 
-            <h5>Egy példa a működésre</h5>
+            <h5>An example:</h5>
             
             <p><i>Az exkatonát kórházba szállították, ahol két műtétet is végrehajtottak rajta.</i></p>
 
@@ -105,38 +105,38 @@
             
             <br/>
 
-            <h4>Fejlesztőknek</h4>
+            <h4>For developers:</h4>
 
             <div class="table-responsive">
                 <table class="table table-striped">                
                     <tbody>
                         <tr>
-                            <td>Forrás</td>
+                            <td>Source</td>
                             <td>
                                 <a href="http://rgai.inf.u-szeged.hu/magyarlanc" target="_balnk">http://rgai.inf.u-szeged.hu/magyarlanc</a>                              
                             </td>
                         </tr>
                         <tr>
-                            <td>Forrásnyelv</td>
+                            <td>Source code</td>
                             <td>Java</td>
                         </tr>
                         <tr>
                             <td>Input</td>
-                            <td>A POS-tagger kimenete (egy sorban egy token, külön oszlopban a szóalak, szótő, morfológiai elemzéssel ellátva), az egyes mondatok üres sorral elválasztva egymástól.</td>
+                            <td>Input is the output of the POS tagger (one token per row, separate column for word form with its lemma and morphological analysis), the respective sentences divided by an empty line.</td>
                         </tr>
                         <tr>
                             <td>Output</td>
-                            <td>Egy sorban egy token, külön oszlopban a szóalak, szótő, morfológiai elemzés, morfológiai elemzés és szintaktikai elemzés.</td>
+                            <td>One token per row, a separate column for word form, lemma, morphological analysis and syntactic parsing.</td>
                         </tr>
                         <tr>
-                            <td>Futtatás</td>
+                            <td>Execution</td>
                             <td>
                                 <span class="code">java -Xmx2G -jar magyarlanc-3.0.jar -mode constparse -input in.txt -output out.txt</span>                               
                             </td>
                         </tr>
                         <tr>
-                            <td>Licensz</td>
-                            <td>Az adatbázisra a Creative Commons Attribution-ShareAlike 4.0 (CC-BY-SA) licenc vonatkozik. Az adatbázis elsõdleges forrásának konverzióját végzõ kód licence GNU General Public License (GPL v3).</td>
+                            <td>Licence</td>
+                            <td>The database is licensed under the Creative Commons Attribution-ShareAlike 4.0 (CC-BY-SA) licence. GNU General Public License (GPL v3) converts the primary source of the database).</td>
                         </tr>                       
                     </tbody>
                 </table>
