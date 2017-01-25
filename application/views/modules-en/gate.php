@@ -2,43 +2,28 @@
     <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 col-sm-offset-1 col-md-offset-2 col-lg-offset-3 text-justify">
 
         <article>
-            <h3 id="gate"><span>Elemzőlánc, integráció</span></h3>
+            <h3 id="gate"><span>Processing chain, integration</span></h3>
 
-            <h4>GATE integráció</h4>
+            <h4>GATE integration</h4>
             <p>
-                Az e-magyar.hu rendszert alkotó különféle feldolgozó modulok integrációját a GATE nyelvfeldolgozó keretrendszerben valósítottuk meg.
-                A java nyelven implementált GATE előnye, hogy kényelmes módszert biztosít tetszőleges számú nyelvfeldolgozó eszköz
-                (ún. Processing Resource) rendszerbe illesztésére. A másik fontos előnyös tulajdonsága az egységes annotációs modell,
-                mely biztosítja a kommunikációt az egyes modulok között.
+                We have integrated the different modules making up  e-magyar.hu in the GATE language processing framework. One advantage of GATE, which is implemented in Java, is that it provides a convenient method for integrating any number of language processing tool (Processing Resource) in one system. Another of its advantages is a uniform annotation model, which enables the communication between the respective modules.
             </p>
             <p>
-                A feldolgozás legelején a szövegben a karakterközök kapnak egy sorszámot (ez az ún. offset), és onnantól kezdve minden annotációt
-                egy offset-pár fejez ki, mely az annotáció elejét és végét adja meg. Az információ közvetlenül az annotációban (Token),
-                vagy az annotációk attribútumaiban (a Token szótő attribútuma) kap helyet. Ezen a módon az annotációk nem zavarják egymást 
-                (sőt tetszőleges átfedés lehet közöttük). Ez hasznos megoldás: így minden modul csak a számára releváns annotációt kell, 
-                hogy beolvassa, az eredményét pedig kiírhatja a megfelelő meglévő vagy újonnan létrehozott annotációba. 
-                Például: a tokenizáló Token és SpaceToken elemeket hoz létre a szavaknak és a szóközöknek megfelelően, a morfológiai elemző 
-                már csak a Tokenek listáját fogja lekérni, ezen végzi el a morfológiai elemzést, a SpaceTokeneket pedig érintetlenül hagyja.
-                A modulok paraméterezhetők abban a tekintetben, hogy mely annotációkon dolgozzanak, ezzel a rendszer rugalmassága még tovább növelhető.
+                At the beginning of the processing all the spaces in the text are assigned a number (so-called offset), and from there on every annotation is expressed by a pair of offsets, indicating the beginning and end of the annotation. Information is stored either directly in the annotation (Token), or in the attributes of the annotation (the attribute of the Token word stem). This way the different annotation do not interfere with each other; there can even be overlaps between them. This is a useful solution: every module may  read only the annotation relevant for it, while the output can be written in the existing or newly created annotation. 
+                For example: the tokeniser creates Token and SpaceToken units, in accordance with words and spaces; the morphological analyser will only fetch the list of Tokens, running the morphological analysis on these and ignoring the SpaceTokens.
+                The modules can be parameterised with respect to which annotations they should be working with, which increases the flexibility of the system even more.
             </p>
             <p>
-                Feladat tehát, hogy minden modult alkalmassá tegyünk arra, hogy a bemenetét és a kimenetét is a GATE annotációs 
-                modelljének megfelelően kezelje. Kiegészítő feladat, hogy ha az egymástól független annotációk között kapcsolatot 
-                akarunk megadni, akkor azt explicit meg kell tenni. Egyszerű példa erre a tulajdonneveket és az őket alkotó tokeneket összekötő
-                kapcsolat. Ezeket a feladatokat valósítottuk meg az integráció során.
+                Our task is, then, to make every module capable of treating both its input and output according to the GATE annotation model.  An additional task is, if we would like to specify a relation between independent annotations, it must be done explicitly. An obvious example for this is the relation between proper names and the tokens constituting them. Such tasks have been implemented during the integration.
             </p>
 
-            <h4>Modulok az elemzőláncban</h4>
+            <h4>Moduls in the processing chain</h4>
             <p>
-                Az e-magyar.hu elemzőlánc a következő GATE-ba integrált modulokból áll. Az emToken mondatokra bontja és tokenizálja a szöveget,
-                az emMorph végrehajtja a morfológiai elemzést és megállapítja a lehetséges szótővet, az emTag egyértelműsít, azaz kiválasztja 
-                az érvényes morfológiai elemzést és szótövet a lehetőségek közül. Az emDep és az emCons szintaktikai elemzést végez, ez után
-                egy kiegészítő eszköz az igékhez kapcsolja az elváló igekötőt, és megadja az igekötős szótövet. Végül az emChunk a főnévi 
-                csoportokat, az emNer pedig a tulajdonneveket határozza meg. Utóbbi eszközök adott attribútumban IOB annotációval látják el a 
-                tokeneket, ezt egy kiegészítő eszköz önálló annotációvá alakítja a kényelmesebb feldolgozhatóság érdekében. 
+                The toolchain e-magyar.hu has the following modules integrated in GATE: emToken segments a text into sentences and tokens, emMorph  carries out a morphological analysis and determines possible word stems, emTag disambiguates, i.e. choses the valid morphological analysis and lemma from the possible ones. emDep and emCons carries out syntactic parsing, followed by an additional tool connecting verbs and their respective separable prefixes, returning the prefixed verb stem.
+                Finally, emChunk determines noun phrases, while emNer identifies proper names. These later tools add an IOB annotation to a given attribute, which, for a more convenient further processing, is transformed into an independent annotation by an additional tool. 
             </p>
 
-            <h4>Telepítés</h4>
+            <h4>Installation</h4>
             Az elemzőlánc használható a GATE grafikus felületéről, (a GATE Developer-ből), és attól függetlenül paracssorból 
             a GATE Embedded technológia segítségével.<br/>
             A grafikus felületen történő használathoz a GATE telepítése után csupán a GATE Developer saját egyszerű telepítési mechanizmusát 
