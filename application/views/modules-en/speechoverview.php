@@ -2,74 +2,47 @@
 <section class="fullpanel">
     <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 col-sm-offset-1 col-md-offset-2 col-lg-offset-3 text-justify">
         <article>
-            <h3>Áttekintés</h3>
+            <h3>Overview</h3>
             <br/>
             <p>
-                Az <strong>e-magyar Nyílt Beszédarchívum</strong> (Open Speech Archive, em-OSA) célja kettős:
-                egyrészt az embertudományi kutatások (antropológia, folklorisztika,
-                néprajz, nyelvészet, szociológia, szociográfia, történettudomány,
-                zenetudomány) támogatása a hanganyagok megőrzésével és nyilvánossá
-                tételével, másrészt nyilt szoftveren alapuló beszédtechnológiai
-                infrastruktúra létrehozása. A nagyközönseg számára is nyitva áll, de
-                közvetlen hasznát elsősorban a fenti területek kutatói, illetve az
-                ezekről tanuló diákok látják.
+                The <strong>e-magyar Open Speech Archive</strong> (em-OSA) has a twofold aim:
+                on the one hand to support humanities research (anthropology, folkloritics, ethnography, sociology, history, linguistics, musicology) by archiving sound material and making it available, on the other hand to create an open source speech technology infrastructure. It is open for the public, but its immediate benificiaries would be researchers and students from the above-mentioned fields.
             </p>
             <p>
-                Az em-OSA elsődleges fókusza a magyar és magyarországi kisebbségi
-                (pl. lovári, beás, stb.)  hanganyagok, de támogatjuk a környező országok
-                nemzeti és kisebbségi nyelveit, nyelvjárásait is. Elsődleges forrásaink
-                ennek megfelelően Magyarország, Románia (Erdély, Bukarest), Szlovákia
-                (Felvidék), Ukrajna (Kárpátalja), Szerbia (Vajdaság), Szlovénia, Ausztria
-                (Burgenland), és az amerikai (USA, stb) diaszpóra körében végzett
-                kutatások, illetve ezen országok nyiltan letölthető, szerzői jogvédelem
-                alatt nem álló műsoros anyagai. A copyright-visszaélések elkerülése
-                érdekében kerüljük a zenés anyagokat (kivétel a kutatásban rögzített
-                népdalok), és a műsoroknak csak a hang-anyagát tároljuk, a videót nem.
-                A magyaron kívül a rendszerben jelenleg a következő nyelveken van anyag:
-                román, cigány, beás, szlovák, szerb, horvát, szlovén, ukrán, német, angol
-                spanyol.
+                The primary focus of the <strong>em-OSA</strong> are sound materials in Hungarian and in Hungary's minority languages (e.g. Lovari or Beash), but both national- and minority languages and dialects of neighbouring countries.
+                We primarily rely on materials from Hungary, Romania (Transylvania, Bukarest), areas with a Hungarian-language population in Slovakia (Felvidék), Ukraine (Carpathian Ruthenia), Serbia (Vojvodina), Slovenia and Austria (Burgenland), on research carried out amongst the American diaspora (in the USA, e.g.), just as on openly accessible, uncopyrighted broadcast materials.  In order to avoid copyright violations we do not use musical materials (an exception for this are folk songs recorded during research). Furthermore we only store sound material from any broadcast and not the video. 
+                Besides Hungarian, the following languages are represented in our archive: Romanian, Romani, Beash, Slovak, Serbian,Croatian, Slovene, Ukrainian, German, English and Spanish. 
             </p>
             <p>
-                Az em-OSA önálló kutatást, hangrögzítést nem végez, de integrálja
-                ilyenek anyagát: a már meglevő archívumok közül a TK (adatgazdák
-                Kovács Éva, Gárdos Judit), a frissen nyilvánosságra kerülők közül a
-                volt 56-os Intézet anyagait (Kozák Gyula, Donáth Ferenc) emeljük
-                ki. Ezeken kívül a katalógus fő hazai elemei lesznek (zárójelben az
-                adatgazdák):
+                <strong>em-OSA</strong> does not carry out independent research or sound recording, but integrates acquired materials. We would like to stress the importance of the material acquired from TK (as from among the existing archives; data providers: Éva Kovács and Judt Gárdos) and that of the 1956 Institute (Oral History Archive; data providers: Gyula Kozák, Ferenc Donáth).  Further materials will be gathered primarily from the partners below (data providers indictaed in brackets): 
             </p>
             <ol>
-                <li>OSzK (Somlai Katalin, Kőrösi Zsuzsa)</li>
-                <li>MTA Kisebbségkutató (Feischmidt Margit, Kállai Ernő, Máté Dezső, Papp Z. Attila, Mouraszki András)</li>
-                <li>MTA Szociológai Intézet (Neményi Mária, Kóczé Angéla, Janky Béla, Szalay Júlia, Kovács Éva)</li>
-                <li>Más hazai intézetek (Havas Gábor, Lengyel Gabriella, Németh Szilvia, Zolnay János, Virág Tünde stb.)</li>
-                <li>Románia (Erdély, Bukarest)</li>
-                <li>Kisebbségkutató Kolozsvár (Fosztó László, Kiss Tamás, Vitos Katalin, Lőrincz József)</li>
-                <li>Molnár Gusztáv hatalmas interjú anyaga (magyarul, románul)</li>
-                <li>Sapientia (Marosvásárhely): Gagyi József (interjúk)</li>
-                <li>Kriza Társaság (Kolozsvár): Szabó Töhötöm Babes-Bolyai Egyetem: Tánczos Vilmos, Pozsony Ferenc</li>
-                <li>Kolozsvári, Marosvásárhelyi Rádió anyagai (Maksay Ágnes, Tibád Zoltán)</li>
+                <li>National Széchenyi Library (Somlai Katalin, Kőrösi Zsuzsa)</li>
+                <li>Institute for Minority Studies, HAS (Feischmidt Margit, Kállai Ernő, Máté Dezső, Papp Z. Attila, Mouraszki András)</li>
+                <li>Institute for Sociology, HAS(Neményi Mária, Kóczé Angéla, Janky Béla, Szalay Júlia, Kovács Éva)</li>
+                <li>Other national institues (Havas Gábor, Lengyel Gabriella, Németh Szilvia, Zolnay János, Virág Tünde stb.)</li>
+                <li>Romania (Erdély, Bukarest)</li>
+                <li>Romanian Institute for Research on Minorities, Cluj-Napoca (Fosztó László, Kiss Tamás, Vitos Katalin, Lőrincz József)</li>
+                <li>vast material of interviews by Gusztáv Molnár (in Hungarian and Romanian</li>
+                <li>Sapientia (Marosvásárhely): Gagyi József (interviews)</li>
+                <li>Kriza János Ethnographic Society (Cluj-Napoca): Szabó Töhötöm Babes-Bolyai Egyetem: Tánczos Vilmos, Pozsony Ferenc</li>
+                <li>Materials of radio broadcasts from Cluj-Napoca and Târgu Mureș (Maksay Ágnes, Tibád Zoltán)</li>
             </ol>
             <br/>
             <p>
-                Az embertudományi kutatások mellett egyenrangúan fontos a magyar
-                számítógépes beszédtechnológia fejlesztése különösen abban a
-                tekintetben, hogy nyílt forráskódú eszközök váljanak mind a
-                beszédtechnológusok, mind a beszéd számitógépes feldolgozására
-                készülő de beszédtechnológiában járatlan felhasználók számára.
+                Besides supporting humanities research, the improvement of Hungarian speech technology is equally important, especially concerning open source tools becoming accessible for both speech technologists and lay users aiming at an automated processing of speech.
             </p>
             <p>
-                A főbb eszközcsaládok a következők:
+                The most important modules are the following:
             </p>
             <ol>                
-                <li>Beszéd-aktivitás felismerése. Tartalmaz-e a felvétel egy adott szakasza beszédet, vagy csak zenét, zajokat, vagy egyéb nem-nyelvi
-                    megnyilvánulásokat (pl. krákogás, köhögés, nevetés) - emSad</li>
-                <li>A beszélt nyelv beazonosítása - emLid</li>
-                <li>Az egyes beszéők elkülönítése (pl. interjúknál a kérdező és a válaszadó), naplókészítés (diarizáció) másodperces pontossággal - emDia</li>                
+                <li>Speech-activity detection: determining whether the given section of a recording contains human speech, or rather music, noise, or other non-linguistic manifestations (cough, laughter, etc.) - emSad</li>
+                <li>Identifying the language spoken - emLid</li>
+                <li>Speaker diarisation: Telling different speakers apart (e.g. in case of interviews interrogator and respondent), diarisation (making a diary of who spoke when, to the second) - emDia</li>                
             </ol>
 
             <p>
-                Hosszú távon célunknak tekintjük a beszédfelismerés, és az ezen alapuló technológiák (automikus leirat-készítés, hangalapú keresés)
-                feljesztését is, de az em-OSA erre ma még nem vállalkozik.
+                In the long run we are hoping to develope speech recognition technologies, as well as technologies based on it (such as automatic transcription software or voice search), but at the moment em-OSA cannot consider these as realistic aims.
             </p>
 
             <img src="<?= base_url(); ?>css/images/speech-flowchart.png" class="img-responsive" style="margin: 20px auto 0 auto;" />
