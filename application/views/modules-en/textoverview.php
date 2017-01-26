@@ -15,7 +15,7 @@
                 
             </p>
             <p>
-                The text processing module of e-magyar.hu has the following modules:         
+                The text processing section of e-magyar.hu has the following modules:         
             </p>
             <ul>
                 <li>Tokeniser – 

@@ -37,15 +37,15 @@
                         </tr>
                         <tr>
                             <td>Source language</td>
-                            <td>C++ és Python 3</td>
+                            <td>C++ and Python 3</td>
                         </tr>
                         <tr>
                             <td>Input</td>
-                            <td>UTF-8 kódolású plain text</td>
+                            <td>Plain text in UTF-8 encoding</td>
                         </tr>
                         <tr>
                             <td>Output</td>
-                            <td>XML és JSON választható</td>
+                            <td>XML or JSON</td>
                         </tr>
                         <tr>
                             <td>Execution</td>

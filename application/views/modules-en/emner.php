@@ -1,7 +1,7 @@
 <section class="fullpanel">
     <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 col-sm-offset-1 col-md-offset-2 col-lg-offset-3 text-justify">
         <article>
-            <h3 id="emner"><span>emNer</span> - tulajdonnév-felismerő</h3>
+            <h3 id="emner"><span>emNer</span> - Named Entity Recogniser (NER Tagger)</h3>
             <h4>Az eszközről</h4>
             <h5>Mire jó? Mit csinál?</h5>
             <p>The automatic Named Entity Recogniser emNer identifies proper names in a running text, and 

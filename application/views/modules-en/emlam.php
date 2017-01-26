@@ -2,60 +2,58 @@
     <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 col-sm-offset-1 col-md-offset-2 col-lg-offset-3 text-justify">
         <article>
 
-            <h3 id="emlam"><span>emLam</span> - nyelvmodell</h3>
-            <h4>Az eszközről</h4>
-            <h5>Mire jó? Mit csinál?</h5>
-            <p>A nyelvmodellezés fő feladata más nyelvi eszközöket támogatni. Fő célja, hogy megmondja, egy-egy szó, mondat,
-                vagy egy egész szöveg mennyire „magyaros”, mennyire „mondanak ilyesmit az emberek”. Hasznos például beszédfelismerésben,
-                ahol több alternatíva közül segít kiválasztani a legvalószínűbbet (pl. „a hosszú béke” vagy „a hosszú béka”).
-                Hasonló modelleket használnak a szöveges keresők az éppen beírthoz hasonló keresőkifejezések listázásához.
-                A modellek ezen kívül alkalmazhatók szövegek generálásához is.</p>
-            <h5>Mi a bemenet?</h5>
-            <p>Ha csak azt szeretnénk tudni, hogy az általunk írt szöveg mennyire hasonlít például
-                a <a href="http://mnsz.nytud.hu/" target="_blank">Magyar Nemzeti Szövegtárban</a> megtalálhatókra,
-                csak írjunk be neki egy mondatot, vagy bekezdést.</p>
-            <h5>Mi a kimenet?</h5>
-            <p>A kimenet alapesetben a szövegünk valószínűsége.</p>
-            <h5>Egy példa a működésre.</h5>
-            <p>Ha például a modell szerint egy az egymillióban, akkor átlagosan egymillióból egy pont a mi mondatunk lesz. 
-                Generáló üzemmódban a modell szöveget is tud írni, különösebb konzisztenciát elvárni tőle azonban nem érdemes.
+            <h3 id="emlam"><span>emLam</span> - Language model</h3>
+            <h4>About the tool</h4>
+            <h5>What is it good for? What does it do?</h5>
+            <p>The main task of language models is to support other NLP tools. Its goal is to judge how well a sentence or just a single word fits the rules of Hungarian, or how native an utterance sounds. It is useful for example in speech recognition, where it helps choose the most probable alternative from several options (e.g. „a hosszú béke” or „a hosszú béka”).
+                Similar models are used by textual search engines in order to list search expressions resembling the one typed in.
+                Besides these, language models can be used for generating texts, as well.</p>
+            <h5>What is the input?</h5>
+            <p>If we are just curious how much a text we have created resembles those found in the
+                <a href="http://mnsz.nytud.hu/" target="_blank">Hungarian National Corpus (Magyar Nemzeti Szövegtár)</a>,
+                we should simply type in our sentences or paragraphs.</p>
+            <h5>What is the output?</h5>
+            <p>The default output is the probability of our text.</p>
+            <h5>An example:</h5>
+            <p>If, according to the model, the probability is 1 : 1000000, then on average our sentence will have one exact occurance among one million sentences in the HNC.  
+                In its generating mode the model is capable of creating text, as well. However, no special consistency should be expected from it.
             </p>
             
             <?php $this->load->view('emlam-demo'); ?>
 
-            <h4>Fejlesztőknek</h4>
+            <h4>For developers</h4>
 
             <div class="table-responsive">
                 <table class="table table-striped">
                     <tr>
-                        <td>Forrás</td>
-                        <td><a href="<?php echo base_url(); ?>emlam/lemmad_u50_krs.lm5.gz" download>egy deglutenizált (ragok külön tokenek) 5-gram modell</a></td>
+                        <td>Source</td>
+                        <td><a href="<?php echo base_url(); ?>emlam/lemmad_u50_krs.lm5.gz" download>a "de-glutinised"  (suffixes treated as separate tokens) 5-gram model </a></td>
                     </tr>
                     <tr>
-                        <td>Forrásnyelv</td>
+                        <td>Source code</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>Input</td>
-                        <td>Soronként egy mondat, a tokenek között space (tokenizálásra használható az emToken). A fenti változatnál a lemma (esetleg képzőkkel együtt) és a ragok külön tokenek.</td>
+                        <td>One sentence per row, space between the tokens (emToken may be used for tokenisation). The version above treats both lemmas (sometimes with their suffixes) and endings as separate tokens.</td>
                     </tr>
                     <tr>
                         <td>Output</td>
-                        <td>A szövegünk valószínűsége, opcionálisan mondatokra, szavakra lebontva.</td>
+                        <td>The probability of our text, optionally segmented into sentences and words.</td>
                     </tr>
                     <tr>
-                        <td>Futtatás</td>
+                        <td>Execution</td>
                         <td>
-                            Az SRILM toolkit ngram nevű programjával:
+                            Using the 'ngram' program of the SRILM toolkit:
                             <br/>
-                            <span class="code">ngram -order 5 -lm lemmad_u50_krs.lm5.gz -ppl &lt;szöveg file&gt;</span>                            
+                            <span class="code">ngram -order 5 -lm lemmad_u50_krs.lm5.gz -ppl &lt;text file&gt;</span>                            
                             <br/>
-                            Paraméterek: -order 5: 5-grammokat használjon (jelenleg ez a legnagyobb); -lm lemmad_u50_krs.lm5.gz: a fenti "gluténmentes" modellt használja, ami az 50-nél nagyobb előfordulású szavakon tanult; -ppl &lt;szöveg file&gt;: itt a mi szövegfile-unkat adjuk meg
+                            Parameters: -order 5: 5-grams should be used (at the moment this is the largest possibility); -lm lemmad_u50_krs.lm5.gz: uses the "de-glutinised" model above, which had been trained on words with a frequency of more than 50 occurance; -ppl &lt;text file&gt;: our own text file should be specified here
                         </td>
                     </tr>
                     <tr>
-                        <td>Licensz</td>
-                        <td>nyílt CC BY</td>
+                        <td>Licence</td>
+                        <td>open CC BY</td>
                     </tr>                   
                 </table>
             </div>

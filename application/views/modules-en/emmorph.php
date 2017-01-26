@@ -13,7 +13,7 @@
                 <br>The tagger integrates the knowledge of other similar tools that have so far been available for Hungarian. According to 
                 its developers it is the most accurate tool of its kind with the widest lexicon to rely on. It is freely accessible, customisable 
                 to specific NLP requirements and to language varieties, while being based on a computational linguistic model (so-called 
-                finite-state technology) that ensures the fastest possible runtime.</p>
+                finite-state technology) that ensures the fastest runtime.</p>
             <h5>What is the input?</h5>
             <p>The system presented here being a toolchain, with analysing steps building one on the other, respectively, the input of the 
             morphological tagger is a word form in a row.
@@ -29,7 +29,7 @@
             <p>The example below is supposed to illustrate two phenomena: on the one hand a disambiguity that is hard to detect for a speaker, 
             on the other hand the case of a word form stored as one unit in the lexicon of the tagger but being able to be decomposed into 
             further components. Depending on the application needed, the analysis ['fejetlenség' + accusative] (which is also the most obvious 
-            alternative for speakers) is sufficient in most cases. Using emLem, we we do arrive at this analysis, but the remaining semantic 
+            alternative for speakers) is sufficient in most cases. Using emLem, we do arrive at this analysis, but the remaining semantic 
             disambiguity (depending on whether <i>fej</i> is interpreted as a noun or a verb) cannot be resolved on the level of morphological 
             analysis or part-of-speech disambiguation.
             <div class="table-responsive">
@@ -91,7 +91,7 @@
                         <tr>
                             <td>Source language</td>
                             <td>The tagger is basically a finite state translator (transducer), which – based on a register of lemmata, a register of endings and a morphophonological description (a grammar) – transforms the surface word form (a character string) into another character string made up of morphemes and morphological codes. The database of the tagger contains the description of the linguistic data in a specific format. Preparing the transducer and running the tagger can be carried out via the Helsinki Finite-State Transducer toolkit (HFST), implemented in C++. 
-                            The lexicon that can be interpreted by HFST (in lexc) is generated from the primary source of the morphology by programmes implemented in perl..</td>
+                            The lexicon that can be interpreted by HFST (in lexc) is generated from the primary source of the morphology by programs implemented in perl.</td>
                         </tr>
                         <tr>
                             <td>Input</td>
@@ -109,12 +109,12 @@
                                 <span class="code">hfst-lookup --pipe-mode=input --cascade=composition hu.hfstol &lt;intext &gt;outtext</span>
                                 <br/>
 				
-                                The tagger may be run with the lookup programmes of the HFST toolkit.
+                                The tagger can be run with the lookup programs of the HFST toolkit.
                             </td>
                         </tr>
                         <tr>
                             <td>Licence</td>
-                            <td>The database is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 (CC BY-NC-SA) licence. GNU General Public License (GPL v3) converts the primary source of the database.</td>
+                            <td>The database is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 (CC BY-NC-SA) licence. The code responsible for the conversion of the primary source of the database is licenced under GNU General Public License (GPL v3).</td>
                         </tr>
                     </tbody>
                 </table>

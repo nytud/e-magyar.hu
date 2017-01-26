@@ -10,7 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <p>
                 The toolchain <strong>e-magyar.hu</strong> contains the basic tools for an automated processing of Hungarian in an integrated and 
                 standardised framework. We are offering tools that can prove useful both on their own and as a toolchain for researchers, 
-                developers of intelligent applications, and for the wide public, as well. These tools provide an inevitable infrastructure 
+                developers of intelligent applications, and for the wide public, as well. These tools provide an indispensable infrastructure 
                 for the digital processing of Hungarian, for the support of digital language use in Hungarian.
             </p>
             <p>
@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 on equal terms with languages with greater support in the digital space.
             </p>            
             <p>
-                It was an important goal to provide an open source code access for the toolchain for both R&D and industrial use. 
+                It was an important goal to provide open access for the source code of the toolchain for both R&D and industrial use. 
                 Besides addressing professional users, we are trying to meet the needs of laymen and non-professional researchers in 
                 two ways. One way is a <a href="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/parser">web service</a>
                 running on our homepage, which returns the input texts in the analysed format. The other way of meeting the needs of those 
@@ -39,7 +39,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 standardised and integrated the existing tools that had been developed in these centres. 
             </p>
             <p>
-                The infrastructure has two distinct components. One of them analysis written texts (for more information see <a href="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/textmodules/textoverview">here</a>),
+                The infrastructure has two distinct components. One of them processes written texts (for more information see <a href="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/textmodules/textoverview">here</a>),
                 the other aids speech processing with a speech-database and speech analysing modules (for more information see <a href="<?php echo base_url(); ?><?= $this->config->item('language_abbr'); ?>/speechmodules/speechoverview">here</a>). 
                 The text processing module was developed under the direction of <strong>Csaba Oravecz</strong>, the speech processing module under the direction of <strong>András Kornai</strong>, while the overall work was coordinated by <strong>Tamás Váradi</strong>.
             </p>

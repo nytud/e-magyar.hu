@@ -80,11 +80,11 @@
                     <tr>
                         <td>Source</td>
                         <td><a href="https://github.com/dlt-rilmta/hunlp-GATE/tree/master/Lang_Hungarian/resources/hfst" target="_blank">https://github.com/dlt-rilmta/hunlp-GATE/tree/master/Lang_Hungarian/resources/hfst</a>
-                            <br>Additionally, the HFST-lookup programme running on the given platform needs to be downloaded from the website <a href="http://apertium.projectjj.com" target="_blank">http://apertium.projectjj.com</a>.</td>
+                            <br>Additionally, the HFST-lookup program running on the given platform needs to be downloaded from the website <a href="http://apertium.projectjj.com" target="_blank">http://apertium.projectjj.com</a>.</td>
                     </tr>
                     <tr>
                         <td>Source code</td>
-                        <td>Originally written in C++ , ported to Java, it calls the hfst-lookup programme of the Helsinki Finite-State Transducer (HFST) toolkit, generating its output from its analyses.</td>
+                        <td>Originally written in C++ , ported to Java, it calls the hfst-lookup programme of the Helsinki Finite-State Transducer (HFST) toolkit, generating its output from the hfst-analyses.</td>
                     </tr>
                     <tr>
                         <td>Input format</td>
@@ -104,7 +104,7 @@
                     </tr>
                     <tr>
                         <td>Others</td>
-                        <td>In order for the lemmatiser to run a Java JRE environment is required. The lemmatiser uses the hfst-lookup programme included in the a HFST toolkit, so this and the binary lexicon of the analyser need to be placed next to the lemmatiser. The configuration of the lemmatiser is included in the hfst-wrapper.props file.</td>
+                        <td>In order for the lemmatiser to run a Java Runtime Environment is required. The lemmatiser uses the hfst-lookup program included in the a HFST toolkit, so this and the binary lexicon of the analyser need to be placed next to the lemmatiser. The configuration of the lemmatiser is included in the hfst-wrapper.props file.</td>
                     </tr>
                 </table>                
             </div>

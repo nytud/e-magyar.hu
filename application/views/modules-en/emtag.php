@@ -7,7 +7,7 @@
 
             <h4>About the tool</h4>
             <h5>What is it good for? What does it do?</h5>
-            <p>On the basis of the learning data the programme determines the lemma and part-of-speech of every token that had been 
+            <p>Based on the training data the programme determines the lemma and part-of-speech of every token that had been 
             identified earlier, and tags these, as well.</p>
             <h5>What is the input?</h5>
             <p>The programme deals with every sentence separately. Accordingly, the input is a series of senteces divided into tokens.</p>
@@ -119,7 +119,7 @@
                         </tr>
                         <tr>
                             <td>Further information</td>
-                            <td>Dependency for the translation: maven 2.</td>
+                            <td>Compile dependency: maven 2.</td>
                         </tr>
                     </tbody>
                 </table>

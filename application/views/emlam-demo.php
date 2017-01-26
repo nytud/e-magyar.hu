@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <div id="emlam">
     <h4>Demo</h3>
-    <p>Kezdj el írni valamit az alábbi szövegmezőbe. Minden szóköz lenyomása után egy szólista jelenik meg, mint lehetséges folytatásai a beírt szövegnek. A felkínált szavak közül kattintással választhatsz, vagy folytathatod a gépelést.</p>
+    <p>Start typing something in the text field below. Every time you press the space key a word list will appear offering possible ways to continue the text typed in so far. You can choose from among the words offered by clicking on them, or you may continue typing.</p>
     <div class="form-group">
         <textarea id="textbox" type="text" class="form-control" placeholder="<?php echo $this->lang->line('start_typing'); ?>"></textarea>
     </div>    

@@ -1,12 +1,12 @@
 <section class="fullpanel">
     <div class="col-xs-12 col-sm-12 col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2 text-justify">
         <article>
-            <h3>emMorph kódlista</h3>
+            <h3>emMorph code list</h3>
 
             <div class="table-responsive">
                 <table class="table table-striped">
                     <thead>
-                        <tr><th>morfológiai kód</th><th>leírás</th><th>példa</th><th>példa elemzése</th></tr>
+                        <tr><th>morphological code</th><th>description</th><th>example</th><th>analysis of the example</th></tr>
                     </thead>
                     <tbody>
                         <tr><td>[1Pl]</td><td>többes szám, első személy</td><td>nálunk</td><td>mi[/N|Pro]nála[Ade]unk[1Pl]</td></tr>
