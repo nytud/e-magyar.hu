@@ -1,62 +1,57 @@
 <section class="fullpanel">
     <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 col-sm-offset-1 col-md-offset-2 col-lg-offset-3 text-justify">
         <article>
-            <h3><span>emPros</span> - beszéddallam elemző</h3>
-            <h4>Az eszközről</h4>
-            <h5>Mire jó? Mit csinál?</h5>
-            <p>A program az élőnyelvi kommunikációban előforduló verbális megnyilatkozások intonációjának elemzésére és lejegyzésére szolgál. Az archivált hangfelvételekből kinyerhető akusztikai paraméterek beszélőnkénti feldolgozása
-                és stilizálása után az interakcióban résztvevők egyedi hangterjedelméhez viszonyítva címkézi fel a megnyilatkozások hanglejtését. 
-                Elsősorban több résztvevős interakciók elemzéséhez készült, de felolvasott szövegek, monologikus közlések feldolgozására is használható.</p>
-            <h5>Mi a bemenet?</h5>
-            <p>A társalgást rögzítő hangfájl és egy hozzá tartozó annotáció, amely a megnyilatkozások időbeli pozícióját beszélőnként külön tengelyen (annotációs szinten)
-                tartalmazza. A beszélők számára, a megnyilatkozások tagolására és a feliratok tartalmára vonatkozóan nincs semmilyen megkötés. Az üres címkék a kérdéses beszélő hallgatásaként értelmeződnek.
+            <h3><span>emPros</span> - Speech Prosody Analyser</h3>
+            <h4>About the tool</h4>
+            <h5>What is it good for? What does it do?</h5>
+            <p>The program analyses and transcribes the intonation of verbal utterances in spontaneous communication. After the retrieval of the acoustic parameters from the archived recordings and their processing and stylization per speaker, it labels the utterances’ intonation relative to the participants’ individual range of voice. The program was designed mainly with the analysis of multi-member interactions in mind, but it can also be used to process texts read out loud, as well as monologues.</p>
+            <h5>What is the input?</h5>
+            <p>The audio file recording the conversation and a respective annotation, containing the temporal position of the utterances on a separate axis (annotation level) for each speaker. There are no restrictions concerning the number of speakers, the segmentation of the utterances or the content of the labels. Empty labels are interpreted as the speaker in question being silent.
             </p>
-            <h5>Mi a kimenet?</h5>
-            <p>A kimenetként kapott annotáció minden beszélő esetén 4 szinten jellemzi a megnyilatkozásokat. Az első szint a megnyilatkozásokat dallammenetekre tagolja, ahol minden dallamenet a "rise", "fall", "descending", "ascending", "level" kategóriák
-                valamelyikét kapja meg. A második szint a dallamenetek kezdő és végpontjait helyezi el a beszélő egyedi, öt szintre felosztott hangterjedelmében (L2 &lt; L1 &lt; M &lt; H1 &lt; H2). 
-                A harmadik szint az előző szint relatív értékeihez az eredeti, Hertzben mért értékeket társítja hozzá. A negyedik szint a beszéd zöngés ("V") és zöngétlen ("U") szakaszait különíti el.</p>
-            <h5>Egy példa a működésre.</h5>
-            <p>A forráskód <i>input</i> könyvtárában elhelyezett példa (<i>sample.wav</i>, <i>sample.TextGrid</i>) egy dialógus archivált hangfelvételét (a felvételen az anonimizálás érdekében csak a beszélők intonációja hallható) és a megnyilatkozások beszélőnkénti ("speakerA" és "speakerB")
-                intervallumait tartalmazza. A kimenet az <i>output</i> könytárban található <i>sample_pitch.TextGrid</i> fájl, ami 8 (4 + 4) annotációs szinten jegyzi le a megnyilatkozások intonációját. Az átfedő beszédek nem kerülnek elemzésre.</p>
-            <h4>Fejlesztőknek</h4>
+            <h5>What is the output?</h5>
+            <p>The annotation returned as an output describes the utterances on four levels for each speaker. The first level tags the utterances into melody segments, assigning one of the five categories to each segment: "rise", "fall", "descending", "ascending", or "level". The second level places the starting and end points of the melody segments within the speaker’s individual voice range divided into five levels  (L2 &lt; L1 &lt; M &lt; H1 &lt; H2). 
+                The third level connects the original values measured in Hertz to the relative values of the previous level. The fourth level separates the voiced ("V") and voiceless ("U") segments of the speech.</p>
+            <h5>An example:</h5>
+            <p>The sample in the source code’s <i>input</i> folder (<i>sample.wav</i>, <i>sample.TextGrid</i>) contains the archived recording of a dialogue (to preserve the speakers’ anonymity, only their intonation can be heard on the recording) as well as the utterances’ intervals per speaker ("speakerA" and "speakerB"). The output is the <i>sample_pitch.TextGrid</i> file in the <i>output</i> folder, containing the intonation of the utterances on 8 (4+4) annotation levels. Overlapping speech is not analysed.</p>
+            <h4>For developers</h4>
 
             <div class="table-responsive">
                 <table class="table table-striped">
                     <tr>
-                        <td>Forrás</td>
+                        <td>Source</td>
                         <td>
                             <a href="https://github.com/szekrenyesi/prosotool" target="_blank">https://github.com/szekrenyesi/prosotool</a>
                         </td>
                     </tr>
                     <tr>
-                        <td>Forrásnyelv</td>
-                        <td>Praat (6.0.13) szkript</td>
+                        <td>Source code</td>
+                        <td>Praat (6.0.13) script</td>
                     </tr>
                     <tr>
                         <td>Input</td>
-                        <td>Minimális esetben egy .wav formátumú hangfájl és egy azonos nevű, Praat TextGrid formátumú szövegfájl, de a bemeneti <i>input</i> mappában ezekből tetszőleges számú pár (hang + annotáció) elhelyezhető.</td>
+                        <td>At least one sound file in .wav format, together with a Praat TextGrid file under the same name. Any number of such pairs (sound + annotation) can be placed in the <i>input</i>  folder. </td>
                     </tr>
                     <tr>
                         <td>Output</td>
-                        <td>Praat TextGrid formátumú szövegfájl, amely az <i>output</i> mappába kerül. Elnevezési konvenció: [bemenet neve] + "_pitch". Az output mappában további, az egyes futtatások részeredményeit tartalmazó (az eredeti bemenetek nevét követő) almappák is keletkeznek.
-                            Az "sp_sep" mappában a beszélők hangjának izolált, az átfedő beszédektől megtisztított, az előfeldolgozás során generált verziója található.</td>
+                        <td>A text file in Praat TextGrid format, which is placed in the <i>output</i> folder. Naming convention:  [input name] + "_pitch".  Several further subfolders (their names following that of the original input) will be created in the output folder, containing partial results.
+                            The folder "sp_sep" contains a version of the speakers' speech which had been cleaned from overlaps and is isolated, as generated during the preprocessing.</td>
                     </tr>
                     <tr>
-                        <td>Futtatás</td>
+                        <td>Execution</td>
                         <td>                            
                             <span class="code">Praat prosotool.praat input 2 1.5 dynamic windows</span>
-                            <br>Az opciók jelentése és értéktartománya:
+                            <br>Meaning and value range of the options:
                             <ul>
-                                <li><i>input</i> : A bemeneti könyvtár elérési útja. Értéktartomány: sztring
-                                <li><i>2</i> : Az F0 görbe stilizálásának felbontása. Magasabb érték erősebb stilizálást (durvább felbontást) eredményez. Értéktartomány: egész szám
-                                <li><i>1.5</i> : Az F0 görbe simítását meghatározó paraméter. Alacsonyabb érték erősebb simítást eredményez. Értéktartomány: valós szám
-                                <li><i>dynamic</i> : Az F0 mérések paramétereinek (alsó és felső küszöb) meghatározási módja. Értéktartomány: standard | dynamic
-                                <li><i>windows</i> : Futtatási környezet. Megadása könyvtárműveletek miatt szükséges. Értéktartomány: windows | unix
+                                <li><i>input</i> : Directory path of the input folder. Value range: string
+                                <li><i>2</i> : Resolution of the stylisation of the F0 curve. A higher value results in a stronger slytisation (coarser resolution). Value range: integers
+                                <li><i>1.5</i> : The parameter determining the F0 curve smoothing. A lower value results in a stronger smoothing. Value range: real numbers
+                                <li><i>dynamic</i> : The determining method of the F0 measurements' parameters . Value range: standard | dynamic
+                                <li><i>windows</i> : Running environment: to be specified because of folder actions. Value range: windows | unix
                             </ul>
                         </td>
                     </tr>
                     <tr>
-                        <td>Licensz</td>
+                        <td>Licence</td>
                         <td>GPL</td>
                     </tr>                   
                 </table>
