@@ -1,7 +1,7 @@
 <section class="fullpanel">
     <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 col-sm-offset-1 col-md-offset-2 col-lg-offset-3 text-justify">
         <article>
-            <h3><span>emPros</span> - Speech Prosody Analyser</h3>
+            <h3><span>emPros</span> - Prosody Parser</h3>
             <h4>About the tool</h4>
             <h5>What is it good for? What does it do?</h5>
             <p>The program analyses and transcribes the intonation of verbal utterances in spontaneous communication. After the retrieval of the acoustic parameters from the archived recordings and their processing and stylization per speaker, it labels the utterances’ intonation relative to the participants’ individual range of voice. The program was designed mainly with the analysis of multi-member interactions in mind, but it can also be used to process texts read out loud, as well as monologues.</p>
