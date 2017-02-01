@@ -38,11 +38,11 @@ $lang['emtoken'] = "tokeniser";
 $lang['emmorph'] = "morphological analyser";
 $lang['emlem'] = "lemmatiser";
 $lang['emtag'] = "POS tagger";
-$lang['emconst'] = "constituent parser";
+$lang['emconst'] = "constituency parser";
 $lang['emdep'] = "dependency parser";
 $lang['emchunk'] = "NP chunker";
 $lang['emner'] = "NER tagger";
-$lang['gate'] = "pipeline";
+$lang['gate'] = "processing chain";
 $lang['emlam'] = "language model";
 
 $lang['emsad'] = "speech detector";
