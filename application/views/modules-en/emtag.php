@@ -3,7 +3,7 @@
 
         <article>
 
-            <h3 id="emtag"><span>emTag</span> - egyértelműsítő</h3>
+            <h3 id="emtag"><span>emTag</span> - POS Tagger</h3>
 
             <h4>About the tool</h4>
             <h5>What is it good for? What does it do?</h5>

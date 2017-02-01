@@ -1,7 +1,7 @@
 <section class="fullpanel">
     <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 col-sm-offset-1 col-md-offset-2 col-lg-offset-3 text-justify">
         <article>
-            <h3><span>emLem</span> - szótövesítő</h3>
+            <h3><span>emLem</span> - Lemmatiser</h3>
 
             <h4>About the tool</h4>
             <h5>What is it good for? What does it do?</h5>
