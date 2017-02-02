@@ -10,14 +10,15 @@
             <h5>Mi a bemenet?</h5>
             <p>A társalgást rögzítő hangfájl és egy hozzá tartozó annotáció, amely a megnyilatkozások időbeli pozícióját beszélőnként külön tengelyen (annotációs szinten)
                 tartalmazza. A beszélők számára, a megnyilatkozások tagolására és a feliratok tartalmára vonatkozóan nincs semmilyen megkötés. Az üres címkék a kérdéses beszélő hallgatásaként értelmeződnek.
+                A beszélőváltás annotációjának hiányában a szkript a hangfájl teljes hangzó tartalmát egyetlen beszélőhöz társítja a beszédszünetek automatikus detektálása után.
             </p>
             <h5>Mi a kimenet?</h5>
-            <p>A kimenetként kapott annotáció minden beszélő esetén 4 szinten jellemzi a megnyilatkozásokat. Az első szint a megnyilatkozásokat dallammenetekre tagolja, ahol minden dallamenet a "rise", "fall", "descending", "ascending", "level" kategóriák
-                valamelyikét kapja meg. A második szint a dallamenetek kezdő és végpontjait helyezi el a beszélő egyedi, öt szintre felosztott hangterjedelmében (L2 &lt; L1 &lt; M &lt; H1 &lt; H2). 
+            <p>A kimenetként kapott annotáció minden beszélő esetén 4 szinten jellemzi a megnyilatkozásokat. Az első szint a megnyilatkozásokat dallammenetekre tagolja, ahol minden dallammenet a "rise", "fall", "descending", "ascending", "level" kategóriák
+                valamelyikét kapja meg. A második szint a dallammenetek kezdő és végpontjait helyezi el a beszélő egyedi, öt szintre felosztott hangterjedelmében (L2 &lt; L1 &lt; M &lt; H1 &lt; H2). 
                 A harmadik szint az előző szint relatív értékeihez az eredeti, Hertzben mért értékeket társítja hozzá. A negyedik szint a beszéd zöngés ("V") és zöngétlen ("U") szakaszait különíti el.</p>
             <h5>Egy példa a működésre.</h5>
             <p>A forráskód <i>input</i> könyvtárában elhelyezett példa (<i>sample.wav</i>, <i>sample.TextGrid</i>) egy dialógus archivált hangfelvételét (a felvételen az anonimizálás érdekében csak a beszélők intonációja hallható) és a megnyilatkozások beszélőnkénti ("speakerA" és "speakerB")
-                intervallumait tartalmazza. A kimenet az <i>output</i> könytárban található <i>sample_pitch.TextGrid</i> fájl, ami 8 (4 + 4) annotációs szinten jegyzi le a megnyilatkozások intonációját. Az átfedő beszédek nem kerülnek elemzésre.</p>
+                intervallumait tartalmazza. A kimenet az <i>output</i> könyvtárban található <i>sample_pitch.TextGrid</i> fájl, ami 8 (4 + 4) annotációs szinten jegyzi le a megnyilatkozások intonációját. Az átfedő beszédek nem kerülnek elemzésre.</p>
             <h4>Fejlesztőknek</h4>
 
             <div class="table-responsive">
@@ -30,7 +31,7 @@
                     </tr>
                     <tr>
                         <td>Forrásnyelv</td>
-                        <td>Praat (6.0.13) szkript</td>
+                        <td><a href="http://www.fon.hum.uva.nl/praat/" target="_blank">Praat</a> (6.0.13) szkript</td>
                     </tr>
                     <tr>
                         <td>Input</td>
@@ -44,14 +45,14 @@
                     <tr>
                         <td>Futtatás</td>
                         <td>                            
-                            <span class="code">Praat prosotool.praat input 2 1.5 dynamic windows</span>
+                            <span class="code">Praat prosotool.praat &lt;input_path&gt; &lt;stylization&gt; &lt;smoothing&gt; &lt;pitch_extraction&gt; &lt;operating_system&gt; </span>
                             <br>Az opciók jelentése és értéktartománya:
                             <ul>
-                                <li><i>input</i> : A bemeneti könyvtár elérési útja. Értéktartomány: sztring
-                                <li><i>2</i> : Az F0 görbe stilizálásának felbontása. Magasabb érték erősebb stilizálást (durvább felbontást) eredményez. Értéktartomány: egész szám
-                                <li><i>1.5</i> : Az F0 görbe simítását meghatározó paraméter. Alacsonyabb érték erősebb simítást eredményez. Értéktartomány: valós szám
-                                <li><i>dynamic</i> : Az F0 mérések paramétereinek (alsó és felső küszöb) meghatározási módja. Értéktartomány: standard | dynamic
-                                <li><i>windows</i> : Futtatási környezet. Megadása könyvtárműveletek miatt szükséges. Értéktartomány: windows | unix
+                                <li><i>INPUT_PATH</i> : A bemeneti könyvtár elérési útja. Értéktartomány: sztring
+                                <li><i>STYLIZATION</i> : Az F0 görbe stilizálásának felbontása. Magasabb érték erősebb stilizálást (durvább felbontást) eredményez. Értéktartomány: egész szám. Optimális beállítás: 2.
+                                <li><i>SMOOTHING</i> : Az F0 görbe simítását meghatározó paraméter. Alacsonyabb érték erősebb simítást eredményez. Értéktartomány: valós szám. Optimális beállítás: 1.5.
+                                <li><i>PITCH_EXTRACTION</i> : Az F0 mérések paramétereinek (alsó és felső küszöb) meghatározási módja. Értéktartomány: standard | dynamic
+                                <li><i>OPERATING_SYSTEM</i> : Futtatási környezet. Megadása könyvtárműveletek miatt szükséges. Értéktartomány: windows | unix
                             </ul>
                         </td>
                     </tr>

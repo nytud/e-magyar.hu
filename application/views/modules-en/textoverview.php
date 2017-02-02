@@ -77,7 +77,7 @@
                 names, such as <i>Jókai Mór</i> in our example.
             </p>
             
-            <img src="<?= base_url(); ?>css/images/text-flowchart.png" class="img-responsive" style="margin: 20px auto 0 auto;" />
+            <img src="<?= base_url(); ?>css/images/text-flowchart_<?= $this->config->item('language_abbr'); ?>.png" class="img-responsive" style="margin: 20px auto 0 auto;" />
             
         </article>
     </div>

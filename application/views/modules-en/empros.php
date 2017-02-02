@@ -25,7 +25,7 @@
                     </tr>
                     <tr>
                         <td>Source code</td>
-                        <td>Praat (6.0.13) script</td>
+                        <td><a href="http://www.fon.hum.uva.nl/praat/" target="_blank">Praat</a> (6.0.13) script</td>
                     </tr>
                     <tr>
                         <td>Input</td>
@@ -39,14 +39,14 @@
                     <tr>
                         <td>Execution</td>
                         <td>                            
-                            <span class="code">Praat prosotool.praat input 2 1.5 dynamic windows</span>
+                            <span class="code">Praat prosotool.praat &lt;input_path&gt; &lt;stylization&gt; &lt;smoothing&gt; &lt;pitch_extraction&gt; &lt;operating_system&gt; </span>
                             <br>Meaning and value range of the options:
                             <ul>
-                                <li><i>input</i> : Directory path of the input folder. Value range: string
-                                <li><i>2</i> : Resolution of the stylisation of the F0 curve. A higher value results in a stronger slytisation (coarser resolution). Value range: integers
-                                <li><i>1.5</i> : The parameter determining the F0 curve smoothing. A lower value results in a stronger smoothing. Value range: real numbers
-                                <li><i>dynamic</i> : The determining method of the F0 measurements' parameters . Value range: standard | dynamic
-                                <li><i>windows</i> : Running environment: to be specified because of folder actions. Value range: windows | unix
+                                <li><i>INPUT_PATH</i> : Directory path of the input folder. Value range: string
+                                <li><i>STYLIZATION</i> : Resolution of the stylisation of the F0 curve. A higher value results in a stronger slytisation (coarser resolution). Value range: integers
+                                <li><i>SMOOTHING</i> : The parameter determining the F0 curve smoothing. A lower value results in a stronger smoothing. Value range: real numbers
+                                <li><i>PITCH_EXTRACTION</i> : The determining method of the F0 measurements' parameters . Value range: standard | dynamic
+                                <li><i>OPERATING_SYSTEM</i> : Running environment: to be specified because of folder actions. Value range: windows | unix
                             </ul>
                         </td>
                     </tr>
@@ -55,7 +55,7 @@
                         <td>GPL</td>
                     </tr>                   
                 </table>
-            </div>
+            </div>                        
         </article>
     </div>
 </section>

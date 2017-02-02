@@ -72,7 +72,7 @@
                 feljesztését is, de az em-OSA erre ma még nem vállalkozik.
             </p>
 
-            <img src="<?= base_url(); ?>css/images/speech-flowchart.png" class="img-responsive" style="margin: 20px auto 0 auto;" />
+            <img src="<?= base_url(); ?>css/images/speech-flowchart_<?= $this->config->item('language_abbr'); ?>.png" class="img-responsive" style="margin: 20px auto 0 auto;" />
         </article>
     </div>
 </section>

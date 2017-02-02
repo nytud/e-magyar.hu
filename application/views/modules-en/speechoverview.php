@@ -45,7 +45,7 @@
                 In the long run we are hoping to develope speech recognition technologies, as well as technologies based on it (such as automatic transcription software or voice search), but at the moment em-OSA cannot consider these as realistic aims.
             </p>
 
-            <img src="<?= base_url(); ?>css/images/speech-flowchart.png" class="img-responsive" style="margin: 20px auto 0 auto;" />
+            <img src="<?= base_url(); ?>css/images/speech-flowchart_<?= $this->config->item('language_abbr'); ?>.png" class="img-responsive" style="margin: 20px auto 0 auto;" />
         </article>
     </div>
 </section>
