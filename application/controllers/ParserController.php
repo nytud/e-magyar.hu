@@ -47,7 +47,7 @@ class ParserController extends CI_Controller {
 
             $maxchar = $this->config->item("maxchar");
 
-            $text = $this->input->post("text");
+            $text = htmlspecialchars($this->input->post("text"));
             $modules = $this->input->post("module");
 
             if (empty($text)) {
