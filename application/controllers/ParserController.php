@@ -144,7 +144,7 @@ class ParserController extends CI_Controller {
 
     private function cleanText($text) {
         return strip_tags(trim(str_replace("\r\n", "\n", $text)));
-        return $text;
+        return htmlspecialchars_decode($text);
     }
 
     private function getConfig($selected_modules) {
