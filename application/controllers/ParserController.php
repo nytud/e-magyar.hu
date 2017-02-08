@@ -47,7 +47,7 @@ class ParserController extends CI_Controller {
 
             $maxchar = $this->config->item("maxchar");
 
-            $text = $this->input->post("text");
+            $text = htmlspecialchars($this->input->post("text"));
             $modules = $this->input->post("module");
 
             if (empty($text)) {
@@ -143,8 +143,8 @@ class ParserController extends CI_Controller {
     }
 
     private function cleanText($text) {
-        return strip_tags(trim(str_replace("\r\n", "\n", $text)));
-        return $text;
+        strip_tags(trim(str_replace("\r\n", "\n", $text)));
+        return htmlspecialchars_decode($text);
     }
 
     private function getConfig($selected_modules) {
