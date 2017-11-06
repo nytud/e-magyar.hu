@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>e-magyar.hu</title>
-        <meta name="keywords" content="NLP, nyelvtechnológia">
-        <meta name="description" content="e-magyar digitális nyelvfeldolgozó rendszer">
+        <meta name="keywords" content="e-magyar, e-magyar digitális nyelvfeldolgozó rendszer, nyelv, szöveg, beszéd, archívum, magyar, NLP, nyelvtechnológia, nyelvfeldolgozás, nyelvelemzés, tokenizálás, szövegtagolás, mondat, morfológia, alaktan, szótő, szintaxis, mondattan, összetevős, függőségi, főnév, főnévi csoport, névelem, tulajdonnév, szófaj, taggelés, elemzés, lánc, nyelvmodell, e-magyar, e-magyar digital language processing system, language, text, speech, archive, Hungarian, magyar, NLP, language technology, natural language processing, language analysis, tokenization, sentence, morphology, lemma, stem, syntax, constituency, dependency, noun, noun phrase, named entity, proper name, part of speech, tagging, analysis, toolchain, language model">
+        <meta name="description" content="e-magyar digitális nyelvfeldolgozó rendszer. Elemezzen magyar szövegeket online, vagy használja az ingyenesen telepíthető verziót. e-magyar digital language processing system. Analyse Hungarian texts online, or install and use the freely available software package.">
         <meta name="author" content="MTA Nyelvtudományi Intézet">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
