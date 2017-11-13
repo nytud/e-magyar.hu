@@ -33,7 +33,7 @@ ellenõrizni, hogy a `gate-server.props`-ban a port 8080!
 
 ```
 cd /home/gerocs/test/hunlp-GATE
-export GATE_HOME=/home/joker/GATE_Developer_8.1
+export GATE_HOME=/opt/GATE_Developer_8.1
 ./gate-server.sh &
 ```
 
@@ -46,18 +46,18 @@ végül tesztelés:
 Ha minden OK, akkor ugyanezt elvégezni az **éles** rendszeren is.
 
 ```
-cd /home/gerocs
+cd /opt
 rm -rf hunlp-GATE.bak infra2.bak
 cp -rp hunlp-GATE hunlp-GATE.bak
 cp -rp /var/www/infra2 infra2.bak
 ```
 
 ```
-cd /home/gerocs/hunlp-GATE; git pull
+cd /opt/hunlp-GATE; git pull
 ./complete.sh
 ```
 
-itt érdemes `diff`-elni: `cd /home/gerocs ; diff -r hunlp-GATE.bak hunlp-GATE` 
+itt érdemes `diff`-elni: `cd /opt ; diff -r hunlp-GATE.bak hunlp-GATE` 
 
 a deploy-hoz szükséges írási jog a `prod` szerinti kvtárba
 
@@ -72,11 +72,11 @@ a `parser_logs/logs.txt`-nek szintén, `664` permission-nel.
  
 ellenõrizni, hogy a `gate-server.props`-ban a port 8000!
 
-itt érdemes `diff`-elni: `diff -r /home/gerocs/infra2.bak /var/www/infra2`
+itt érdemes `diff`-elni: `diff -r /opt/infra2.bak /var/www/infra2`
 
 ```
-cd /home/gerocs/hunlp-GATE
-export GATE_HOME=/home/joker/GATE_Developer_8.1
+cd /opt/hunlp-GATE
+export GATE_HOME=/opt/GATE_Developer_8.1
 ./gate-server.sh &
 ```
 
@@ -86,8 +86,8 @@ ellenõrzés:
 
 -----
 
-| mód   | dir                       | repó clone        | port |
-|-------|---------------------------|-------------------|------|
-| teszt | `oli:/var/www/infra2test` | `test/hunlp-GATE` | 8080 |
-| éles  | `oli:/var/www/infra2`     | `hunlp-GATE`      | 8000 |
+| mód   | dir                       | repó clone                         | port |
+|-------|---------------------------|------------------------------------|------|
+| teszt | `oli:/var/www/infra2test` | `oli:/home/gerocs/test/hunlp-GATE` | 8080 |
+| éles  | `oli:/var/www/infra2`     | `oli:/opt/hunlp-GATE`              | 8000 |
 
