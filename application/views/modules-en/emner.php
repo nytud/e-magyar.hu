@@ -2,8 +2,8 @@
     <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 col-sm-offset-1 col-md-offset-2 col-lg-offset-3 text-justify">
         <article>
             <h3 id="emner"><span>emNer</span> - Named Entity Recogniser (NER Tagger)</h3>
-            <h4>Az eszközről</h4>
-            <h5>Mire jó? Mit csinál?</h5>
+            <h4>About the tool</h4>
+            <h5>What is it good for? What does it do?</h5>
             <p>The automatic Named Entity Recogniser emNer identifies proper names in a running text, and 
                 assigns them to one of the predetermined categories (person names, organisation names, place names or other).</p>
             <h5>What is the input?</h5>
