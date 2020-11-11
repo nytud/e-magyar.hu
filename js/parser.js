@@ -158,8 +158,8 @@ function Parser(_maxchar) {
 
             $(token).find("Feature").each(function (index, feature) {
                 var $feature = $(feature);
-                var name = $feature.find("Name").text();
-                var value = $feature.find("Value").text();
+                var name = $feature.find("Name").text().trim();
+                var value = $feature.find("Value").text().trim();
                 featureSet[name] = value;
             });
 

@@ -70,12 +70,30 @@ class ParserController extends CI_Controller {
 
             $config = $this->getConfig($modules);
 
+            // Prepare data for emtsv
+            $postdata = http_build_query(
+                array(
+                    'text' => $text."\n"
+                )
+            );
+
+            $opts = array('http' =>
+                array(
+                    'method'  => 'POST',
+                    'header'  => 'Content-Type: application/x-www-form-urlencoded',
+                    'content' => $postdata
+                )
+            );
+
             //hack!
-            $url = "http://localhost:" . $this->config->item('port') . "/process?run=" . $config . "&text=" . str_replace("%0D%0A", "%0A", urlencode($text));
+            $context  = stream_context_create($opts);
+            $url = "http://localhost:" . $this->config->item('port') . "/" . $config. '/gate-conv';
+            #. "&text=" . str_replace("%0D%0A", "%0A", urlencode($text));
             //for testing            
             //$url = $this->config->item("base_url") . "samples/sample.xml";            
             set_time_limit(300);
-            $xml = file_get_contents($url);
+            $xml = file_get_contents($url, false, $context);
+            $xml = ltrim($xml, "\n");  // Hack for emGATEConv
 
             /* $xml = preg_replace('/(.*)?(<GateDocument .*)/s', '$2', $xml);
               $xml = "<?xml version='1.0' encoding='UTF-8'?>\n" . $xml; */
@@ -200,7 +218,7 @@ class ParserController extends CI_Controller {
                 return 0;
             return ($a[0] < $b[0]) ? -1 : 1;
         });
-        $config = implode(',', array_map(function ($a) {
+        $config = implode('/', array_map(function ($a) {
                     return $a[1];
                 }, $config));
 
@@ -308,7 +326,7 @@ class ParserController extends CI_Controller {
                 foreach ($features as $feature) {
                     $name = $feature->getElementsByTagName("Name")->item(0);
                     $value = $feature->getElementsByTagName("Value")->item(0);
-                    $fts[$name->nodeValue] = $value->nodeValue;
+                    $fts[trim($name->nodeValue)] = trim($value->nodeValue);
                 }
                 $fullline .= getLine($fts);
 

@@ -3,7 +3,7 @@
 $config['gate_path'] = "/home/joker/GATE_Developer_8.1";
 $config['hunlp_path'] = "/home/gerocs/hunlp-GATE";
 
-$config['port'] = 8000;
+$config['port'] = 5000;  // the default port for emtsv is 5000, currently GATE runs on port 8000
 
 $config['maxchar'] = 6000;
 
@@ -58,6 +58,7 @@ $config['maxchar'] = 6000;
 //QT,ML2-PosLem-pos,ML2-PosLem-feature,huntag3-NP-pipe,huntag3-NER-pipe,IOB4NP,IOB4NER,HFSTLemm,ML3-PosLem,ML3-Dep,ML3-Cons,Preverb
 //QT,HFSTLemm,ML3-PosLem,ML3-Dep,ML3-Cons,Preverb, ML2-PosLem-pos,ML2-PosLem-feature,huntag3-NP-pipe,huntag3-NER-pipe,IOB4NP,IOB4NER
 
+/* GATE Last working version
 $config['modules'] = array(
   'tokenizer' => array(0, "QT"),
   'morph_anal' => array(1, "HFSTLemm,readable-morpho"),
@@ -66,4 +67,15 @@ $config['modules'] = array(
   'const_parser' => array(4, "ML3-Cons"),    
   'np_chunker' => array(5, "huntag3-NP-pipe-hfstcode,IOB4NP"),
   'ner_tagger' => array(6, "huntag3-NER-pipe-hfstcode,IOB4NER")
+);
+*/
+
+$config['modules'] = array(
+	'tokenizer' => array(0, "tok"),
+	'morph_anal' => array(1, "morph"),
+	'pos_tagger' => array(2, "pos"),
+	'dep_parser' => array(3, "conv-morph/dep"),
+	'const_parser' => array(4, "cons"),
+	'np_chunker' => array(5, "chunk"),
+	'ner_tagger' => array(6, "ner")
 );
