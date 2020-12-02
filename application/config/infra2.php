@@ -1,9 +1,18 @@
 <?php
 
+# Set base_url to the appropriate value
+//$config['base_url'] = 'http://localhost/e-magyar.hu/';
+//$config['base_url'] = 'http://e-magyar.hu/'; -- PK: let us be a bit more dynamic ;)
+$config['base_url'] = 'http://mytestpage.com/';
+//$config['base_url'] = $_SERVER['HTTP_X_FORWARDED_PROTO'].'://'.$_SERVER['HTTP_X_FORWARDED_SERVER'].'/';
+
 $config['gate_path'] = "/home/joker/GATE_Developer_8.1";
 $config['hunlp_path'] = "/home/gerocs/hunlp-GATE";
 
-$config['port'] = 5000;  // the default port for emtsv is 5000, currently GATE runs on port 8000
+$config['sess_save_path'] = APPPATH . "../cache";
+
+// the default port for emtsv is 5000, currently GATE runs on port 8000
+$config['emtsv_base_url'] = "http://localhost:5000";
 
 $config['maxchar'] = 6000;
 

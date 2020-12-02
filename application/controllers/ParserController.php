@@ -87,7 +87,7 @@ class ParserController extends CI_Controller {
 
             //hack!
             $context  = stream_context_create($opts);
-            $url = "http://localhost:" . $this->config->item('port') . "/" . $config. '/gate-conv';
+            $url = $this->config->item("emtsv_base_url") . "/" . $config . "/gate-conv";
             #. "&text=" . str_replace("%0D%0A", "%0A", urlencode($text));
             //for testing            
             //$url = $this->config->item("base_url") . "samples/sample.xml";            

@@ -25,10 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 
 /* use this if server IP is registered in DNS */
-//$config['base_url'] = 'http://localhost/e-magyar.hu/';
-//$config['base_url'] = 'http://e-magyar.hu/'; -- PK: let us be a bit more dynamic ;)
-$config['base_url'] = 'http://mytestpage.com/';
-//$config['base_url'] = $_SERVER['HTTP_X_FORWARDED_PROTO'].'://'.$_SERVER['HTTP_X_FORWARDED_SERVER'].'/';
+$config['base_url'] = '';
 
 /*
 |--------------------------------------------------------------------------
